@@ -1,45 +1,48 @@
-import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi';
+/*eslint-disable*/
+import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const contacts = [
-	{
-		id: 1,
-		name: 'Your Address, Your City, Your Country',
-		icon: <FiMapPin />,
-	},
-	{
-		id: 2,
-		name: 'email@domain.com',
-		icon: <FiMail />,
-	},
-	{
-		id: 3,
-		name: '555 8888 888',
-		icon: <FiPhone />,
-	},
+  {
+    id: 1,
+    // name: "Volcan Paricutin 5102 Int 12 El Colli Urbano CP 45070, Zapopan, Jalisco, Mexico",
+    name: "Zapopan, Jalisco, Mexico",
+    icon: <FiMapPin />,
+  },
+  {
+    id: 2,
+    name: "taylorgr@outlook.com",
+    icon: <FiMail />,
+  },
+  {
+    id: 3,
+    name: "+52 33 3172 8350",
+    icon: <FaWhatsapp />,
+  },
 ];
 
 const ContactDetails = () => {
-	return (
-		<div className="w-full lg:w-1/2">
-			<div className="text-left max-w-xl px-6">
-				<h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
-					Contact details
-				</h2>
-				<ul className="font-general-regular">
-					{contacts.map((contact) => (
-						<li className="flex " key={contact.id}>
-							<i className="text-2xl text-gray-500 dark:text-gray-400 mr-4">
-								{contact.icon}
-							</i>
-							<span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
-								{contact.name}
-							</span>
-						</li>
-					))}
-				</ul>
-			</div>
-		</div>
-	);
+  return (
+    <div className="w-full lg:w-1/2">
+      <div className="text-left max-w-xl px-6">
+        <h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
+          Contact details
+        </h2>
+        <ul className="font-general-regular">
+          {contacts.map((contact) => (
+            <li className="flex " key={contact.id}>
+              <i className="text-2xl text-gray-500 dark:text-gray-400 mr-4">
+                {contact.icon}
+              </i>
+              <span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
+                {contact.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 };
 
 export default ContactDetails;

@@ -1,14 +1,14 @@
-/*eslint-disable*/
 import { motion } from "framer-motion";
-import ContactDetails from "../components/contact/ContactDetails";
-import ContactForm from "../components/contact/ContactForm";
+import { SkillsYears } from "../components/skills/SkillsYears";
+import { skills, skills2 } from "../data/skillsData";
 
-const Contact = () => {
+export const Skills = () => {
   return (
     <>
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-          Contact
+          Skills
+          {/* skills and years of experience */}
         </p>
       </div>
 
@@ -20,13 +20,13 @@ const Contact = () => {
           duration: 0.5,
           delay: 0.1,
         }}
-        className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10"
+        className="container mt-10"
+        // className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10"
       >
-        {/* <ContactForm /> */}
-        <ContactDetails />
+        <SkillsYears skills={skills} />
+        <SkillsYears skills={skills2} />
+        {/* <SkillsYears skills={skills3} /> */}
       </motion.div>
     </>
   );
 };
-
-export default Contact;
