@@ -5,7 +5,7 @@ export const aboutMeData = [
   },
   {
     id: 2,
-    bio: `At my current company, I have been responsible for developing IoT and Industry 4.0 solutions as a software developer. My work has involved working with embedded systems, particularly the Raspberry Pi with Linux-based operating systems such as Ubuntu, Manjaro, and Raspbian. Additionally, I have worked as a Full Stack developer, using the MERN stack which includes React, Node.js, and Express.js with MongoDB as the database. I have also utilized various programming tools like Typescript, Docker, JEST, Git, AWS, and web development languages such as HTML and CSS.`,
+    bio: `At my current company, I have been responsible for developing IoT and Industry 4.0 solutions as a software developer. My work has involved working with embedded systems, particularly the Raspberry Pi with Linux-based operating systems such as Ubuntu, Manjaro, and Raspbian. Additionally, I have worked as a Full Stack developer, using the MERN stack which includes React, Node.js, and Express.js with MongoDB as the database. I have also utilized various programming tools like Typescript, Docker, JEST, Git, AWS, HTML and CSS.`,
   },
   //   {
   //     id: 3,
