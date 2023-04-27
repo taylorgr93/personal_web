@@ -1,7 +1,7 @@
 export const aboutMeData = [
   {
     id: 1,
-    bio: `I am a software developer with over six years of experience in electronic design and development. Currently, I work as a software developer and have been with my current company for four years. For me, the work environment is the most important factor in a job.`,
+    bio: `I am an electronics engineer and I studied a master's degree in computer science. I am a software developer with over six years of experience in electronic design and development. Currently, I work as a software developer and have been with my current company for four years. For me, the work environment is the most important factor in a job.`,
   },
   {
     id: 2,
