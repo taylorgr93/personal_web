@@ -1,6 +1,12 @@
 /*eslint-disable*/
-import { FiPhone, FiMapPin, FiMail } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
+import {
+  FiPhone,
+  FiMapPin,
+  FiMail,
+  FiGithub,
+  FiLinkedin,
+} from "react-icons/fi";
+import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
 const contacts = [
   {
@@ -18,6 +24,16 @@ const contacts = [
     id: 3,
     name: "+52 33 3172 8350",
     icon: <FaWhatsapp />,
+  },
+  {
+    id: 4,
+    name: "https://www.linkedin.com/in/taylorgr-24505ab4/",
+    icon: <FiLinkedin />,
+  },
+  {
+    id: 5,
+    name: "@taylorgr93",
+    icon: <FiGithub />,
   },
 ];
 

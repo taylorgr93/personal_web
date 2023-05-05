@@ -6,7 +6,8 @@ import { ProjectsProvider } from "../context/ProjectsContext";
 import Button from "../components/reusable/Button";
 import About from "./AboutMe";
 import Contact from "./Contact";
-import { Skills } from "./Skills";
+import Skills from "./Skills";
+import Experience from "./Experience";
 
 const Home = () => {
   return (
@@ -17,9 +18,11 @@ const Home = () => {
 
       <Skills />
 
-      <ProjectsProvider>
+      <Experience />
+
+      {/* <ProjectsProvider>
         <ProjectsGrid></ProjectsGrid>
-      </ProjectsProvider>
+      </ProjectsProvider> */}
 
       {/* <div className="mt-8 sm:mt-10 flex justify-center">
         <Link

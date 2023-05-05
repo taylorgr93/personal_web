@@ -883,6 +883,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-justify {
+  text-align: justify;
+  /* text-align-last: justify; */
+}
 .font-bold {
   font-weight: 700;
 }
