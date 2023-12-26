@@ -1,3 +1,5 @@
+// SkillsYears.jsx
+
 export const SkillsYears = ({ skills }) => {
   //   return (
   //     <div className="container mx-auto py-8">
@@ -13,12 +15,15 @@ export const SkillsYears = ({ skills }) => {
   //   );
 
   return (
-    <div className="w-full flex flex-auto justify-center">
+    <div className="flex flex-wrap justify-center max-auto">
       {skills?.map((skill) => (
-        <div key={skill.name} className="m-4 p-4 text-center">
+        <div
+          key={skill.name}
+          className="m-2 p-3 text-center md:w-1/2 lg:w-1/4"
+          // className="m-2 mb-4 p-3 text-center w-full sm:w-1/2 md:w-1/3 lg:w-1/4"
+        >
           <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
-          <p className="whitespace-nowrap text-gray-500">{`${skill.years} años`}</p>
-          {/* <p className="text-gray-500">{`${skill.years} años de experiencia`}</p> */}
+          <p className="text-gray-500">{`${skill.years} years`}</p>
         </div>
       ))}
     </div>

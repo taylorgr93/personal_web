@@ -1,4 +1,4 @@
-export const softkills = [
+export const softSkills = [
   { name: "Self-motivation" },
   { name: "Teamwork" },
   { name: "Communication" },
@@ -7,15 +7,6 @@ export const softkills = [
   { name: "Work ethic" },
   { name: "Creativity" },
   { name: "Continuous learning" },
-  // Agrega más habilidades aquí
-];
-
-export const softSkills2 = [
   { name: "Empathy" },
-  { name: "" },
-  { name: "" },
-  { name: "" },
-  { name: "" },
-  { name: "" },
-  { name: "" },
+  // Agrega más habilidades aquí
 ];

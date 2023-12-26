@@ -1,9 +1,11 @@
 /*eslint-disable*/
 import { motion } from "framer-motion";
 import { SkillsYears } from "../components/skills/SkillsYears";
-import { skills, skills2 } from "../data/skillsData";
+import { skills } from "../data/skillsData";
 import { SoftSkills } from "../components/skills/SoftSkills";
-import { softkills, softSkills2 } from "../data/softSkillsData";
+import { softSkills } from "../data/softSkillsData";
+import { otherSkills } from "../data/otherSkillsData";
+import { AboutMeProvider } from "../context/AboutMeContext";
 import { useEffect, useState } from "react";
 
 const Skills = () => {
@@ -20,13 +22,11 @@ const Skills = () => {
         <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
           <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
             Skills
-            {/* skills and years of experience */}
           </p>
         </div>
       ) : (
         <></>
       )}
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -35,31 +35,48 @@ const Skills = () => {
           duration: 0.5,
           delay: 0.1,
         }}
-        className="container mt-10"
-        // className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10"
+        className="container mx-auto flex flex-wrap"
+        // className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10 bg-gray-600"
       >
         <SkillsYears skills={skills} />
-        <SkillsYears skills={skills2} />
-        {/* <SkillsYears skills={skills3} /> */}
       </motion.div>
+
+      {/* <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
+        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+          Other Skills & Tools
+        </p>
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, delay: 1 }}
+        exit={{ opacity: 0 }}
+        className="container mx-auto flex flex-wrap"
+        // transition={{
+        //   ease: "easeInOut",
+        //   duration: 0.5,
+        //   delay: 0.1,
+        // }}
+      >
+        <SkillsYears skills={otherSkills} />
+      </motion.div> */}
 
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
           Soft Skills
         </p>
       </div>
-
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          ease: "easeInOut",
-          duration: 0.5,
-          delay: 0.1,
-        }}
-        className="container mt-10"
+        animate={{ opacity: 1, delay: 1 }}
+        exit={{ opacity: 0 }}
+        className="container mx-auto flex flex-wrap"
+        // transition={{
+        //   ease: "easeInOut",
+        //   duration: 0.5,
+        //   delay: 0.1,
+        // }}
       >
-        <SoftSkills skills={softkills} />
+        <SoftSkills skills={softSkills} />
       </motion.div>
     </>
   );

@@ -4,6 +4,7 @@ import {
   FiMapPin,
   FiMail,
   FiGithub,
+  FiGitlab,
   FiLinkedin,
 } from "react-icons/fi";
 import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
@@ -19,6 +20,7 @@ const contacts = [
     id: 2,
     name: "taylorgr@outlook.com",
     icon: <FiMail />,
+    // link: "taylorgr@outlook.com",
   },
   {
     id: 3,
@@ -27,19 +29,27 @@ const contacts = [
   },
   {
     id: 4,
-    name: "https://www.linkedin.com/in/taylorgr-24505ab4/",
+    name: "Christopher Taylor Gonzalez",
     icon: <FiLinkedin />,
+    link: "https://www.linkedin.com/in/taylorgr-24505ab4/",
   },
   {
     id: 5,
     name: "@taylorgr93",
     icon: <FiGithub />,
+    link: "https://github.com/taylorgr93",
+  },
+  {
+    id: 6,
+    name: "@ctgonzalez",
+    icon: <FiGitlab />,
+    link: "https://gitlab.com/ctgonzalez",
   },
 ];
 
 const ContactDetails = () => {
   return (
-    <div className="w-full lg:w-1/2">
+    <div className="w-full">
       <div className="text-left max-w-xl px-6">
         <h2 className="font-general-medium text-2xl text-primary-dark dark:text-primary-light mt-12 mb-8">
           Contact details
@@ -50,9 +60,20 @@ const ContactDetails = () => {
               <i className="text-2xl text-gray-500 dark:text-gray-400 mr-4">
                 {contact.icon}
               </i>
-              <span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
-                {contact.name}
-              </span>
+              {contact.link ? (
+                <a
+                  href={contact.link ?? "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg mb-4 text-ternary-dark dark:text-ternary-light"
+                >
+                  {contact.name}
+                </a>
+              ) : (
+                <span className="text-lg mb-4 text-ternary-dark dark:text-ternary-light">
+                  {contact.name}
+                </span>
+              )}
             </li>
           ))}
         </ul>

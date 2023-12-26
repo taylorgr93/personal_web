@@ -8,11 +8,11 @@ const AboutMeBio = () => {
   return (
     <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20">
       <div className="w-full sm:w-1/4 mb-7 sm:mb-0">
-        <div class="flex-none w-52 relative">
+        <div className="flex-none w-52 relative">
           <img
             src={TaylorPhoto}
             alt=""
-            class="absolute inset-0 w-full h-full object-cover rounded-lg"
+            className="absolute inset-0 w-full h-full object-cover rounded-lg"
             loading="lazy"
           />
         </div>

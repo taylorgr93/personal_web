@@ -14,8 +14,8 @@ export const ExperienceComponent = ({ experience }) => {
               {`${item.startDate} - ${item.endDate}`}
             </p>
             <ul className="list-disc list-inside mb-4">
-              {item.responsibilities.map((responsibility) => (
-                <li key={responsibility}>{responsibility}</li>
+              {item.responsibilities.map((responsibility, index) => (
+                <li key={item.id + responsibility}>{responsibility}</li>
               ))}
             </ul>
           </div>
