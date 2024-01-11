@@ -17,13 +17,14 @@ export const skills = [
   { name: "SQL Server", years: 3 },
   { name: "MySQL", years: 3 },
   { name: "TypeScript", years: 3 },
+  { name: "JEST", years: 2 },
   { name: "PostgreSQL", years: 2 },
   { name: "Python", years: 2 },
   { name: "ASP .NET", years: 2 },
   { name: "C++", years: 1 },
-  // { name: "Flutter", years: 1 },
+  { name: "NextJS", years: 1 },
+  { name: "Flutter", years: 1 },
   // { name: "Vue", years: 1 },
-  // { name: "NextJS", years: 1 },
   // { name: "Kubernetes", years: 1 },
   // Agrega más habilidades aquí
 ];
