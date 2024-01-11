@@ -20,9 +20,9 @@ const Home = () => {
 
       <Experience />
 
-      {/* <ProjectsProvider>
+      <ProjectsProvider>
         <ProjectsGrid></ProjectsGrid>
-      </ProjectsProvider> */}
+      </ProjectsProvider>
 
       {/* <div className="mt-8 sm:mt-10 flex justify-center">
         <Link
