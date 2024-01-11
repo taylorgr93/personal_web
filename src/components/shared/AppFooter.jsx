@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import {
   FiGithub,
+  FiGitlab,
   FiTwitter,
   FiLinkedin,
   FiGlobe,
@@ -11,24 +12,23 @@ import AppFooterCopyright from "./AppFooterCopyright";
 const socialLinks = [
   {
     id: 1,
-    icon: <FiGlobe />,
-    url: "https://www.taylorgr93.com/",
-    // url: 'https://www.stoman.me/',
-  },
-  {
-    id: 2,
     icon: <FiGithub />,
     url: "https://github.com/taylorgr93",
   },
   {
-    id: 3,
+    id: 2,
     icon: <FiLinkedin />,
     url: "https://www.linkedin.com/in/taylorgr-24505ab4/",
   },
+  {
+    id: 3,
+    icon: <FiGitlab />,
+    url: "https://gitlab.com/ctgonzalez",
+  },
   // {
   //   id: 4,
-  //   icon: <FiTwitter />,
-  //   url: "https://twitter.com/realstoman",
+  //   icon: <FiGlobe />,
+  //   url: "https://www.taylorgr93.com/",
   // },
   // {
   //   id: 5,
