@@ -3,7 +3,7 @@ export const experience = [
     id: 1,
     company: "Grupo ABSA / Knesys Plus",
     position: "Software Engineer",
-    startDate: "May 2019",
+    startDate: "April 2019",
     endDate: "Present",
     responsibilities: [
       `Development of applications for industry 4.0 and IoT, allowing users to monitor variables in real time and extract valuable information for making intelligent decisions. In addition, we develop customized web solutions adapted to the needs of our clients.`,
@@ -57,7 +57,7 @@ export const experience = [
     company: "JABIL",
     position: "Diagnostic technician",
     startDate: "January 2016",
-    endDate: "November 2018",
+    endDate: "November 2016",
     responsibilities: [
       `• Analyze and diagnose electrical failures occurred in the electronic cards (PCB's).`,
       `• Report failures in the process, operating errors and test equipment failures to my immediate boss.`,
