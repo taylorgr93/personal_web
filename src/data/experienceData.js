@@ -43,13 +43,13 @@ export const experience = [
     startDate: "August 2016",
     endDate: "November 2018",
     responsibilities: [
-      `Development of applications for the validation of products manufactured by the company, as well as the improvement of processes.`,
-      `• Development of .NET Applications for validation of electronic meters.`,
-      `• Development of graphic user interfaces for validation and automation of production lines.`,
+      `Development of applications for the validation and verification of the operation of the products manufactured by the company, as well as the improvement of processes.`,
+      `• Development of Applications and graphical user interfaces with Windows Form with .NET and C# for validation of electronic meters.`,
       `• Database design and management (SQL server, MySQL).`,
+      `• Generation of csv reports from the sql management studio tool using specific queries.`,
       `• Version control systems (hg mercurial, svn, git).`,
-      `• Customer Support (I had to travel to Mexico City to support the company's manufacturing plant).`,
-      `• knowledge in production lines for electronic manufacturing.`,
+      `• Customer service (had to travel throughout the Mexican Republic to support the company's manufacturing plants).`,
+      `• I have knowledge of production lines for electronic manufacturing.`,
     ],
   },
   {
@@ -59,10 +59,11 @@ export const experience = [
     startDate: "January 2016",
     endDate: "November 2018",
     responsibilities: [
-      `• Analyze and diagnose electrical failures occurred in the cards (PCB's).`,
+      `• Analyze and diagnose electrical failures occurred in the electronic cards (PCB's).`,
       `• Report failures in the process, operating errors and test equipment failures to my immediate boss.`,
       `• Maintain the diagnostic efficiency established in the project.`,
       `• Maintain 100% of the certifications required by the company and the project.`,
+      `• Use of electronic measurement equipment (multimeter, oscilloscope, spectrum analyzer).`,
     ],
   },
   // ... other experiences
