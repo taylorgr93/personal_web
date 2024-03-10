@@ -21,7 +21,7 @@ const Skills = () => {
       {url != "skills" ? (
         <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
           <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-            Skills
+            Skills & Frameworks
           </p>
         </div>
       ) : (
@@ -41,24 +41,23 @@ const Skills = () => {
         <SkillsYears skills={skills} />
       </motion.div>
 
-      {/* <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
+      <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
           Other Skills & Tools
         </p>
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="container mx-auto flex flex-wrap"
-        // transition={{
-        //   ease: "easeInOut",
-        //   duration: 0.5,
-        //   delay: 0.1,
-        // }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+          delay: 0.1,
+        }}
       >
         <SkillsYears skills={otherSkills} />
-      </motion.div> */}
+      </motion.div>
 
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
         <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
@@ -67,14 +66,13 @@ const Skills = () => {
       </div>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1, delay: 1 }}
+        animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        className="container mx-auto flex flex-wrap"
-        // transition={{
-        //   ease: "easeInOut",
-        //   duration: 0.5,
-        //   delay: 0.1,
-        // }}
+        transition={{
+          ease: "easeInOut",
+          duration: 0.5,
+          delay: 0.1,
+        }}
       >
         <SoftSkills skills={softSkills} />
       </motion.div>
