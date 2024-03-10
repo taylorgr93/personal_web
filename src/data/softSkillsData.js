@@ -8,5 +8,6 @@ export const softSkills = [
   { name: "Creativity" },
   { name: "Continuous learning" },
   { name: "Empathy" },
+  { name: "Sense of Responsibility" },
   // Agrega más habilidades aquí
 ];
