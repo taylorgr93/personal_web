@@ -22,7 +22,7 @@ const ProjectSingle = () => {
         <ProjectHeader />
         <ProjectGallery />
         <ProjectInfo />
-        <ProjectRelatedProjects />
+        {/* <ProjectRelatedProjects /> */}
       </SingleProjectProvider>
     </motion.div>
   );
