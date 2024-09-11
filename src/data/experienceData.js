@@ -24,6 +24,23 @@ export const experience = [
   },
   {
     id: 2,
+    company: "Freelance Experience",
+    position: "Freelance Full Stack Developer",
+    startDate: "August 2024",
+    endDate: "Present",
+    responsibilities: [
+      `Developed and delivered customized web solutions as a Full Stack Developer, focusing on the MERN stack (MongoDB, Express.js, React, Node.js) for diverse clients. Worked independently and collaboratively to meet client needs, including:`,
+      `• Designed and built responsive web applications tailored to specific client requirements, ensuring high performance and scalability.`,
+      `• Collaborated with clients to refine project scope, timelines, and deliverables, providing ongoing support and updates as needed.`,
+      // `• Developed RESTful APIs for various applications, enhancing data integration and user experience.`,
+      // `• Managed cloud services and deployments using AWS, improving application reliability and availability.`,
+      // `• Utilized Docker and Docker Compose for containerization, facilitating seamless development, testing, and deployment workflows.`
+      // `• Integrated CI/CD pipelines to streamline deployments, resulting in more efficient and reliable release processes.`
+      // `• Collaborated with clients to refine project scope, timelines, and deliverables, providing ongoing support and updates as needed.`
+    ],
+  },
+  {
+    id: 3,
     company: "JABIL",
     position: "Software Test Engineer",
     startDate: "November 2018",
@@ -37,7 +54,7 @@ export const experience = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: "Pounce Consulting",
     position: "Support Engineer",
     startDate: "August 2016",
@@ -53,7 +70,7 @@ export const experience = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: "JABIL",
     position: "Diagnostic technician",
     startDate: "January 2016",
