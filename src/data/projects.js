@@ -6,6 +6,7 @@ import WebImage3 from "../images/web-project-3.png";
 import WebImage4 from "../images/web-project-4.png";
 import WebImage5 from "../images/web-project-5.png";
 import WebImage6 from "../images/web-project-6.png";
+import WebImage7 from "../images/web-project-7.png";
 // import MobileImage1 from "../images/mobile-project-1.jpg";
 // import MobileImage2 from "../images/mobile-project-2.jpg";
 // import UIImage1 from "../images/ui-project-1.jpg";
@@ -45,6 +46,12 @@ export const projectsData = [
     title: "DataCenter",
     category: "Backend Development",
     img: WebImage5,
+  },
+  {
+    id: 5,
+    title: "Transportes Colimenses",
+    category: "Web Application",
+    img: WebImage7,
   },
   // {
   // 	id: 4,
