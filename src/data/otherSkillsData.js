@@ -14,7 +14,6 @@ export const otherSkills = [
   { name: "Zeplin", years: 1 },
   { name: "Ngrok", years: 1 },
   { name: "Apigateway", years: 1 },
-  { name: "Gitlab CI/CD", years: 1 },
   // { name: "Nginx", years: 1 },
   // Agrega más habilidades aquí
 ];
