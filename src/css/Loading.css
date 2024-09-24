@@ -1,0 +1,34 @@
+/* Loading.css */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-color: #f8f9fa; /* Color de fondo que combine con tu diseño */
+}
+
+.loader {
+  border: 8px solid #e0e0e0; /* Color claro para el borde */
+  border-top: 8px solid #007bff; /* Color del borde superior para el efecto */
+  border-radius: 50%;
+  width: 60px; /* Tamaño del loader */
+  height: 60px;
+  animation: spin 1s linear infinite; /* Animación de giro */
+}
+
+.loading-text {
+  margin-top: 15px;
+  font-size: 24px; /* Tamaño del texto */
+  color: #343a40; /* Color del texto que combine con tu diseño */
+  font-weight: bold;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

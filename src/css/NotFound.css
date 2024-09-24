@@ -1,0 +1,33 @@
+/* NotFound.css */
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Para centrar verticalmente */
+  background-color: #ffffff; /* Color de fondo claro */
+  color: #333; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+}
+
+.not-found-content {
+  /* max-width: 600px;  */
+  /* Ancho máximo del contenido */
+}
+
+.not-found-content h1 {
+  font-size: 5rem; /* Tamaño de la fuente */
+  margin-bottom: 2rem; /* Espaciado inferior */
+}
+
+.not-found-content p {
+  font-size: 2rem; /* Tamaño de la fuente */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

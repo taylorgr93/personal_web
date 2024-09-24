@@ -2,10 +2,12 @@ import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Loading from "./components/Loading";
 import AppFooter from "./components/shared/AppFooter";
 import AppHeader from "./components/shared/AppHeader";
 import "./css/App.css";
 import UseScrollToTop from "./hooks/useScrollToTop";
+import NotFound from "./components/NotFound.jsx";
 
 const About = lazy(() => import("./pages/AboutMe"));
 const Skills = lazy(() => import("./pages/Skills"));
@@ -22,7 +24,7 @@ function App() {
         <Router>
           <ScrollToTop />
           <AppHeader />
-          <Suspense fallback={""}>
+          <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="projects" element={<Projects />} />
@@ -35,6 +37,7 @@ function App() {
               <Route path="skills" element={<Skills />} />
               <Route path="experience" element={<Experience />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
           <AppFooter />
