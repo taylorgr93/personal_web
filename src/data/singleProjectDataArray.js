@@ -1,12 +1,7 @@
 /*eslint-disable*/
-// Import images
-import Image1 from "../images/ui-project-1.jpg";
-import Image2 from "../images/web-project-2.jpg";
-import Image3 from "../images/mobile-project-2.jpg";
-import Image4 from "../images/mobile-project-1.jpg";
-import Image5 from "../images/web-project-1.jpg";
-import Image6 from "../images/ui-project-2.jpg";
-
+import ChecktonImg from "../images/web-project-3.png";
+import checkton2 from "../images/checkton2.png";
+import checkton3 from "../images/checkton3.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
 
@@ -126,6 +121,109 @@ export const singleProjectDataArray = [
       title: "Checkton",
       publishDate: "Aug 12, 2021",
       tags: "Frontend",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Checkton UI",
+        img: ChecktonImg,
+      },
+      {
+        id: 2,
+        title: "Dashboard",
+        img: checkton2,
+      },
+      {
+        id: 3,
+        title: "Employees",
+        img: checkton3,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Checkton",
+        },
+        // {
+        //   id: 2,
+        //   title: "Services",
+        //   details: "UI Design & Frontend Development",
+        // },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://checkton.com.mx/",
+        },
+        {
+          id: 4,
+          title: "Email",
+          details: "ventas@checkton.com.mx",
+        },
+        {
+          id: 5,
+          title: "Email",
+          details: "cynthia.duenas@checkton.com.mx",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "The objective of the web platform is to provide a flexible and user-friendly management system for construction companies, where users can manage work crews, in addition to modules such as attendance tracking, warehouse management, and work hours reporting.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "React",
+            "Material UI",
+            "Redux",
+            "NodeJS",
+            "JavaScript",
+            "Docker",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "The most challenging aspect of the project was developing web services with the REST standard for two front-end applications (event management platform and ticket purchasing platform). Some services for the online purchasing platform did not require tokens and were publicly accessible.",
+        },
+        {
+          id: 2,
+          details:
+            "Additionally, we created different types of roles and permissions for each user, allowing a user to have an account on both platforms using the same email.",
+        },
+        {
+          id: 3,
+          details:
+            "We also established a flexible and scalable development environment, utilizing microservices for code reuse and creating generic middlewares for different endpoints.",
+        },
+      ],
+      // SocialSharingHeading: "Social media",
+      SocialSharingHeading: "",
+      SocialSharing: [
+        // {
+        //   id: 1,
+        //   name: "Twitter",
+        //   icon: <FiTwitter />,
+        //   url: "https://x.com/conboleto",
+        // },
+        // {
+        //   id: 2,
+        //   name: "Instagram",
+        //   icon: <FiInstagram />,
+        //   url: "https://www.instagram.com/conboleto",
+        // },
+        // {
+        //   id: 3,
+        //   name: "Facebook",
+        //   icon: <FiFacebook />,
+        //   url: "https://www.facebook.com/Conboleto/?locale=es_LA",
+        // },
+      ],
     },
   },
   {
