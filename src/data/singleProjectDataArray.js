@@ -4,6 +4,8 @@ import checkton2 from "../images/checkton2.png";
 import checkton3 from "../images/checkton3.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
+import transportescolimenses2 from "../images/transportescolimenses2.png";
+import transportescolimenses3 from "../images/transportescolimenses3.png";
 
 // Import icons
 import {
@@ -250,7 +252,17 @@ export const singleProjectDataArray = [
       {
         id: 1,
         title: "Transportes Colimenses",
+        img: transportescolimenses2,
+      },
+      {
+        id: 2,
+        title: "Transportes Colimenses",
         img: TransportesColimensesImg,
+      },
+      {
+        id: 3,
+        title: "Transportes Colimenses",
+        img: transportescolimenses3,
       },
     ],
     ProjectInfo: {
