@@ -24,17 +24,20 @@ const ProjectInfo = () => {
                   key={info.id}
                 >
                   <span>{info.title}: </span>
-                  <a
+                  {/* <a
                     href="https://stoman.me"
                     className={
-                      info.title === "Website" || info.title === "Phone"
+                      info.title === "Website" || info.title === "Email" || info.title === "Email"
                         ? "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
                         : ""
                     }
                     aria-label="Project Website and Phone"
                   >
                     {info.details}
-                  </a>
+                  </a> */}
+                  <span className={"hover:text-indigo-500"}>
+                    {info.details}
+                  </span>
                 </li>
               );
             })}
