@@ -1,9 +1,10 @@
 /*eslint-disable*/
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+import { motion } from "framer-motion";
 import { FiArrowDownCircle } from "react-icons/fi";
+import useThemeSwitcher from "../../hooks/useThemeSwitcher";
 import developerLight from "../../images/developer.svg";
 import developerDark from "../../images/developer-dark.svg";
-import { motion } from "framer-motion";
+// import TaylorPhoto from "../../images/taylor.png";
 
 const AppBanner = () => {
   const [activeTheme] = useThemeSwitcher();
@@ -68,11 +69,13 @@ const AppBanner = () => {
         initial={{ opacity: 0, y: -180 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-        className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0"
+        className="w-full sm:w-2/3 text-right float-right mt-8 sm:mt-0 bg-blue-500"
       >
         <img
           src={activeTheme === "dark" ? developerLight : developerDark}
+          // src={TaylorPhoto}
           alt="Developer"
+          // className="rounded-lg shadow-lg"
         />
       </motion.div>
     </motion.section>
