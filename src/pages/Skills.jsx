@@ -49,12 +49,12 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
         transition={{
           ease: "easeInOut",
           duration: 0.5,
           delay: 0.1,
         }}
+        className="container mx-auto flex flex-wrap"
       >
         <SkillsYears skills={otherSkills} />
       </motion.div>
@@ -67,12 +67,12 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
         transition={{
           ease: "easeInOut",
           duration: 0.5,
           delay: 0.1,
         }}
+        className="container mx-auto flex flex-wrap"
       >
         <SoftSkills skills={softSkills} />
       </motion.div>
