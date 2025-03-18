@@ -6,6 +6,7 @@ import {
   FiGithub,
   FiGitlab,
   FiLinkedin,
+  FiMessageSquare,
 } from "react-icons/fi";
 import { FaWhatsapp, FaLinkedin } from "react-icons/fa";
 
@@ -29,18 +30,23 @@ const contacts = [
   },
   {
     id: 4,
+    name: "+1 657 281 0607",
+    icon: <FiMessageSquare />,
+  },
+  {
+    id: 5,
     name: "Christopher Taylor Gonzalez",
     icon: <FiLinkedin />,
     link: "https://www.linkedin.com/in/taylorgr-24505ab4/",
   },
   {
-    id: 5,
+    id: 6,
     name: "@taylorgr93",
     icon: <FiGithub />,
     link: "https://github.com/taylorgr93",
   },
   {
-    id: 6,
+    id: 7,
     name: "@ctgonzalez",
     icon: <FiGitlab />,
     link: "https://gitlab.com/ctgonzalez",
