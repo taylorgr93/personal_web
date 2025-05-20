@@ -1,7 +1,7 @@
 export const experience = [
   {
     id: 1,
-    company: "Grupo ABSA / Knesys Plus",
+    company: "Knesys Plus",
     position: "Software Engineer",
     startDate: "April 2019",
     endDate: "Present",
