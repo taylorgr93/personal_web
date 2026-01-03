@@ -1,32 +1,36 @@
+// src/components/about/AboutMeBio.jsx
 import { useContext } from "react";
 import AboutMeContext from "../../context/AboutMeContext";
-// import TaylorPhoto from "../../images/taylor_graduaction.jpg";
-import TaylorPhoto from "../../images/taylor.png";
+import { highlights } from "../../data/aboutMeData";
 
 const AboutMeBio = () => {
   const { aboutMe } = useContext(AboutMeContext);
 
   return (
-    <div className="block sm:flex sm:gap-10 mt-10 sm:mt-20 bg-blue-500">
-      <div className="w-full sm:w-1/4 mb-0 sm:mb-0 bg-red-400">
-        <div className="flex-none w-52 relative bg-green-400">
-          <img
-            src={TaylorPhoto}
-            alt=""
-            className="absolute inset-0 w-full h-full object-fit rounded-lg"
-            loading="lazy"
-          />
-        </div>
+    <div className="max-w-3xl mx-auto mt-10 sm:mt-20 px-4">
+      {/* Bio paragraphs - centered */}
+      <div className="space-y-4">
+        {aboutMe.map((item) => (
+          <p
+            key={item.id}
+            className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light leading-relaxed text-justify"
+          >
+            {item.bio}
+          </p>
+        ))}
       </div>
 
-      <div className="font-general-regular w-full sm:w-3/4 text-left">
-        {aboutMe.map((bio) => (
-          <p
-            className="mb-4 text-ternary-dark dark:text-ternary-light text-xl text-justify"
-            key={bio.id}
-          >
-            {bio.bio}
-          </p>
+      {/* Quick highlights - scannable stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10 pt-10 border-t border-gray-200 dark:border-gray-700">
+        {highlights.map((item, index) => (
+          <div key={index} className="text-center">
+            <p className="text-3xl font-bold text-ternary-dark dark:text-ternary-light">
+              {item.value}
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+              {item.label}
+            </p>
+          </div>
         ))}
       </div>
     </div>

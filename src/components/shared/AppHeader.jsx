@@ -1,40 +1,48 @@
-/*eslint-disable*/
-import { useState } from "react";
-import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
-import { Link } from "react-router-dom";
-import useThemeSwitcher from "../../hooks/useThemeSwitcher";
-import HireMeModal from "../HireMeModal";
-import logoLight from "../../images/logo-light.svg";
-import logoDark from "../../images/logo-dark.svg";
+// src/components/shared/AppHeader.jsx
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Button from "../reusable/Button";
+import { Link, useLocation } from "react-router-dom";
+import { FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
+import useThemeSwitcher from "../../hooks/useThemeSwitcher";
+// import HireMeModal from "../HireMeModal";
+
+// Navigation items - single source of truth
+const NAV_ITEMS = [
+  { path: "/", label: "I'm Taylor" },
+  { path: "/about", label: "About Me" },
+  { path: "/skills", label: "Skills" },
+  { path: "/experience", label: "Experience" },
+  { path: "/projects", label: "Projects" },
+  { path: "/contact", label: "Contact" },
+];
 
 const AppHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [activeTheme, setTheme] = useThemeSwitcher();
+  const location = useLocation();
 
-  function toggleMenu() {
-    if (!showMenu) {
-      setShowMenu(true);
-    } else {
-      setShowMenu(false);
-    }
-  }
+  // Close mobile menu on route change
+  useEffect(() => {
+    setShowMenu(false);
+  }, [location.pathname]);
 
-  function showHireMeModal() {
-    if (!showModal) {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.add("overflow-y-hidden");
-      setShowModal(true);
+  // Handle body scroll lock for mobile menu
+  useEffect(() => {
+    if (showMenu) {
+      document.body.style.overflow = "hidden";
     } else {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.remove("overflow-y-hidden");
-      setShowModal(false);
+      document.body.style.overflow = "unset";
     }
-  }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [showMenu]);
+
+  const toggleMenu = () => setShowMenu((prev) => !prev);
+  const toggleTheme = () => setTheme(activeTheme);
+
+  const ThemeIcon = activeTheme === "dark" ? FiMoon : FiSun;
 
   return (
     <motion.nav
@@ -44,201 +52,85 @@ const AppHeader = () => {
       className="sm:container sm:mx-auto"
     >
       <div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
-        {/* Header menu links and small screen hamburger menu */}
+        {/* Mobile header */}
         <div className="flex justify-between items-center px-4 sm:px-0">
-          {/* <div className="w-40 border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <a className="font-general-medium block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-              I'm Taylor
-            </a>
-          </div> */}
-
-          {/* <div>
-            <Link to="/">
-              {activeTheme === "dark" ? (
-                <img src={logoDark} className="w-36" alt="Dark Logo" />
-              ) : (
-                <img src={logoLight} className="w-36" alt="Dark Logo" />
-              )}
-            </Link>
-          </div> */}
-
-          {/* Theme switcher small screen */}
-          <div
-            onClick={() => setTheme(activeTheme)}
-            aria-label="Theme Switcher"
-            className="block sm:hidden ml-0 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
+          {/* Theme switcher - mobile */}
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="block sm:hidden bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
-              <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+            <ThemeIcon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+          </button>
+
+          {/* Hamburger menu button */}
+          <button
+            onClick={toggleMenu}
+            type="button"
+            className="sm:hidden focus:outline-none"
+            aria-label={showMenu ? "Close menu" : "Open menu"}
+            aria-expanded={showMenu}
+          >
+            {showMenu ? (
+              <FiX className="h-7 w-7 text-secondary-dark dark:text-ternary-light" />
             ) : (
-              <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+              <FiMenu className="h-7 w-7 text-secondary-dark dark:text-ternary-light" />
             )}
-          </div>
-
-          {/* Small screen hamburger menu */}
-          <div className="sm:hidden">
-            <button
-              onClick={toggleMenu}
-              type="button"
-              className="focus:outline-none"
-              aria-label="Hamburger Menu"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                className="h-7 w-7 fill-current text-secondary-dark dark:text-ternary-light"
-              >
-                {showMenu ? (
-                  <FiX className="text-3xl" />
-                ) : (
-                  <FiMenu className="text-3xl" />
-                )}
-              </svg>
-            </button>
-          </div>
+          </button>
         </div>
 
-        {/* Header links small screen */}
+        {/* Navigation links - mobile */}
         <div
-          className={
-            showMenu
-              ? "block m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none"
-              : "hidden"
-          }
+          className={`${
+            showMenu ? "block" : "hidden"
+          } sm:hidden m-0 mt-5 p-5 shadow-lg`}
         >
-          <Link
-            to="/"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="I'm Taylor"
-          >
-            I'm Taylor
-          </Link>
-          <Link
-            to="/about"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="About Me"
-          >
-            About Me
-          </Link>
-          <Link
-            to="/skills"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="Skills"
-          >
-            Skills
-          </Link>
-          <Link
-            to="/experience"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="Experience"
-          >
-            Experience
-          </Link>
-          <Link
-            to="/projects"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="Projects"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/contact"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="Contact"
-          >
-            Contact
-          </Link>
-          {/* <div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-primary-light dark:border-secondary-dark">
-            <span
-              onClick={showHireMeModal}
-              className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-              aria-label="Hire Me Button"
-            >
-              <Button title="Hire Me" />
-            </span>
-          </div> */}
+          <NavLinks isMobile />
         </div>
 
-        {/* Header links large screen */}
-        <div className="font-general-medium hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none">
-          <Link
-            to="/"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark"
-            aria-label="I'm Taylor"
-          >
-            I'm Taylor
-          </Link>
-          <Link
-            to="/about"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="About Me"
-          >
-            About Me
-          </Link>
-          <Link
-            to="/skills"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="Skills"
-          >
-            Skils
-          </Link>
-          <Link
-            to="/experience"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="Experience"
-          >
-            Experience
-          </Link>
-          <Link
-            to="/projects"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="Projects"
-          >
-            Projects
-          </Link>
-          <Link
-            to="/contact"
-            className="block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
-            aria-label="Contact"
-          >
-            Contact
-          </Link>
+        {/* Navigation links - desktop */}
+        <div className="font-general-medium hidden sm:flex sm:ml-4 mt-3 p-0 justify-center items-center">
+          <NavLinks />
         </div>
 
-        {/* Header right section buttons */}
-        <div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-          {/* <div className="hidden md:flex">
-            <span
-              onClick={showHireMeModal}
-              className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-              aria-label="Hire Me Button"
-            >
-              <Button title="Hire Me" />
-            </span>
-          </div> */}
-
-          {/* Theme switcher large screen */}
-          <div
-            onClick={() => setTheme(activeTheme)}
-            aria-label="Theme Switcher"
+        {/* Theme switcher - desktop */}
+        <div className="hidden sm:flex justify-between items-center">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
             className="ml-8 bg-primary-light dark:bg-ternary-dark p-3 shadow-sm rounded-xl cursor-pointer"
           >
-            {activeTheme === "dark" ? (
-              <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
-            ) : (
-              <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
-            )}
-          </div>
+            <ThemeIcon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+          </button>
         </div>
       </div>
-      {/* Hire me modal */}
-      <div>
-        {showModal ? (
-          <HireMeModal onClose={showHireMeModal} onRequest={showHireMeModal} />
-        ) : null}
-        {showModal ? showHireMeModal : null}
-      </div>
     </motion.nav>
+  );
+};
+
+// Extracted NavLinks component to avoid duplication
+const NavLinks = ({ isMobile = false }) => {
+  const baseClasses =
+    "block text-left text-lg text-primary-dark dark:text-ternary-light hover:text-secondary-dark dark:hover:text-secondary-light";
+  const mobileClasses =
+    "mb-2 border-t-2 pt-3 border-primary-light dark:border-secondary-dark";
+  const desktopClasses = "sm:mx-4 sm:py-2";
+
+  return (
+    <>
+      {NAV_ITEMS.map(({ path, label }) => (
+        <Link
+          key={path}
+          to={path}
+          className={`${baseClasses} ${
+            isMobile ? mobileClasses : desktopClasses
+          }`}
+          aria-label={label}
+        >
+          {label}
+        </Link>
+      ))}
+    </>
   );
 };
 

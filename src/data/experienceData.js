@@ -24,10 +24,10 @@ export const experience = [
   },
   {
     id: 2,
-    company: "Freelance Experience",
-    position: "Freelance Full Stack Developer",
+    company: "HiveCoding",
+    position: "Full Stack Developer",
     startDate: "August 2024",
-    endDate: "Present",
+    endDate: "",
     responsibilities: [
       `Developed and delivered customized web solutions as a Full Stack Developer, focusing on the MERN stack (MongoDB, Express.js, React, Node.js) for diverse clients. Worked independently and collaboratively to meet client needs, including:`,
       `• Designed and built responsive web applications tailored to specific client requirements, ensuring high performance and scalability.`,

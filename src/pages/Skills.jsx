@@ -1,11 +1,10 @@
-/*eslint-disable*/
+// src/pages/Skills.jsx
 import { motion } from "framer-motion";
 import { SkillsYears } from "../components/skills/SkillsYears";
 import { skills } from "../data/skillsData";
 import { SoftSkills } from "../components/skills/SoftSkills";
 import { softSkills } from "../data/softSkillsData";
 import { otherSkills } from "../data/otherSkillsData";
-import { AboutMeProvider } from "../context/AboutMeContext";
 import { useEffect, useState } from "react";
 
 const Skills = () => {
@@ -18,7 +17,7 @@ const Skills = () => {
 
   return (
     <>
-      {url != "skills" ? (
+      {url !== "skills" ? (
         <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
           <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
             Skills & Frameworks

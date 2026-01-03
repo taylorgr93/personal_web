@@ -2,6 +2,18 @@ const colors = require("tailwindcss/colors");
 
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  safelist: [
+    "rounded-2xl",
+    "rounded-3xl",
+    "shadow-2xl",
+    "shadow-xl",
+    "ring-1",
+    "ring-gray-200",
+    "dark:text-ternary-light",
+    "dark:text-gray-300",
+    "dark:text-gray-400",
+    "dark:bg-transparent",
+  ],
   darkMode: "class",
   theme: {
     extend: {

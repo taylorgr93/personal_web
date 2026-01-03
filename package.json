@@ -1,12 +1,17 @@
 {
   "name": "react-tailwindcss-portfolio",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "license": "ISC",
   "keywords": [
     "Christopher Taylor Gonzalez Rivera",
+    "Christopher Taylor Gonzalez",
+    "Christopher Taylor",
     "taylorgr93",
     "taylorgr",
-    "taylor"
+    "taylor",
+    "dev",
+    "developer",
+    "portfolio"
   ],
   "author": "Christopher Taylor Gonzalez Rivera",
   "private": true,
@@ -20,6 +25,7 @@
     "react": "^18.1.0",
     "react-countup": "^6.1.1",
     "react-dom": "^18.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.0.2",
     "react-scripts": "^5.0.1",

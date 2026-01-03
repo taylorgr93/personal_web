@@ -1,20 +1,19 @@
-/*eslint-disable*/
-import React from "react";
+// src/components/experience/ExperienceComponent.jsx
 
 export const ExperienceComponent = ({ experience }) => {
   return (
-    <div className="bg-gray-100 py-8 px-4">
-      {/* <h2 className="text-center text-3xl font-bold mb-6">Experience</h2> */}
+    <div className="py-8 px-4">
       <div className="max-w-7xl mx-auto">
         {experience.map((item) => (
           <div className="mb-8" key={item.id}>
-            <h3 className="text-xl font-semibold mb-2">{item.company}</h3>
-            <p className="text-lg text-gray-600 mb-1">{item.position}</p>
-            <p className="text-gray-500 mb-2">
+            <h3 className="text-2xl font-semibold mb-2 text-ternary-dark dark:text-ternary-light">
+              {item.position} - {item.company}
+            </h3>
+            <p className="text-lg mb-2 text-gray-500 dark:text-gray-400">
               {`${item.startDate} - ${item.endDate}`}
             </p>
-            <ul className="list-disc list-inside mb-4">
-              {item.responsibilities.map((responsibility, index) => (
+            <ul className="list-disc list-inside mb-4 space-y-1 text-ternary-dark dark:text-ternary-light">
+              {item.responsibilities.map((responsibility) => (
                 <li key={item.id + responsibility}>{responsibility}</li>
               ))}
             </ul>
