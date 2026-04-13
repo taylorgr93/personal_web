@@ -10,7 +10,8 @@
       "Bash(npm test:*)",
       "Bash(npm run:*)",
       "Bash(git checkout:*)",
-      "Bash(git merge:*)"
+      "Bash(git merge:*)",
+      "Bash(curl -s http://localhost:3000)"
     ]
   }
 }
