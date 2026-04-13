@@ -1,7 +1,12 @@
 /*eslint-disable*/
+import InvertuntelesImg from "../images/web-project-8.png";
+import Invertuneles2 from "../images/invertuneles2.png";
+import Invertuneles3 from "../images/invertuneles3.png";
 import ChecktonImg from "../images/web-project-3.png";
 import checkton2 from "../images/checkton2.png";
 import checkton3 from "../images/checkton3.png";
+import RtspImg from "../images/web-project-4.png";
+import DataCenterImg from "../images/web-project-5.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
 import transportescolimenses2 from "../images/transportescolimenses2.png";
@@ -232,14 +237,132 @@ export const singleProjectDataArray = [
     ProjectHeader: {
       title: "RTSP ABSA Industrial",
       publishDate: "Aug 12, 2021",
-      tags: "Frontend",
+      tags: "Web Application",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "RTSP ABSA Industrial UI",
+        img: RtspImg,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "ABSA Industrial",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "Manufacturing / Packaging",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a web application to visualize and record production line incident videos in real time, allowing operators to capture events triggered by a keyboard shortcut and automatically upload the footage to the cloud for later review.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "React",
+            "JavaScript",
+            "RTSP Streaming",
+            "AWS S3",
+            "Node.js",
+            "Docker",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "The main challenge was integrating an RTSP video stream directly into the browser to display live footage from production line cameras, ensuring low latency for real-time incident monitoring.",
+        },
+        {
+          id: 2,
+          details:
+            "A key feature was enabling operators to trigger a video recording using a specific keyboard shortcut sequence, capturing the incident in progress and uploading the clip automatically to AWS S3 for storage and review.",
+        },
+        {
+          id: 3,
+          details:
+            "The interface needed to be intuitive and reliable in a demanding industrial environment, where operators had to react quickly to production line events without interrupting the workflow.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
     },
   },
   {
     ProjectHeader: {
-      title: "DataCenter",
+      title: "DataCenter & Facedn",
       publishDate: "Aug 12, 2021",
-      tags: "Backend",
+      tags: "IoT / Backend",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "DataCenter Dashboard",
+        img: DataCenterImg,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Project",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "DataCenter & Facedn",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "IoT / Industry 4.0",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Develop a set of IoT microservices running on Raspberry Pi gateways to manage network configuration, file system encryption, hardware indicators, and integrate communication with GPS devices, Motorola RF radios, and facial recognition cameras with cloud synchronization.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Node.js",
+            "Docker",
+            "Raspberry Pi",
+            "Linux (Ubuntu / Raspbian / Manjaro)",
+            "GPS API",
+            "Motorola RF API",
+            "AWS S3",
+            "IoT",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Built microservices deployed on Raspberry Pi gateways to handle dynamic network configuration (DHCP and static IP), file system encryption, and LED status indicators — all running on constrained hardware in industrial environments.",
+        },
+        {
+          id: 2,
+          details:
+            "Integrated REST APIs for GPS location services and Motorola RF communication radios, enabling real-time asset tracking and wireless communication between field devices and the central platform.",
+        },
+        {
+          id: 3,
+          details:
+            "Developed the communication layer between facial recognition cameras (Facedn) and the cloud, handling image synchronization and event reporting to AWS S3 for storage and further processing.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
     },
   },
   {
@@ -285,14 +408,23 @@ export const singleProjectDataArray = [
         },
         {
           id: 4,
-          title: "Phone",
-          details: "312 311 6372 / 333 811 3031",
+          title: "WhatsApp",
+          details: "+52 312 311 6372",
+        },
+        {
+          id: 6,
+          title: "WhatsApp",
+          details: "+52 333 811 3031",
         },
         {
           id: 5,
           title: "Email",
-          details:
-            "colima@transportescolimenses.mx / gdl@transportescolimenses.mx",
+          details: "colima@transportescolimenses.mx",
+        },
+        {
+          id: 7,
+          title: "Email",
+          details: "gdl@transportescolimenses.mx",
         },
       ],
       ObjectivesHeading: "Objective",
@@ -344,6 +476,87 @@ export const singleProjectDataArray = [
         //   url: "https://www.facebook.com/Conboleto/?locale=es_LA",
         // },
       ],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Invertúneles",
+      publishDate: "Jul 1, 2025",
+      tags: "Web Application",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Invertúneles Corporate Website",
+        img: InvertuntelesImg,
+      },
+      {
+        id: 2,
+        title: "Invertúneles Corporate Website",
+        img: Invertuneles2,
+      },
+      {
+        id: 3,
+        title: "Invertúneles Corporate Website",
+        img: Invertuneles3,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Invertúneles",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "Agriculture / Protected Structures",
+        },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://www.invertuneles.com",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a multilingual corporate website (Spanish/English) for an agricultural protected structures company, showcasing their product catalog of tunnel solutions, company values, and enabling customer inquiries via email quotation and WhatsApp contact.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Next.js 16+",
+            "React",
+            "TypeScript",
+            "i18n",
+            "SEO",
+            "Email Integration",
+            "WhatsApp API",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Implemented full internationalization (i18n) for seamless Spanish/English language switching with localized content, ensuring both the UI and SEO metadata were correctly adapted for each language.",
+        },
+        {
+          id: 2,
+          details:
+            "Developed a responsive product catalog with video integration to showcase agricultural tunnel solutions, requiring careful optimization for performance across mobile and desktop devices.",
+        },
+        {
+          id: 3,
+          details:
+            "Integrated an email quotation system and a WhatsApp contact button to streamline customer inquiries, and optimized the site's SEO for agricultural industry keywords to improve search visibility.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
     },
   },
 ];

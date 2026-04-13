@@ -51,6 +51,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://taylorgr93.com/projects/single-project/6</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://taylorgr93.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

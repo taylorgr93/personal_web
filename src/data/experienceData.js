@@ -24,19 +24,16 @@ export const experience = [
   },
   {
     id: 2,
-    company: "HiveCoding",
+    company: "Freelance",
     position: "Full Stack Developer",
     startDate: "August 2024",
-    endDate: "",
+    endDate: "Present",
     responsibilities: [
-      `Developed and delivered customized web solutions as a Full Stack Developer, focusing on the MERN stack (MongoDB, Express.js, React, Node.js) for diverse clients. Worked independently and collaboratively to meet client needs, including:`,
-      `• Designed and built responsive web applications tailored to specific client requirements, ensuring high performance and scalability.`,
-      `• Collaborated with clients to refine project scope, timelines, and deliverables, providing ongoing support and updates as needed.`,
-      // `• Developed RESTful APIs for various applications, enhancing data integration and user experience.`,
-      // `• Managed cloud services and deployments using AWS, improving application reliability and availability.`,
-      // `• Utilized Docker and Docker Compose for containerization, facilitating seamless development, testing, and deployment workflows.`
-      // `• Integrated CI/CD pipelines to streamline deployments, resulting in more efficient and reliable release processes.`
-      // `• Collaborated with clients to refine project scope, timelines, and deliverables, providing ongoing support and updates as needed.`
+      `Delivering custom web solutions for startups and small businesses as a freelance Full Stack Developer under HiveCoding. Specialized in Next.js, React, and TypeScript to build modern, scalable corporate websites and web applications.`,
+      `• Invertúneles (Apr–Jul 2025): Built a multilingual corporate website (Spanish/English) for an agricultural protected structures company using Next.js 16+. Implemented i18n, a responsive product catalog with video integration, email quotation system, and WhatsApp contact.`,
+      `• Transportes Colimenses (Aug–Sep 2024): Developed a comprehensive corporate website for a freight transportation company using Next.js 14+. Implemented multi-section layout, external client portal integration, interactive routes map, and social media integration.`,
+      `• Managed full project lifecycle: requirements gathering, technical scoping, development, deployment on Vercel, and post-launch support.`,
+      `• Optimized SEO for each project to improve search visibility in their respective industries.`,
     ],
   },
   {

@@ -4,6 +4,7 @@ import WebImage4 from "../images/web-project-4.png";
 import WebImage5 from "../images/web-project-5.png";
 import WebImage6 from "../images/web-project-6.png";
 import WebImage7 from "../images/web-project-7.png";
+import WebImage8 from "../images/web-project-8.png";
 
 export const projectsData = [
   {
@@ -29,7 +30,7 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "DataCenter",
+    title: "DataCenter & Facedn",
     url: "datacenter",
     category: "Backend Development",
     img: WebImage5,
@@ -40,6 +41,13 @@ export const projectsData = [
     url: "transportes_colimenses",
     category: "Web Application",
     img: WebImage7,
+  },
+  {
+    id: 6,
+    title: "Invertúneles",
+    url: "invertuneles",
+    category: "Web Application",
+    img: WebImage8,
   },
 ];
 
