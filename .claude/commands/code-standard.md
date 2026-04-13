@@ -70,6 +70,9 @@ Review the code I just wrote or modified against the conventions of this project
 
 ---
 
+### 9. Git commits
+- Never add `Co-Authored-By: Claude` or any AI co-author trailer to commit messages.
+
 After reviewing, report:
 1. Issues found with file and line number reference
 2. Fixes applied
