@@ -108,6 +108,10 @@ The `SEO` component (`src/components/SEO.jsx`) accepts the following props:
 
 Use it at the top of every page.
 
+## Git Commits
+
+- Never add `Co-Authored-By: Claude` or any AI co-author trailer to commit messages.
+
 ## Git Branches
 
 - `main` — production (do not push directly)
