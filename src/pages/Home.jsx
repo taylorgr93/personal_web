@@ -1,4 +1,3 @@
-/*eslint-disable*/
 // src/pages/Home.jsx
 import SEO from "../components/SEO";
 import About from "./AboutMe";

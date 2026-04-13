@@ -13,8 +13,8 @@ const About = () => {
     <AboutMeProvider>
       {isStandalonePage && (
         <SEO
-          title="About Taylor | Full Stack Developer"
-          description="Learn about Taylor's journey as a Full Stack Developer with 5+ years of experience in React, Node.js, and IoT solutions."
+          title="About | Taylor - Software Engineer"
+          description="Learn about Taylor's journey as a Software Engineer with 6+ years of experience in Full Stack development, IoT, and Industry 4.0 solutions."
           path="/about"
         />
       )}

@@ -1,22 +1,29 @@
 // src/pages/Skills.jsx
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 import { SkillsYears } from "../components/skills/SkillsYears";
-import { skills } from "../data/skillsData";
 import { SoftSkills } from "../components/skills/SoftSkills";
+import { skills } from "../data/skillsData";
 import { softSkills } from "../data/softSkillsData";
 import { otherSkills } from "../data/otherSkillsData";
-import { useEffect, useState } from "react";
 
 const Skills = () => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    // console.log(window.location.href.split("/").pop());
     setUrl(window.location.href.split("/").pop());
   }, []);
 
   return (
     <>
+      {url === "skills" && (
+        <SEO
+          title="Skills | Taylor - Software Engineer"
+          description="Technical skills of Taylor: JavaScript, React, Node.js, TypeScript, Docker, AWS and more. 6+ years of experience in Full Stack and IoT development."
+          path="/skills"
+        />
+      )}
       {url !== "skills" ? (
         <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
           <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">

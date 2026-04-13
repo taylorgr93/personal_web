@@ -1,20 +1,26 @@
-/*eslint-disable*/
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import SEO from "../components/SEO";
 import { ExperienceComponent } from "../components/experience/ExperienceComponent";
 import { experience } from "../data/experienceData";
-import { useEffect, useState } from "react";
 
 const Experience = () => {
   const [url, setUrl] = useState("");
 
   useEffect(() => {
-    // console.log(window.location.href.split("/").pop());
     setUrl(window.location.href.split("/").pop());
   }, []);
 
   return (
     <>
-      {url != "experience" ? (
+      {url === "experience" && (
+        <SEO
+          title="Experience | Taylor - Software Engineer"
+          description="Work history of Taylor: Software Engineer at Knesys Plus, Full Stack Developer at HiveCoding, and more. 6+ years building web and IoT solutions."
+          path="/experience"
+        />
+      )}
+      {url !== "experience" ? (
         <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
           <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
             Experience

@@ -1,10 +1,30 @@
-/*eslint-disable*/
+// src/pages/ProjectSingle.jsx
+import { useContext } from "react";
+import { useParams } from "react-router-dom";
+import { motion } from "framer-motion";
+import SingleProjectContext, { SingleProjectProvider } from "../context/SingleProjectContext";
+import SEO from "../components/SEO";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import ProjectHeader from "../components/projects/ProjectHeader";
 import ProjectInfo from "../components/projects/ProjectInfo";
-import ProjectRelatedProjects from "../components/projects/ProjectRelatedProjects";
-import { SingleProjectProvider } from "../context/SingleProjectContext";
-import { motion } from "framer-motion";
+// import ProjectRelatedProjects from "../components/projects/ProjectRelatedProjects";
+
+const ProjectSingleSEO = () => {
+  const { singleProjectData } = useContext(SingleProjectContext);
+  const { id } = useParams();
+
+  if (!singleProjectData) return null;
+
+  const { title, tags } = singleProjectData.ProjectHeader;
+
+  return (
+    <SEO
+      title={`${title} | Taylor - Software Engineer`}
+      description={`${title} — ${tags} project developed by Taylor. Full Stack Developer with 6+ years of experience building modern web solutions.`}
+      path={`/projects/single-project/${id}`}
+    />
+  );
+};
 
 const ProjectSingle = () => {
   return (
@@ -19,6 +39,7 @@ const ProjectSingle = () => {
       className="container mx-auto mt-5 sm:mt-10"
     >
       <SingleProjectProvider>
+        <ProjectSingleSEO />
         <ProjectHeader />
         <ProjectGallery />
         <ProjectInfo />
