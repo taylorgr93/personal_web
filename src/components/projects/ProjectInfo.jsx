@@ -24,20 +24,45 @@ const ProjectInfo = () => {
                   key={info.id}
                 >
                   <span>{info.title}: </span>
-                  {/* <a
-                    href="https://stoman.me"
-                    className={
-                      info.title === "Website" || info.title === "Email" || info.title === "Email"
-                        ? "hover:underline hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer duration-300"
-                        : ""
-                    }
-                    aria-label="Project Website and Phone"
-                  >
-                    {info.details}
-                  </a> */}
-                  <span className={"hover:text-indigo-500"}>
-                    {info.details}
-                  </span>
+                  {info.title === "Website" ? (
+                    <a
+                      href={info.details}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${info.details}`}
+                      className="underline text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 cursor-pointer duration-300"
+                    >
+                      {info.details}
+                    </a>
+                  ) : info.title === "Email" ? (
+                    <a
+                      href={`mailto:${info.details}`}
+                      aria-label={`Send email to ${info.details}`}
+                      className="underline text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 cursor-pointer duration-300"
+                    >
+                      {info.details}
+                    </a>
+                  ) : info.title === "Phone" ? (
+                    <a
+                      href={`tel:${info.details}`}
+                      aria-label={`Call ${info.details}`}
+                      className="underline text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 cursor-pointer duration-300"
+                    >
+                      {info.details}
+                    </a>
+                  ) : info.title === "WhatsApp" ? (
+                    <a
+                      href={`https://wa.me/${info.details.replace(/[\s\-+()]/g, "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`WhatsApp ${info.details}`}
+                      className="underline text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 cursor-pointer duration-300"
+                    >
+                      {info.details}
+                    </a>
+                  ) : (
+                    <span>{info.details}</span>
+                  )}
                 </li>
               );
             })}

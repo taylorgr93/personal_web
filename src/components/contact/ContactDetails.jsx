@@ -21,17 +21,19 @@ const contacts = [
     id: 2,
     name: "taylorgr@outlook.com",
     icon: <FiMail />,
-    // link: "taylorgr@outlook.com",
+    link: "mailto:taylorgr@outlook.com",
   },
   {
     id: 3,
     name: "+52 33 3172 8350",
     icon: <FaWhatsapp />,
+    link: "https://wa.me/523331728350",
   },
   {
     id: 4,
     name: "+1 657 281 0607",
     icon: <FiMessageSquare />,
+    link: "sms:+16572810607",
   },
   {
     id: 5,
