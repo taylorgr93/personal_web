@@ -16,6 +16,7 @@ const About = () => {
           title="About | Taylor - Software Engineer"
           description="Learn about Taylor's journey as a Software Engineer with 6+ years of experience in Full Stack development, IoT, and Industry 4.0 solutions."
           path="/about"
+          noindex={true}
         />
       )}
 

@@ -2,7 +2,9 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
-import SingleProjectContext, { SingleProjectProvider } from "../context/SingleProjectContext";
+import SingleProjectContext, {
+  SingleProjectProvider,
+} from "../context/SingleProjectContext";
 import SEO from "../components/SEO";
 import ProjectGallery from "../components/projects/ProjectGallery";
 import ProjectHeader from "../components/projects/ProjectHeader";
@@ -22,6 +24,7 @@ const ProjectSingleSEO = () => {
       title={`${title} | Taylor - Software Engineer`}
       description={`${title} — ${tags} project developed by Taylor. Full Stack Developer with 6+ years of experience building modern web solutions.`}
       path={`/projects/single-project/${id}`}
+      noindex={true}
     />
   );
 };

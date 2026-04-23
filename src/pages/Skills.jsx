@@ -1,5 +1,5 @@
 // src/pages/Skills.jsx
-import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import { SkillsYears } from "../components/skills/SkillsYears";
@@ -9,30 +9,26 @@ import { softSkills } from "../data/softSkillsData";
 import { otherSkills } from "../data/otherSkillsData";
 
 const Skills = () => {
-  const [url, setUrl] = useState("");
-
-  useEffect(() => {
-    setUrl(window.location.href.split("/").pop());
-  }, []);
+  const location = useLocation();
+  const isStandalonePage = location.pathname === "/skills";
 
   return (
     <>
-      {url === "skills" && (
+      {isStandalonePage ? (
         <SEO
           title="Skills | Taylor - Software Engineer"
           description="Technical skills of Taylor: JavaScript, React, Node.js, TypeScript, Docker, AWS and more. 6+ years of experience in Full Stack and IoT development."
           path="/skills"
+          noindex={true}
         />
-      )}
-      {url !== "skills" ? (
-        <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
-          <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
-            Skills & Frameworks
-          </p>
-        </div>
       ) : (
-        <></>
+        <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
+          <h2 className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+            Skills & Frameworks
+          </h2>
+        </div>
       )}
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -42,15 +38,14 @@ const Skills = () => {
           delay: 0.1,
         }}
         className="container mx-auto flex flex-wrap"
-        // className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-10 bg-gray-600"
       >
         <SkillsYears skills={skills} />
       </motion.div>
 
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+        <h2 className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
           Other Skills & Tools
-        </p>
+        </h2>
       </div>
       <motion.div
         initial={{ opacity: 0 }}
@@ -66,9 +61,9 @@ const Skills = () => {
       </motion.div>
 
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
-        <p className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
+        <h2 className="font-general-medium text-2xl sm:text-4xl mb-1 text-ternary-dark dark:text-ternary-light">
           Soft Skills
-        </p>
+        </h2>
       </div>
       <motion.div
         initial={{ opacity: 0 }}

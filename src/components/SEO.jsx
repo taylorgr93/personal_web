@@ -7,6 +7,7 @@ const SEO = ({
   path = "",
   image = "/og-image.png",
   type = "website",
+  noindex = false,
 }) => {
   const siteUrl = "https://taylorgr93.com";
   const fullUrl = `${siteUrl}${path}`;
@@ -14,6 +15,12 @@ const SEO = ({
 
   return (
     <Helmet>
+      {/* Robots - noindex if specified */}
+      <meta
+        name="robots"
+        content={noindex ? "noindex, nofollow" : "index, follow"}
+      />
+
       {/* Primary Meta Tags */}
       <title>{title}</title>
       <meta name="title" content={title} />
