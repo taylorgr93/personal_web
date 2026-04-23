@@ -110,7 +110,11 @@ Use it at the top of every page.
 
 ## Git Commits
 
+- Use **conventional commits** format: `type(scope): description`
+  - Types: `feat`, `fix`, `chore`, `refactor`, `docs`, `test`, `style`, `perf`, `ci`
+  - Scope is optional but recommended (e.g. `feat(projects):`, `fix(seo):`)
 - Never add `Co-Authored-By: Claude` or any AI co-author trailer to commit messages.
+- When changes span multiple unrelated concerns, create **separate commits** for each — do not squash everything into one.
 
 ## Git Branches
 
