@@ -19,6 +19,7 @@ Analyze all current changes and create a commit with a clear, concise message.
    - Is 1-2 sentences max
    - Does NOT include any `Co-Authored-By` trailer
 7. Commit the changes.
-8. Show the resulting `git log --oneline -1` to confirm.
+8. Push to the current branch: `git push origin HEAD`.
+9. Show the resulting `git log --oneline -1` to confirm.
 
 If there are no changes to commit, say so and stop.
