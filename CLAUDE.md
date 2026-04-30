@@ -5,24 +5,22 @@ Production URL: `https://taylorgr93.com`
 
 ## Tech Stack
 
-- **Framework**: React 18 (Create React App)
+- **Framework**: React 18 (Vite)
 - **Routing**: React Router v6
 - **Styles**: TailwindCSS v3 + custom CSS (`src/css/App.css`)
 - **Animations**: Framer Motion
 - **SEO**: react-helmet-async (`src/components/SEO.jsx`)
 - **Icons**: react-icons
-- **Testing**: Jest + React Testing Library
+- **Testing**: Vitest + React Testing Library
 
 ## Main Commands
 
 ```bash
-npm start          # Development server (port 3000)
-npm run build      # Production build
-npm test           # Run tests
-npm run build:css  # Recompile TailwindCSS with PostCSS
+npm run dev        # Development server (port 3000)
+npm run build      # Production build (Vite)
+npm run preview    # Preview production build
+npm test           # Run tests (Vitest)
 ```
-
-> `yarn` or `npm` can be used interchangeably.
 
 ## Project Structure
 
@@ -67,7 +65,7 @@ All site content lives here. To update personal information, **edit only these f
 | `otherSkillsData.js` | Other skills |
 | `experienceData.js` | Work history (company, position, dates, responsibilities) |
 | `projects.js` | Projects list (id, title, URL, category, image) |
-| `singleProjectData.js` / `singleProjectDataArray.js` | Individual project details |
+| `singleProjectData.jsx` / `singleProjectDataArray.jsx` | Individual project details (`.jsx` because they contain react-icons) |
 | `clientsData.js` | Clients / logos |
 
 ## Design System (TailwindCSS)
@@ -118,8 +116,7 @@ Use it at the top of every page.
 
 ## Git Branches
 
-- `main` — production (do not push directly)
-- `develop` — active development (default branch for day-to-day work)
+- `main` — production and active development (push directly)
 
 ## Code Standards
 
@@ -170,6 +167,6 @@ Use it at the top of every page.
 ## Important Notes
 
 - `Home.jsx` loads all sections as components within a single page (single-page approach). Individual routes (`/about`, etc.) also exist for direct access.
-- `App.js` uses `React.lazy` + `Suspense` for code splitting across all pages.
+- `App.jsx` uses `React.lazy` + `Suspense` for code splitting across all pages.
 - Project images are imported in `src/data/projects.js` from `src/images/`.
 - There is no custom backend; the contact form requires integration with an external service (see `src/components/contact/ContactForm.jsx`).
