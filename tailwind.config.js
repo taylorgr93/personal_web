@@ -1,7 +1,5 @@
-const colors = require("tailwindcss/colors");
-
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   safelist: [
     "rounded-2xl",
     "rounded-3xl",
@@ -40,5 +38,5 @@ module.exports = {
   variants: {
     extend: { opacity: ["disabled"] },
   },
-  plugins: ["@tailwindcss/forms"],
+  plugins: [require("@tailwindcss/forms")],
 };
