@@ -11,13 +11,16 @@ Production URL: `https://taylorgr93.com`
 - **Animations**: Framer Motion
 - **SEO**: react-helmet-async (`src/components/SEO.jsx`)
 - **Icons**: react-icons
-- **Testing**: Vitest + React Testing Library
+- **Scroll**: react-scroll (smooth scrolling)
+- **Counters**: react-countup (animated number counters)
+- **Styled Components**: styled-components (used in select components)
+- **Testing**: Vitest + React Testing Library + jsdom
 
 ## Main Commands
 
 ```bash
 npm run dev        # Development server (port 3000)
-npm run build      # Production build (Vite)
+npm run build      # Production build (Vite, output: build/)
 npm run preview    # Preview production build
 npm test           # Run tests (Vitest)
 ```
@@ -28,8 +31,14 @@ npm test           # Run tests (Vitest)
 src/
   pages/           # Route-level views (Home, AboutMe, Skills, Experience, Projects, Contact, ProjectSingle)
   components/
+    SEO.jsx        # Shared SEO/meta component (react-helmet-async)
+    Loading.jsx    # Suspense fallback spinner
+    NotFound.jsx   # 404 page
+    HireMeModal.jsx # Hire-me contact modal
+    ScrollToTop.jsx # Scrolls to top on route change
+    BackToTop.jsx  # Back-to-top utility
     shared/        # AppHeader, AppFooter, AppBanner, AppFooterCopyright
-    about/         # AboutMeBio, AboutClients, AboutCounter, CounterItem
+    about/         # AboutMeBio, AboutClients, AboutClientSingle, AboutCounter, CounterItem
     projects/      # ProjectsGrid, ProjectsFilter, ProjectSingle, ProjectHeader, ProjectInfo, ProjectGallery, ProjectRelatedProjects
     skills/        # SkillsYears, SoftSkills
     experience/    # ExperienceComponent
@@ -38,7 +47,10 @@ src/
   data/            # Static content source of truth (see Data section)
   context/         # ProjectsContext, SingleProjectContext, AboutMeContext
   hooks/           # useThemeSwitcher, useScrollToTop
-  css/             # App.css (GeneralSans fonts), tailwind.css
+  css/             # App.css (GeneralSans fonts), tailwind.css, Loading.css, NotFound.css
+  fonts/           # GeneralSans font files (variable + static weights, all formats)
+  images/          # Project screenshots and brand logos
+  __tests__/       # Test files (Modal.test.jsx, Banner.test.jsx)
 ```
 
 ## Application Routes
@@ -52,6 +64,7 @@ src/
 | `/projects` | `Projects` |
 | `/projects/single-project/:id` | `ProjectSingle` |
 | `/contact` | `Contact` |
+| `*` | `NotFound` (404 catch-all) |
 
 ## Data Files (`src/data/`)
 
@@ -92,6 +105,12 @@ Always use classes like `dark:bg-primary-dark dark:text-ternary-light`.
 Main font: **GeneralSans** (variable font, defined in `src/css/App.css`).
 Utility classes: `font-general-regular`, `font-general-medium`, `font-general-semibold`, `font-general-bold`, etc.
 
+### Tailwind Config Notes
+
+- **Safelist**: Several utility classes are safelisted (`rounded-2xl`, `shadow-2xl`, `ring-1`, dark variants) to prevent purging.
+- **Container**: Custom responsive padding defined (`DEFAULT: 1rem`, `sm: 2rem`, `lg: 5rem`, `xl/2xl: 6rem`).
+- **Plugin**: `@tailwindcss/forms` is enabled for form element styling.
+
 ## SEO
 
 The `SEO` component (`src/components/SEO.jsx`) accepts the following props:
@@ -103,6 +122,7 @@ The `SEO` component (`src/components/SEO.jsx`) accepts the following props:
 | `path` | Relative path (e.g. `"/about"`) | `""` |
 | `image` | Open Graph image | `"/og-image.png"` |
 | `type` | Open Graph type | `"website"` |
+| `noindex` | Prevent search engine indexing | `false` |
 
 Use it at the top of every page.
 
@@ -167,6 +187,7 @@ Use it at the top of every page.
 ## Important Notes
 
 - `Home.jsx` loads all sections as components within a single page (single-page approach). Individual routes (`/about`, etc.) also exist for direct access.
-- `App.jsx` uses `React.lazy` + `Suspense` for code splitting across all pages.
+- `App.jsx` uses `React.lazy` + `Suspense` for code splitting across all pages, with `Loading` as the fallback.
+- Vite build outputs to `build/` (not the default `dist/`), configured in `vite.config.js`.
 - Project images are imported in `src/data/projects.js` from `src/images/`.
 - There is no custom backend; the contact form requires integration with an external service (see `src/components/contact/ContactForm.jsx`).
