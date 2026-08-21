@@ -35,9 +35,9 @@ const AppBanner = () => {
           className="font-general-medium mt-4 text-lg md:text-xl lg:text-2xl xl:text-3xl text-center sm:text-left leading-normal text-gray-500 dark:text-gray-200"
         >
           Software Engineer
-          {/* <span className="block text-base md:text-lg lg:text-xl text-gray-400 dark:text-gray-400 mt-2">
-            Node.js • TypeScript • React
-          </span> */}
+          <span className="block text-base md:text-lg lg:text-xl text-gray-400 dark:text-gray-400 mt-2">
+            React · Node.js · TypeScript · Next.js
+          </span>
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -71,10 +71,7 @@ const AppBanner = () => {
         <img
           src={taylorPhoto}
           alt="Taylor - Software Engineer"
-          style={{
-            borderRadius: "16px",
-            boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-          }}
+          className="rounded-2xl shadow-2xl"
         />
       </motion.div>
     </motion.section>
