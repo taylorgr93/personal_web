@@ -1,7 +1,7 @@
 // src/components/shared/AppBanner.jsx
 import { motion } from "framer-motion";
 import { FiArrowDownCircle } from "react-icons/fi";
-import taylorPhoto from "../../images/TaylorCHI.png";
+import taylorPhoto from "../../images/TaylorProfile.png";
 
 const AppBanner = () => {
   return (
