@@ -109,3 +109,6 @@ build
 
 # Compiled Tailwind CSS (Vite handles PostCSS at build time)
 src/css/main.css
+
+# Project TODO (local only)
+TODO.md
