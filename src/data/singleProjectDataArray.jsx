@@ -7,7 +7,9 @@ import checkton2 from "../images/checkton2.png";
 import checkton3 from "../images/checkton3.png";
 import RtspImg from "../images/rtsp/rtsp1.png";
 import Rtsp2 from "../images/rtsp/rtsp2.png";
-import DataCenterImg from "../images/web-project-5.png";
+import DataCenterImg from "../images/datacenter/datacenter1.png";
+import DataCenter2 from "../images/datacenter/datacenter2.png";
+import DataCenter4 from "../images/datacenter/datacenter4.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
 import transportescolimenses2 from "../images/transportescolimenses2.png";
@@ -312,14 +314,95 @@ export const singleProjectDataArray = [
   },
   {
     ProjectHeader: {
-      title: "DataCenter & Facedn",
+      title: "DataCenter",
       publishDate: "Aug 12, 2021",
       tags: "IoT / Backend",
     },
     ProjectImages: [
       {
         id: 1,
+        title: "DataCenter Login",
+        img: DataCenterImg,
+      },
+      {
+        id: 2,
         title: "DataCenter Dashboard",
+        img: DataCenter2,
+      },
+      {
+        id: 3,
+        title: "DataCenter Devices",
+        img: DataCenter4,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Project",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "DataCenter",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "IoT / Industry 4.0",
+        },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://app.knesysplus.com/datacenter/Account/Login",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build the OS-provisioning and hardware I/O microservices — cmdSO, rgbcontrol, and gpioctl — for a containerized IoT gateway running on Raspberry Pi, as part of a larger multi-service platform covering Bluetooth/BLE, RTSP streaming, and monitoring.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Node.js",
+            "Docker",
+            "Docker Compose",
+            "Raspberry Pi",
+            "Linux (Ubuntu / Raspbian / Manjaro)",
+            "GPIO",
+            "systemd",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Built cmdSO, an OS-provisioning microservice that runs system-level setup directly on the gateway — dynamic network configuration (DHCP and static IP via dhcpcd) and other host-level tasks — from inside a container with access to system resources like dbus and systemd.",
+        },
+        {
+          id: 2,
+          details:
+            "Built rgbcontrol, which drives the gateway's physical RGB LED indicators, turning internal service and connectivity status into visual feedback operators can read directly off the hardware.",
+        },
+        {
+          id: 3,
+          details:
+            "Built gpioctl, the microservice behind the gateway's physical button: it debounces the GPIO signal, triggers a factory reset over SSH after a 10-second hold, and cycles the Bluetooth stack between peripheral (Bleno) and central (Noble) mode on a triple-press, relaying each state change to rgbcontrol so the RGB LED reflects what's happening.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Facedn",
+      publishDate: "Aug 12, 2021",
+      tags: "IoT / Computer Vision",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Facedn",
         img: DataCenterImg,
       },
     ],
@@ -329,7 +412,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           title: "Name",
-          details: "DataCenter & Facedn",
+          details: "Facedn",
         },
         {
           id: 2,
@@ -339,20 +422,11 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Develop a set of IoT microservices running on Raspberry Pi gateways to manage network configuration, file system encryption, hardware indicators, and integrate communication with GPS devices, Motorola RF radios, and facial recognition cameras with cloud synchronization.",
+        "Build the communication layer between facial recognition cameras and the cloud, handling image synchronization and event reporting for storage and further processing.",
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: [
-            "Node.js",
-            "Docker",
-            "Raspberry Pi",
-            "Linux (Ubuntu / Raspbian / Manjaro)",
-            "GPS API",
-            "Motorola RF API",
-            "AWS S3",
-            "IoT",
-          ],
+          techs: ["Node.js", "Docker", "AWS S3", "IoT"],
         },
       ],
       ProjectDetailsHeading: "Challenge",
@@ -360,17 +434,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Built microservices deployed on Raspberry Pi gateways to handle dynamic network configuration (DHCP and static IP), file system encryption, and LED status indicators — all running on constrained hardware in industrial environments.",
-        },
-        {
-          id: 2,
-          details:
-            "Integrated REST APIs for GPS location services and Motorola RF communication radios, enabling real-time asset tracking and wireless communication between field devices and the central platform.",
-        },
-        {
-          id: 3,
-          details:
-            "Developed the communication layer between facial recognition cameras (Facedn) and the cloud, handling image synchronization and event reporting to AWS S3 for storage and further processing.",
+            "Developed the communication layer between facial recognition cameras and the cloud, handling image synchronization and event reporting to AWS S3 for storage and further processing.",
         },
       ],
       SocialSharingHeading: "",

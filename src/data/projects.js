@@ -1,5 +1,6 @@
 import WebImage3 from "../images/web-project-3.png";
 import Rtsp1 from "../images/rtsp/rtsp1.png";
+import DataCenter1 from "../images/datacenter/datacenter1.png";
 import WebImage5 from "../images/web-project-5.png";
 import WebImage6 from "../images/web-project-6.png";
 import WebImage7 from "../images/web-project-7.png";
@@ -41,16 +42,27 @@ export const projectsData = [
   },
   {
     id: 4,
-    title: "DataCenter & Facedn",
+    title: "DataCenter",
     url: "datacenter",
     category: "IoT Platform",
-    img: WebImage5,
+    img: DataCenter1,
     description:
-      "IoT microservices on Raspberry Pi gateways for GPS tracking, facial recognition cameras, and RF communication.",
-    technologies: ["Node.js", "Docker", "Raspberry Pi", "GPS API", "AWS S3"],
+      "OS provisioning and hardware I/O microservices (network config, RGB status LEDs, GPIO sensors) for a containerized Bluetooth IoT gateway on Raspberry Pi.",
+    technologies: ["Node.js", "Docker", "Raspberry Pi", "GPIO", "Linux"],
+    liveUrl: "https://app.knesysplus.com/datacenter/Account/Login",
   },
   {
     id: 5,
+    title: "Facedn",
+    url: "facedn",
+    category: "IoT Platform",
+    img: WebImage5,
+    description:
+      "Cloud communication layer for facial recognition cameras, handling image synchronization and event reporting to AWS S3.",
+    technologies: ["Node.js", "Docker", "AWS S3", "IoT"],
+  },
+  {
+    id: 6,
     title: "Transportes Colimenses",
     url: "transportes_colimenses",
     category: "Corporate Website",
@@ -61,7 +73,7 @@ export const projectsData = [
     liveUrl: "https://www.transportescolimenses.mx",
   },
   {
-    id: 6,
+    id: 7,
     title: "Invertúneles",
     url: "invertuneles",
     category: "Corporate Website",
