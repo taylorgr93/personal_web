@@ -10,6 +10,7 @@ import Rtsp2 from "../images/rtsp/rtsp2.png";
 import DataCenterImg from "../images/datacenter/datacenter1.png";
 import DataCenter2 from "../images/datacenter/datacenter2.png";
 import DataCenter4 from "../images/datacenter/datacenter4.png";
+import Facedn1 from "../images/facedn/facedn1.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
 import transportescolimenses2 from "../images/transportescolimenses2.png";
@@ -362,6 +363,7 @@ export const singleProjectDataArray = [
           title: "Tools & Technologies",
           techs: [
             "Node.js",
+            "Express.js",
             "Docker",
             "Docker Compose",
             "Raspberry Pi",
@@ -395,15 +397,15 @@ export const singleProjectDataArray = [
   },
   {
     ProjectHeader: {
-      title: "Facedn",
+      title: "FaceDN",
       publishDate: "Aug 12, 2021",
       tags: "IoT / Computer Vision",
     },
     ProjectImages: [
       {
         id: 1,
-        title: "Facedn",
-        img: DataCenterImg,
+        title: "FaceDN Login",
+        img: Facedn1,
       },
     ],
     ProjectInfo: {
@@ -412,21 +414,26 @@ export const singleProjectDataArray = [
         {
           id: 1,
           title: "Name",
-          details: "Facedn",
+          details: "FaceDN",
         },
         {
           id: 2,
           title: "Industry",
           details: "IoT / Industry 4.0",
         },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://app.knesysplus.com/facedn/Account/Login",
+        },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build the communication layer between facial recognition cameras and the cloud, handling image synchronization and event reporting for storage and further processing.",
+        "Build backend microservices and contribute to the configuration UI for a thermal-camera IoT gateway that monitors employee attendance, temperature, and mask compliance at access points.",
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: ["Node.js", "Docker", "AWS S3", "IoT"],
+          techs: ["Node.js", "Express.js", "React", "Docker", "MongoDB", "GPIO", "Linux"],
         },
       ],
       ProjectDetailsHeading: "Challenge",
@@ -434,7 +441,12 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Developed the communication layer between facial recognition cameras and the cloud, handling image synchronization and event reporting to AWS S3 for storage and further processing.",
+            "Built nodesetup, rgbcontrol, and gpioctl — the same network-provisioning, status-LED, and physical-button microservices developed for the DataCenter gateway — reused here as the hardware control layer for the thermal-camera devices.",
+        },
+        {
+          id: 2,
+          details:
+            "Built mainconfig, the backend API for managing and configuring the thermal/facial-recognition cameras, and contributed to frontconfig, its React-based configuration interface, giving operators a way to set up and calibrate cameras per site.",
         },
       ],
       SocialSharingHeading: "",

@@ -1,7 +1,7 @@
 import WebImage3 from "../images/web-project-3.png";
 import Rtsp1 from "../images/rtsp/rtsp1.png";
 import DataCenter1 from "../images/datacenter/datacenter1.png";
-import WebImage5 from "../images/web-project-5.png";
+import Facedn1 from "../images/facedn/facedn1.png";
 import WebImage6 from "../images/web-project-6.png";
 import WebImage7 from "../images/web-project-7.png";
 import WebImage8 from "../images/web-project-8.png";
@@ -48,18 +48,19 @@ export const projectsData = [
     img: DataCenter1,
     description:
       "OS provisioning and hardware I/O microservices (network config, RGB status LEDs, GPIO sensors) for a containerized Bluetooth IoT gateway on Raspberry Pi.",
-    technologies: ["Node.js", "Docker", "Raspberry Pi", "GPIO", "Linux"],
+    technologies: ["Node.js", "Express.js", "Docker", "Raspberry Pi", "GPIO", "Linux"],
     liveUrl: "https://app.knesysplus.com/datacenter/Account/Login",
   },
   {
     id: 5,
-    title: "Facedn",
+    title: "FaceDN",
     url: "facedn",
     category: "IoT Platform",
-    img: WebImage5,
+    img: Facedn1,
     description:
-      "Cloud communication layer for facial recognition cameras, handling image synchronization and event reporting to AWS S3.",
-    technologies: ["Node.js", "Docker", "AWS S3", "IoT"],
+      "Backend microservices and configuration UI for a thermal-camera IoT platform monitoring employee attendance, temperature, and mask compliance.",
+    technologies: ["Node.js", "Express.js", "React", "Docker", "MongoDB", "GPIO", "Linux"],
+    liveUrl: "https://app.knesysplus.com/facedn/Account/Login",
   },
   {
     id: 6,
