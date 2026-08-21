@@ -74,7 +74,7 @@ const ProjectInfo = () => {
           <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
             {singleProjectData.ProjectInfo.ObjectivesHeading}
           </p>
-          <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+          <p className="font-general-regular text-primary-dark dark:text-ternary-light text-justify">
             {singleProjectData.ProjectInfo.ObjectivesDetails}
           </p>
         </div>
@@ -121,7 +121,7 @@ const ProjectInfo = () => {
           return (
             <p
               key={details.id}
-              className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light"
+              className="font-general-regular mb-5 text-lg text-ternary-dark dark:text-ternary-light text-justify"
             >
               {details.details}
             </p>
