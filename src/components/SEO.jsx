@@ -6,6 +6,8 @@ const SEO = ({
   description = "Software Engineer with 6+ years of experience in Full Stack Development, IoT, and Industry 4.0 solutions.",
   path = "",
   image = "/og-image.png",
+  imageWidth = "1363",
+  imageHeight = "1101",
   type = "website",
   noindex = false,
 }) => {
@@ -33,8 +35,8 @@ const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:image:width" content="1363" />
-      <meta property="og:image:height" content="1101" />
+      <meta property="og:image:width" content={imageWidth} />
+      <meta property="og:image:height" content={imageHeight} />
       <meta property="og:site_name" content="Taylor - Software Engineer" />
       <meta property="og:locale" content="en_US" />
 
