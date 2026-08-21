@@ -1,10 +1,14 @@
-// NotFound.jsx
-import React from "react";
-import "../css/NotFound.css"; // Asegúrate de crear un archivo CSS
+import "../css/NotFound.css";
+import SEO from "./SEO";
 
 const NotFound = () => {
   return (
     <div className="not-found-container">
+      <SEO
+        title="Page Not Found | Taylor - Software Engineer"
+        description="The page you are looking for does not exist."
+        noindex={true}
+      />
       <div className="not-found-content">
         <h1 className="font-general-semibold text-center sm:text-left text-ternary-dark dark:text-primary-light uppercase">
           Page Not Found
