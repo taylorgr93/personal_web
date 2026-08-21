@@ -357,7 +357,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build the OS-provisioning and hardware I/O microservices — cmdSO, rgbcontrol, and gpioctl — for a containerized IoT gateway running on Raspberry Pi, as part of a larger multi-service platform covering Bluetooth/BLE, RTSP streaming, and monitoring.",
+        "Build the OS-provisioning and hardware I/O microservices — cmdSO, rgbcontrol, and gpioctl — for a containerized IoT gateway running on Raspberry Pi, as part of a larger multi-service platform covering Bluetooth/BLE, RTSP streaming, and monitoring. Also built BackendGPSTRACsa, a separate microservices backend for real-time GPS vehicle tracking under the same project.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -370,6 +370,8 @@ export const singleProjectDataArray = [
             "Linux (Ubuntu / Raspbian / Manjaro)",
             "GPIO",
             "systemd",
+            "MongoDB",
+            "Twilio",
           ],
         },
       ],
@@ -389,6 +391,11 @@ export const singleProjectDataArray = [
           id: 3,
           details:
             "Built gpioctl, the microservice behind the gateway's physical button: it debounces the GPIO signal, triggers a factory reset over SSH after a 10-second hold, and cycles the Bluetooth stack between peripheral (Bleno) and central (Noble) mode on a triple-press, relaying each state change to rgbcontrol so the RGB LED reflects what's happening.",
+        },
+        {
+          id: 4,
+          details:
+            "Built the full BackendGPSTRACsa microservices backend for real-time vehicle GPS tracking — apigateway_begt and rules_begt following established Knesys Plus service patterns, plus parser_begt, a custom TCP server decoding raw GPS device frames (position and heartbeat commands, battery-level tracking) into structured data, and sms_begt, which sends Twilio SMS alerts triggered by the rules engine.",
         },
       ],
       SocialSharingHeading: "",
