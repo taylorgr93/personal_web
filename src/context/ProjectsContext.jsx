@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import { useState, createContext } from "react";
 import { projectsData } from "../data/projects";
 
@@ -23,12 +22,9 @@ export const ProjectsProvider = (props) => {
     return result;
   });
 
-  // Select projects by project category
-  const selectProjectsByCategory = projects.filter((item) => {
-    let category =
-      item.category.charAt(0).toUpperCase() + item.category.slice(1);
-    return category.includes(selectProject);
-  });
+  const selectProjectsByCategory = projects.filter(
+    (item) => item.category === selectProject
+  );
 
   return (
     <ProjectsContext.Provider

@@ -1,11 +1,9 @@
-/*eslint-disable*/
-
 const selectOptions = [
-  "Web Application",
-  "Backend Development",
-  // 'Mobile Application',
-  // 'UI/UX Design',
-  // 'Branding',
+  "Corporate Website",
+  "IoT Platform",
+  "Construction SaaS",
+  "Ticketing Platform",
+  "Industrial Video",
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
@@ -14,7 +12,7 @@ const ProjectsFilter = ({ setSelectProject }) => {
       onChange={(e) => {
         setSelectProject(e.target.value);
       }}
-      className="font-general-medium 
+      className="font-general-medium
                 px-4
                 sm:px-6
                 py-2
@@ -30,7 +28,7 @@ const ProjectsFilter = ({ setSelectProject }) => {
                 dark:text-ternary-light
             "
     >
-      <option value={setSelectProject} className="text-sm sm:text-md">
+      <option value="" className="text-sm sm:text-md">
         All Projects
       </option>
 

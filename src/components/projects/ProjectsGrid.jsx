@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import { useContext } from "react";
 import { FiSearch } from "react-icons/fi";
 import ProjectSingle from "./ProjectSingle";
@@ -102,6 +101,9 @@ const ProjectsGrid = () => {
                 title={project.title}
                 category={project.category}
                 image={project.img}
+                description={project.description}
+                technologies={project.technologies}
+                liveUrl={project.liveUrl}
                 key={project.id}
               />
             ))
@@ -112,6 +114,9 @@ const ProjectsGrid = () => {
                 title={project.title}
                 category={project.category}
                 image={project.img}
+                description={project.description}
+                technologies={project.technologies}
+                liveUrl={project.liveUrl}
                 key={project.id}
               />
             ))
@@ -121,6 +126,9 @@ const ProjectsGrid = () => {
                 title={project.title}
                 category={project.category}
                 image={project.img}
+                description={project.description}
+                technologies={project.technologies}
+                liveUrl={project.liveUrl}
                 key={project.id}
               />
             ))}

@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import WebImage3 from "../images/web-project-3.png";
 import WebImage4 from "../images/web-project-4.png";
 import WebImage5 from "../images/web-project-5.png";
@@ -11,66 +10,64 @@ export const projectsData = [
     id: 1,
     title: "Conboleto",
     url: "conboleto",
-    category: "Backend Development",
+    category: "Ticketing Platform",
     img: WebImage6,
+    description:
+      "Ticketing platform for event organizers and buyers with role-based access and microservices architecture.",
+    technologies: ["Node.js", "Express", "MongoDB", "Docker", "JWT"],
+    liveUrl: "https://www.conboleto.com",
   },
   {
     id: 2,
     title: "Checkton",
     url: "checkton",
-    category: "Web Application",
+    category: "Construction SaaS",
     img: WebImage3,
+    description:
+      "Management platform for construction companies with crew tracking, attendance, warehouse, and work hours modules.",
+    technologies: ["React", "Redux", "Material UI", "Node.js", "Docker"],
+    liveUrl: "https://checkton.com.mx",
   },
   {
     id: 3,
     title: "RTSP ABSA Industrial",
     url: "rtsp_absa_industrial",
-    category: "Web Application",
+    category: "Industrial Video",
     img: WebImage4,
+    description:
+      "Real-time video monitoring for production lines with keyboard-triggered incident recording and AWS S3 uploads.",
+    technologies: ["React", "Node.js", "RTSP Streaming", "AWS S3", "Docker"],
   },
   {
     id: 4,
     title: "DataCenter & Facedn",
     url: "datacenter",
-    category: "Backend Development",
+    category: "IoT Platform",
     img: WebImage5,
+    description:
+      "IoT microservices on Raspberry Pi gateways for GPS tracking, facial recognition cameras, and RF communication.",
+    technologies: ["Node.js", "Docker", "Raspberry Pi", "GPS API", "AWS S3"],
   },
   {
     id: 5,
     title: "Transportes Colimenses",
     url: "transportes_colimenses",
-    category: "Web Application",
+    category: "Corporate Website",
     img: WebImage7,
+    description:
+      "Corporate website for a freight transportation company with client portal integration and interactive routes map.",
+    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    liveUrl: "https://www.transportescolimenses.mx",
   },
   {
     id: 6,
     title: "Invertúneles",
     url: "invertuneles",
-    category: "Web Application",
+    category: "Corporate Website",
     img: WebImage8,
+    description:
+      "Multilingual corporate website for an agricultural company with product catalog, video integration, and email quotation system.",
+    technologies: ["Next.js", "React", "TypeScript", "i18n", "SEO"],
+    liveUrl: "https://www.invertuneles.com",
   },
 ];
-
-// {
-// 	id: 4,
-// 	title: 'Cloud Storage Platform',
-// 	category: 'UI/UX Design',
-// 	img: UIImage2,
-// ProjectHeader: {
-//   title: "Project Management UI - From Context",
-//   publishDate: "Jul 26, 2021",
-//   tags: "UI / Frontend",
-// },
-// },
-// {
-// 	id: 5,
-// 	title: 'React Social App',
-// 	category: 'Mobile Application',
-// 	img: MobileImage1,
-// },
-// {
-// 	id: 6,
-// 	title: 'Apple Design System',
-// 	category: 'Web Application',
-// 	img: WebImage1,
-// },
