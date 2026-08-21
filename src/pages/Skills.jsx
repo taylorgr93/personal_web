@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SEO from "../components/SEO";
 import { SkillsYears } from "../components/skills/SkillsYears";
 import { SoftSkills } from "../components/skills/SoftSkills";
-import { skills } from "../data/skillsData";
+import { skillCategories } from "../data/skillsData";
 import { softSkills } from "../data/softSkillsData";
 import { otherSkills } from "../data/otherSkillsData";
 
@@ -39,7 +39,7 @@ const Skills = () => {
         }}
         className="container mx-auto flex flex-wrap"
       >
-        <SkillsYears skills={skills} />
+        <SkillsYears categories={skillCategories} />
       </motion.div>
 
       <div className="text-center pt-20 sm:pt-30 pb-8 mt-20">
