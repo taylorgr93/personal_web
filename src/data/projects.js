@@ -1,5 +1,5 @@
 import WebImage3 from "../images/web-project-3.png";
-import WebImage4 from "../images/web-project-4.png";
+import Rtsp1 from "../images/rtsp/rtsp1.png";
 import WebImage5 from "../images/web-project-5.png";
 import WebImage6 from "../images/web-project-6.png";
 import WebImage7 from "../images/web-project-7.png";
@@ -32,11 +32,12 @@ export const projectsData = [
     id: 3,
     title: "RTSP ABSA Industrial",
     url: "rtsp_absa_industrial",
-    category: "Industrial Video",
-    img: WebImage4,
+    category: "Video Management Platform",
+    img: Rtsp1,
     description:
-      "Real-time video monitoring for production lines with keyboard-triggered incident recording and AWS S3 uploads.",
-    technologies: ["React", "Node.js", "RTSP Streaming", "AWS S3", "Docker"],
+      "Frontend for a multi-enterprise RTSP video management platform, built on a microservices backend for device, employee, and access control, plus a searchable video evidence archive.",
+    technologies: ["React", "Redux", "Material-UI", "Node.js", "MongoDB", "Docker"],
+    liveUrl: "https://absa-amapola.knesysplus.com/inicio_sesion",
   },
   {
     id: 4,

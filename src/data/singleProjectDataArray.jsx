@@ -5,7 +5,8 @@ import Invertuneles3 from "../images/invertuneles3.png";
 import ChecktonImg from "../images/web-project-3.png";
 import checkton2 from "../images/checkton2.png";
 import checkton3 from "../images/checkton3.png";
-import RtspImg from "../images/web-project-4.png";
+import RtspImg from "../images/rtsp/rtsp1.png";
+import Rtsp2 from "../images/rtsp/rtsp2.png";
 import DataCenterImg from "../images/web-project-5.png";
 import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/web-project-7.png";
@@ -245,6 +246,11 @@ export const singleProjectDataArray = [
         title: "RTSP ABSA Industrial UI",
         img: RtspImg,
       },
+      {
+        id: 2,
+        title: "RTSP ABSA Industrial - Video Archive",
+        img: Rtsp2,
+      },
     ],
     ProjectInfo: {
       ClientHeading: "About Client",
@@ -259,19 +265,25 @@ export const singleProjectDataArray = [
           title: "Industry",
           details: "Manufacturing / Packaging",
         },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://absa-amapola.knesysplus.com/inicio_sesion",
+        },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build a web application to visualize and record production line incident videos in real time, allowing operators to capture events triggered by a keyboard shortcut and automatically upload the footage to the cloud for later review.",
+        "As frontend developer, build the React/Redux interface for a multi-enterprise RTSP video management platform: administering devices, employees, and user access, and giving operators a searchable archive to find and review recorded video evidence linked to production orders.",
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
             "React",
+            "Redux",
+            "Material-UI",
             "JavaScript",
-            "RTSP Streaming",
-            "AWS S3",
             "Node.js",
+            "MongoDB",
             "Docker",
           ],
         },
@@ -281,17 +293,17 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "The main challenge was integrating an RTSP video stream directly into the browser to display live footage from production line cameras, ensuring low latency for real-time incident monitoring.",
+            "The platform runs on a microservices backend (API gateway, authentication, licensing, and a rules engine), so the frontend had to consume multiple service contracts while enforcing enterprise-level, role-based access control consistently across the whole app.",
         },
         {
           id: 2,
           details:
-            "A key feature was enabling operators to trigger a video recording using a specific keyboard shortcut sequence, capturing the incident in progress and uploading the clip automatically to AWS S3 for storage and review.",
+            "Operators needed to locate specific recordings among tens of thousands of video files, so I built a searchable, paginated archive with date-range filtering, indexed by purchase order and station.",
         },
         {
           id: 3,
           details:
-            "The interface needed to be intuitive and reliable in a demanding industrial environment, where operators had to react quickly to production line events without interrupting the workflow.",
+            "The same codebase had to serve multiple client enterprises with their own users, devices, and permissions, so screens for device, employee, and user administration were built to adapt to each enterprise's configuration.",
         },
       ],
       SocialSharingHeading: "",
