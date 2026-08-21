@@ -1,5 +1,14 @@
 ---
-model: claude-sonnet-4-6
+name: code-standard
+description: >
+  Code standards and conventions for this React/Vite portfolio project. Enforces
+  React component patterns, TailwindCSS dark mode conventions, SEO requirements,
+  Framer Motion animation patterns, data file structure, accessibility rules, and
+  Git commit conventions. Use this skill whenever writing, reviewing, refactoring,
+  or generating code in this project. Also trigger when the user asks about coding
+  style, naming conventions, component structure, or best practices. This skill
+  applies even if the user doesn't explicitly mention "standards" — any code
+  generation or review task should follow these conventions.
 ---
 
 # Code Standard Review
@@ -72,8 +81,7 @@ Standard animation pattern used across the project:
 
 ### 5. TailwindCSS Conventions
 - **Dark mode is mandatory**: always include the `dark:` counterpart for every visual property
-  - ✅ `bg-secondary-light dark:bg-primary-dark`
-  - ❌ `bg-secondary-light` (missing dark variant)
+  - `bg-secondary-light dark:bg-primary-dark`
 - Use the project's **custom color tokens only** — never hardcode raw colors like `bg-[#0D2438]`:
   - Light: `primary-light`, `secondary-light`, `ternary-light`
   - Dark: `primary-dark`, `secondary-dark`, `ternary-dark`

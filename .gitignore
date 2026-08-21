@@ -107,6 +107,9 @@ build
 # Claude Code local settings
 .claude/settings.local.json
 
+# Claude Code plans (local only)
+.claude/plans/
+
 # Compiled Tailwind CSS (Vite handles PostCSS at build time)
 src/css/main.css
 
