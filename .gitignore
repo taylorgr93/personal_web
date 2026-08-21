@@ -110,6 +110,9 @@ build
 # Claude Code plans (local only)
 .claude/plans/
 
+# Reference CLAUDE.md docs from other project repos (local only, not this codebase)
+.claude/project-notes/
+
 # Compiled Tailwind CSS (Vite handles PostCSS at build time)
 src/css/main.css
 
