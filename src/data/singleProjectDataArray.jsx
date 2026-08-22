@@ -58,16 +58,6 @@ export const singleProjectDataArray = [
           title: "Website",
           details: "https://www.conboleto.com/",
         },
-        // {
-        //   id: 4,
-        //   title: "Phone",
-        //   details: "555 8888 888",
-        // },
-        {
-          id: 5,
-          title: "Email",
-          details: "soporte@conboleto.com",
-        },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
@@ -167,16 +157,6 @@ export const singleProjectDataArray = [
           id: 3,
           title: "Website",
           details: "https://checkton.com.mx/",
-        },
-        {
-          id: 4,
-          title: "Email",
-          details: "ventas@checkton.com.mx",
-        },
-        {
-          id: 5,
-          title: "Email",
-          details: "cynthia.duenas@checkton.com.mx",
         },
       ],
       ObjectivesHeading: "Objective",
@@ -506,26 +486,6 @@ export const singleProjectDataArray = [
           id: 3,
           title: "Website",
           details: "https://www.transportescolimenses.mx",
-        },
-        {
-          id: 4,
-          title: "WhatsApp",
-          details: "+52 312 311 6372",
-        },
-        {
-          id: 6,
-          title: "WhatsApp",
-          details: "+52 333 811 3031",
-        },
-        {
-          id: 5,
-          title: "Email",
-          details: "colima@transportescolimenses.mx",
-        },
-        {
-          id: 7,
-          title: "Email",
-          details: "gdl@transportescolimenses.mx",
         },
       ],
       ObjectivesHeading: "Objective",
