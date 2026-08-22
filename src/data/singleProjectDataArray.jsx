@@ -357,7 +357,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build the OS-provisioning and hardware I/O microservices — cmdSO, rgbcontrol, and gpioctl — for a containerized IoT gateway running on Raspberry Pi, as part of a larger multi-service platform covering Bluetooth/BLE, RTSP streaming, and monitoring. Also built BackendGPSTRACsa, a separate microservices backend for real-time GPS vehicle tracking under the same project.",
+        "Build the OS-provisioning and hardware I/O microservices — cmdSO, rgbcontrol, and gpioctl — for a containerized IoT gateway running on Raspberry Pi, as part of a larger multi-service platform covering Bluetooth/BLE, RTSP streaming, and monitoring. Also built BackendGPSTRACsa, a separate microservices backend for real-time GPS vehicle tracking, and motorolamiddleware, a UDP middleware for Motorola two-way radios, both under the same project.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -372,6 +372,7 @@ export const singleProjectDataArray = [
             "systemd",
             "MongoDB",
             "Twilio",
+            "UDP",
           ],
         },
       ],
@@ -396,6 +397,11 @@ export const singleProjectDataArray = [
           id: 4,
           details:
             "Built the full BackendGPSTRACsa microservices backend for real-time vehicle GPS tracking — apigateway_begt and rules_begt following established Knesys Plus service patterns, plus parser_begt, a custom TCP server decoding raw GPS device frames (position and heartbeat commands, battery-level tracking) into structured data, and sms_begt, which sends Twilio SMS alerts triggered by the rules engine.",
+        },
+        {
+          id: 5,
+          details:
+            "Built motorolamiddleware from scratch, a Node.js/Express service bridging REST endpoints to Motorola MOTOTRBO two-way radios over raw UDP — encoding text messages into the MOTOTRBO wire protocol, deriving each radio's IP from its numeric ID via the CAI addressing convention, and checking network presence, so the rest of the platform can message and query physical radios without speaking UDP directly.",
         },
       ],
       SocialSharingHeading: "",

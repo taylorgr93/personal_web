@@ -47,7 +47,7 @@ export const projectsData = [
     category: "IoT Platform",
     img: DataCenter1,
     description:
-      "OS provisioning and hardware I/O microservices for a containerized Bluetooth IoT gateway on Raspberry Pi, plus a GPS vehicle-tracking backend with device parsing, rules, and SMS alerts.",
+      "OS provisioning and hardware I/O microservices for a containerized Bluetooth IoT gateway on Raspberry Pi, a GPS vehicle-tracking backend, and a UDP middleware bridging REST to Motorola two-way radios.",
     technologies: [
       "Node.js",
       "Express.js",
@@ -56,6 +56,7 @@ export const projectsData = [
       "GPIO",
       "MongoDB",
       "Twilio",
+      "UDP",
       "Linux",
     ],
     liveUrl: "https://app.knesysplus.com/datacenter/Account/Login",
