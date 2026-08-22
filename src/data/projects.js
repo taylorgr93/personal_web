@@ -4,7 +4,7 @@ import DataCenter1 from "../images/datacenter/datacenter1.png";
 import Facedn1 from "../images/facedn/facedn1.png";
 import WebImage6 from "../images/web-project-6.png";
 import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
-import WebImage8 from "../images/web-project-8.png";
+import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 
 export const projectsData = [
   {
@@ -88,10 +88,10 @@ export const projectsData = [
     title: "Invertúneles",
     url: "invertuneles",
     category: "Corporate Website",
-    img: WebImage8,
+    img: Invertuneles1,
     description:
       "Multilingual corporate website for an agricultural company with product catalog, video integration, and email quotation system.",
-    technologies: ["Next.js", "React", "TypeScript", "i18n", "SEO"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "i18n", "SEO"],
     liveUrl: "https://www.invertuneles.com",
   },
 ];

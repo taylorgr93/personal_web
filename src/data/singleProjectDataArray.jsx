@@ -1,7 +1,7 @@
 /*eslint-disable*/
-import InvertuntelesImg from "../images/web-project-8.png";
-import Invertuneles2 from "../images/invertuneles2.png";
-import Invertuneles3 from "../images/invertuneles3.png";
+import InvertuntelesImg from "../images/invertuneles/invertuneles1.png";
+import Invertuneles2 from "../images/invertuneles/invertuneles2.png";
+import Invertuneles3 from "../images/invertuneles/invertuneles3.png";
 import ChecktonImg from "../images/web-project-3.png";
 import checkton2 from "../images/checkton2.png";
 import checkton3 from "../images/checkton3.png";
@@ -590,18 +590,18 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build a multilingual corporate website (Spanish/English) for an agricultural protected structures company, showcasing their product catalog of tunnel solutions, company values, and enabling customer inquiries via email quotation and WhatsApp contact.",
+        "Build a multilingual corporate website (Spanish/English) for an agricultural protected-structures company on Next.js 15, with a custom-built i18n system, a video-integrated product catalog for their tunnel solutions, and inquiry forms for customer quote requests.",
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
-            "Next.js 16+",
-            "React",
+            "Next.js 15",
+            "React 19",
             "TypeScript",
+            "Tailwind CSS",
             "i18n",
             "SEO",
-            "Email Integration",
-            "WhatsApp API",
+            "Nodemailer",
           ],
         },
       ],
@@ -610,17 +610,17 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Implemented full internationalization (i18n) for seamless Spanish/English language switching with localized content, ensuring both the UI and SEO metadata were correctly adapted for each language.",
+            "Built a custom i18n system from scratch instead of pulling in a library — flat JSON dictionaries per locale, a dot-notation t() resolver, and locale-first routing where middleware redirects the bare URL to /es or /en based on the browser's language — keeping both the UI and SEO metadata (hreflang, per-page titles and descriptions) correctly localized.",
         },
         {
           id: 2,
           details:
-            "Developed a responsive product catalog with video integration to showcase agricultural tunnel solutions, requiring careful optimization for performance across mobile and desktop devices.",
+            "Adopted Next.js 15's async params API, required across every page and layout, and built a responsive, video-integrated product catalog validated against a closed set of categories, optimized for both mobile and desktop.",
         },
         {
           id: 3,
           details:
-            "Integrated an email quotation system and a WhatsApp contact button to streamline customer inquiries, and optimized the site's SEO for agricultural industry keywords to improve search visibility.",
+            "Built two Nodemailer-backed contact endpoints over SMTP — a general contact form and a custom-project inquiry form (crop, location, and contact details) — plus a WhatsApp contact link, to streamline customer quote requests, and optimized the site's SEO for agricultural industry keywords.",
         },
       ],
       SocialSharingHeading: "",
