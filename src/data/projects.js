@@ -3,7 +3,7 @@ import Rtsp1 from "../images/rtsp/rtsp1.png";
 import DataCenter1 from "../images/datacenter/datacenter1.png";
 import Facedn1 from "../images/facedn/facedn1.png";
 import WebImage6 from "../images/web-project-6.png";
-import WebImage7 from "../images/web-project-7.png";
+import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
 import WebImage8 from "../images/web-project-8.png";
 
 export const projectsData = [
@@ -77,10 +77,10 @@ export const projectsData = [
     title: "Transportes Colimenses",
     url: "transportes_colimenses",
     category: "Corporate Website",
-    img: WebImage7,
+    img: TransportesColimenses1,
     description:
       "Corporate website for a freight transportation company with client portal integration and interactive routes map.",
-    technologies: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Swiper", "Vercel"],
     liveUrl: "https://www.transportescolimenses.mx",
   },
   {

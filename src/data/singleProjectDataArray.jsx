@@ -12,9 +12,9 @@ import DataCenter2 from "../images/datacenter/datacenter2.png";
 import DataCenter4 from "../images/datacenter/datacenter4.png";
 import Facedn1 from "../images/facedn/facedn1.png";
 import ConboletoImg from "../images/web-project-6.png";
-import TransportesColimensesImg from "../images/web-project-7.png";
-import transportescolimenses2 from "../images/transportescolimenses2.png";
-import transportescolimenses3 from "../images/transportescolimenses3.png";
+import TransportesColimensesImg from "../images/transportescolimenses/transportescolimenses1.png";
+import transportescolimenses2 from "../images/transportescolimenses/transportescolimenses2.png";
+import transportescolimenses3 from "../images/transportescolimenses/transportescolimenses3.png";
 
 // Import icons
 import {
@@ -494,7 +494,14 @@ export const singleProjectDataArray = [
       Technologies: [
         {
           title: "Tools & Technologies",
-          techs: ["React", "TailwindCSS", "NextJS", "Javascript", "NodeJS"],
+          techs: [
+            "React",
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Swiper",
+            "Vercel",
+          ],
         },
       ],
       ProjectDetailsHeading: "Challenge",
