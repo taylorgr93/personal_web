@@ -21,6 +21,9 @@ import VigoCoffee3 from "../images/vigo-coffee/vigo-coffee3.png";
 import ConboletoImg from "../images/conboleto/conboleto1.png";
 import Conboleto2 from "../images/conboleto/conboleto2.png";
 import Conboleto3 from "../images/conboleto/conboleto3.png";
+import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
+import KnesysMonitoring2 from "../images/knesys-monitoring/knesys-monitoring2.png";
+import KnesysMonitoring3 from "../images/knesys-monitoring/knesys-monitoring3.png";
 
 // Import icons
 import {
@@ -752,6 +755,95 @@ export const singleProjectDataArray = [
           id: 4,
           details:
             "Produced a detailed accessibility compliance report documenting all changes, standards met (WCAG 2.1 Level AA), and remediation steps—serving as legal defense documentation for the client.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Knesys Monitoring",
+      publishDate: "2026",
+      tags: "Infrastructure / DevOps",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Prometheus Targets",
+        img: KnesysMonitoring1,
+      },
+      {
+        id: 2,
+        title: "Grafana Dashboards",
+        img: KnesysMonitoring2,
+      },
+      {
+        id: 3,
+        title: "Loki Logs",
+        img: KnesysMonitoring3,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Knesys Plus",
+        },
+        {
+          id: 2,
+          title: "Website",
+          details: "https://knesysplus.com/",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Design and deploy a centralized monitoring infrastructure observing ~8 production servers and ConBoleto microservices (testing + production). Implement Prometheus for metrics collection with push-based remote_write architecture, Grafana for visualization and alerting dashboards, and Loki for log aggregation and retention. Enable real-time observability across system metrics, container health, application performance, and multi-environment logs.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Prometheus",
+            "Grafana",
+            "Loki",
+            "Docker Compose",
+            "node_exporter",
+            "cAdvisor",
+            "Grafana Alloy",
+            "Remote Write Push",
+            "Log Aggregation",
+            "Alerting",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Versioned and hardened a 20-month-old Prometheus + Grafana stack with pinned image versions (Prometheus v3.13.1, Grafana 13.1.0, Loki 3.4.2), hard-fail Grafana admin password via environment variable, and proper Docker restart policies—preserving 15 days of historical metrics and the irreplaceable 20-month Grafana configuration (dashboards, datasources, users).",
+        },
+        {
+          id: 2,
+          details:
+            "Implemented Prometheus remote_write receiver (`:9090`) and Loki (`:3100`) on the central monitoring host, enabling ConBoleto (testing + production) to push metrics and logs from external Docker daemon via cAdvisor and Grafana Alloy, eliminating single-point-of-failure risk by separating monitoring from the servers it observes.",
+        },
+        {
+          id: 3,
+          details:
+            "Configured external labels (`project: conboleto`, `env: prod/test`) on ConBoleto's Prometheus agent to uniquely identify multi-environment sources; designed Grafana dashboards with dynamic filtering by project and environment template variables, enabling clean metric segregation across ConBoleto and 7 other servers.",
+        },
+        {
+          id: 4,
+          details:
+            "Provisioned Grafana datasources and dashboards as code (JSON), including ConBoleto-specific HTTP request metrics, container health (cAdvisor) panels, and Loki log queries—all scoped to `{project=\"conboleto\"}` labels to prevent metric mixing in a shared central observability platform.",
+        },
+        {
+          id: 5,
+          details:
+            "Documented the 5-phase migration plan (Spanish) with critical gotchas: preserving Docker Compose project name (`COMPOSE_PROJECT_NAME=monitoreo`) to retain volumes holding the 20-month Grafana config, and proper external label setup before enabling remote_write to avoid metric collision.",
         },
       ],
       SocialSharingHeading: "",

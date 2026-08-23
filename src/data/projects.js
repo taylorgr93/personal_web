@@ -6,6 +6,7 @@ import Facedn1 from "../images/facedn/facedn1.png";
 import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
 import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
+import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
 
 export const projectsData = [
   {
@@ -113,5 +114,17 @@ export const projectsData = [
       "Comprehensive web accessibility audit and optimization for a coffee company website, including WCAG 2.1 compliance, link remediation, and social media integration.",
     technologies: ["Web Accessibility", "WCAG 2.1", "HTML", "GoDaddy", "SEO", "Social Media"],
     liveUrl: "https://vigo-coffee.com/",
+  },
+  {
+    id: 9,
+    title: "Knesys Monitoring",
+    url: "knesys_monitoring",
+    category: "Infrastructure & Monitoring",
+    company: "Knesys Plus",
+    img: KnesysMonitoring1,
+    description:
+      "Centralized monitoring infrastructure observing ~8 servers and ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs.",
+    technologies: ["Prometheus", "Grafana", "Loki", "Docker Compose", "node_exporter", "cAdvisor", "Alloy"],
+    liveUrl: "https://monitoring.knesysplus.com",
   },
 ];
