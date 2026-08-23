@@ -11,8 +11,7 @@ export const SingleProjectProvider = ({ children }) => {
   const [projectExists, setProjectExists] = useState(true); // Estado para verificar si el proyecto existe
 
   useEffect(() => {
-    // console.log("id:", id);
-    const projectId = Number(id) - 1; // Restar 1 para la indexación
+    const projectId = Number(id) - 1;
     const projectData = singleProjectDataArray[projectId];
 
     if (projectData) {

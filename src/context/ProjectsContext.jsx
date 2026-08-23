@@ -11,16 +11,10 @@ export const ProjectsProvider = (props) => {
   const [selectProject, setSelectProject] = useState("");
 
   // Search projects by project title
-  const searchProjectsByTitle = projects.filter((item) => {
-    const result = item.title
-      .toLowerCase()
-      .includes(searchProject.toLowerCase())
-      ? item
-      : searchProject === ""
-      ? item
-      : "";
-    return result;
-  });
+  const searchProjectsByTitle = projects.filter((item) =>
+    item.title.toLowerCase().includes(searchProject.toLowerCase()) ||
+    searchProject === ""
+  );
 
   const selectProjectsByCategory = projects.filter(
     (item) => item.category === selectProject
