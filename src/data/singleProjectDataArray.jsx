@@ -439,6 +439,16 @@ export const singleProjectDataArray = [
           details:
             "Built motorolamiddleware from scratch, a Node.js/Express service bridging REST endpoints to Motorola MOTOTRBO two-way radios over raw UDP — encoding text messages into the MOTOTRBO wire protocol, deriving each radio's IP from its numeric ID via the CAI addressing convention, and checking network presence, so the rest of the platform can message and query physical radios without speaking UDP directly.",
         },
+        {
+          id: 6,
+          details:
+            "Implemented LUKS full-disk encryption for external SD card storage attached to IoT gateways, enabling automatic unlocking at boot via keyfile mechanism and custom initramfs hooks—protecting sensitive sensor data, configurations, and GPS tracking information against physical access in field deployments across multiple customer sites.",
+        },
+        {
+          id: 7,
+          details:
+            "Designed and automated the complete gateway provisioning pipeline using systemd, Docker, and shell scripting: preconfigured OS images (Ubuntu Server 20.04 ARM64) with containerized services, firewall rules, Git repository auto-cloning, and environment variable injection. Used golden-master approach to clone images to dozens of SD cards, reducing gateway setup time from hours to minutes and enabling zero-touch deployment across multiple field locations.",
+        },
       ],
       SocialSharingHeading: "",
       SocialSharing: [],
