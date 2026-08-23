@@ -1044,4 +1044,77 @@ export const singleProjectDataArray = [
       SocialSharing: [],
     },
   },
+  {
+    ProjectHeader: {
+      title: "Tracsa",
+      publishDate: "2021 - 2023",
+      tags: "Fleet Management / Backend",
+    },
+    ProjectImages: [],
+    ProjectInfo: {
+      ClientHeading: "About Project",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Tracsa",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "Fleet Management & Analytics",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a centralized fleet management platform aggregating vehicle fuel consumption, utilization metrics, salary tracking, and operational expenses. Enable real-time data synchronization from multiple external sources (telematics, price feeds) via scheduled jobs, and expose metrics via REST API with comprehensive documentation.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Docker Compose",
+            "node-schedule",
+            "Passport.js",
+            "JWT",
+            "Fast-Gateway",
+            "Swagger/OpenAPI",
+            "Jest",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Architected monorepo with 3 independent microservices: Tracsa (main API with business logic), API Gateway (request routing + Swagger docs), and Security (Passport JWT authentication). Each service independently deployable via Docker Compose with separate configuration per environment (dev/prod).",
+        },
+        {
+          id: 2,
+          details:
+            "Implemented scheduled synchronization jobs using node-schedule: daily metrics aggregation (fuel consumption, vehicle utilization), location data sync from Nominatim, and price feed updates. Jobs run at precise times (19:25, 13:35, 00:00) syncing external data into MongoDB collections without manual intervention.",
+        },
+        {
+          id: 3,
+          details:
+            "Refactored controllers (metrics.js, consumptionPriceCalculation.js) with defensive null-safety patterns: optional chaining (?.) for deep object access, nullish coalescing (??) for consistent defaults, and explicit fallbacks ('Not Available' for offline data) ensuring API never crashes on missing data.",
+        },
+        {
+          id: 4,
+          details:
+            "Optimized fuel consumption calculation logic: fixed edge cases where consumption intervals were empty, standardized price lookups, and ensured metrics aggregation handles partial/missing data gracefully. Implemented 39 focused commits improving robustness without changing public API contracts.",
+        },
+        {
+          id: 5,
+          details:
+            "Managed 5+ MongoDB collections (Daily, Fuel, SMULOC, Items, FuelPrice, FuelPlaces) with foreign key relationships via Items_id. Implemented aggregation pipelines for complex queries (multi-field filtering, time-series analysis) and created unique indexes for data integrity and query performance.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
 ];

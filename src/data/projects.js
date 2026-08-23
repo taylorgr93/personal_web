@@ -9,6 +9,7 @@ import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
 import MongoClientImg from "../images/npm.webp";
 import Findable1 from "../images/findable/findable1.png";
+import TracSaImg from "../images/nodejs.png";
 
 export const projectsData = [
   {
@@ -152,5 +153,17 @@ export const projectsData = [
       "BLE beacon localization and detection system running on Raspberry Pi. Real-time beacon scanning via noble, GPIO and RGB LED controls, REST API gateway, and MongoDB data collection for indoor positioning applications.",
     technologies: ["Node.js", "Express.js", "BLE", "GPIO", "Docker Compose", "MongoDB", "Raspberry Pi"],
     liveUrl: "https://app.knesysplus.com/findable/Account/Login",
+  },
+  {
+    id: 12,
+    title: "Tracsa",
+    url: "tracsa",
+    category: "Fleet Management",
+    company: "Knesys Plus",
+    img: TracSaImg,
+    description:
+      "Fleet management system tracking vehicle fuel consumption, metrics, salaries, and expenses via monorepo architecture (3 microservices). Real-time data synchronization from external sources, scheduled daily jobs for metrics aggregation, and REST API with Swagger documentation.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "Docker Compose", "node-schedule", "Passport.js", "JWT"],
+    liveUrl: "https://app.knesysplus.com",
   },
 ];
