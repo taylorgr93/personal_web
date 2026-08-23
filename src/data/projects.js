@@ -5,6 +5,7 @@ import Facedn1 from "../images/facedn/facedn1.png";
 import WebImage6 from "../images/web-project-6.png";
 import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
 import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
+import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 
 export const projectsData = [
   {
@@ -100,5 +101,17 @@ export const projectsData = [
       "Multilingual corporate website for an agricultural company with product catalog, video integration, and email quotation system.",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "i18n", "SEO"],
     liveUrl: "https://www.invertuneles.com",
+  },
+  {
+    id: 8,
+    title: "Vigo Coffee",
+    url: "vigo_coffee",
+    category: "Web Accessibility & Optimization",
+    company: "HiveCoding",
+    img: VigoCoffee1,
+    description:
+      "Comprehensive web accessibility audit and optimization for a coffee company website, including WCAG 2.1 compliance, link remediation, and social media integration.",
+    technologies: ["Web Accessibility", "WCAG 2.1", "HTML", "GoDaddy", "SEO", "Social Media"],
+    liveUrl: "https://vigo-coffee.com/",
   },
 ];

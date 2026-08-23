@@ -15,6 +15,9 @@ import ConboletoImg from "../images/web-project-6.png";
 import TransportesColimensesImg from "../images/transportescolimenses/transportescolimenses1.png";
 import transportescolimenses2 from "../images/transportescolimenses/transportescolimenses2.png";
 import transportescolimenses3 from "../images/transportescolimenses/transportescolimenses3.png";
+import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
+import VigoCoffee2 from "../images/vigo-coffee/vigo-coffee2.png";
+import VigoCoffee3 from "../images/vigo-coffee/vigo-coffee3.png";
 
 // Import icons
 import {
@@ -621,6 +624,79 @@ export const singleProjectDataArray = [
           id: 3,
           details:
             "Built two Nodemailer-backed contact endpoints over SMTP — a general contact form and a custom-project inquiry form (crop, location, and contact details) — plus a WhatsApp contact link, to streamline customer quote requests, and optimized the site's SEO for agricultural industry keywords.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Vigo Coffee",
+      publishDate: "May 2026",
+      tags: "Web Accessibility",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Homepage",
+        img: VigoCoffee1,
+      },
+      {
+        id: 2,
+        title: "Services Page",
+        img: VigoCoffee2,
+      },
+      {
+        id: 3,
+        title: "Contact Section",
+        img: VigoCoffee3,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Vigo Coffee",
+        },
+        {
+          id: 2,
+          title: "Website",
+          details: "https://vigo-coffee.com/",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Conduct a comprehensive web accessibility audit and implement WCAG 2.1 compliance standards for an existing GoDaddy-hosted website, while fixing broken links, configuring social media integration, and producing detailed legal documentation for compliance.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: ["Web Accessibility", "WCAG 2.1", "HTML", "GoDaddy", "SEO", "Social Media"],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Conducted a full WCAG 2.1 accessibility audit, identifying compliance gaps across the entire website and implementing fixes via GoDaddy's built-in accessibility tools combined with custom HTML adjustments.",
+        },
+        {
+          id: 2,
+          details:
+            "Audited and remediating all broken and outdated links throughout the site, ensuring navigation integrity and improving SEO performance.",
+        },
+        {
+          id: 3,
+          details:
+            "Configured and integrated Instagram business account with proper social media metadata and open graph tags, increasing brand visibility and customer engagement.",
+        },
+        {
+          id: 4,
+          details:
+            "Produced a detailed accessibility compliance report documenting all changes, standards met (WCAG 2.1 Level AA), and remediation steps—serving as legal defense documentation for the client.",
         },
       ],
       SocialSharingHeading: "",
