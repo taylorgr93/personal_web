@@ -25,7 +25,6 @@ const Home = () => {
         <ProjectsProvider>
           <ProjectsGrid />
         </ProjectsProvider>
-        <Contact />
       </div>
     </>
   );

@@ -1,66 +1,104 @@
-/*eslint-disable*/
 import {
+  FiMail,
   FiGithub,
   FiGitlab,
-  FiTwitter,
   FiLinkedin,
-  FiGlobe,
-  FiYoutube,
+  FiMessageSquare,
 } from "react-icons/fi";
-import AppFooterCopyright from "./AppFooterCopyright";
+import { FaWhatsapp } from "react-icons/fa";
 
-const socialLinks = [
+const primaryContacts = [
   {
     id: 1,
-    icon: <FiGithub />,
-    url: "https://github.com/taylorgr93",
+    label: "Email",
+    name: "taylorgr@outlook.com",
+    icon: <FiMail />,
+    link: "mailto:taylorgr@outlook.com",
   },
   {
     id: 2,
-    icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/taylorgr-24505ab4/",
+    label: "WhatsApp",
+    name: "+52 33 3172 8350",
+    icon: <FaWhatsapp />,
+    link: "https://wa.me/523331728350",
   },
   {
     id: 3,
-    icon: <FiGitlab />,
-    url: "https://gitlab.com/ctgonzalez",
+    label: "LinkedIn",
+    name: "Christopher Taylor Gonzalez",
+    icon: <FiLinkedin />,
+    link: "https://www.linkedin.com/in/taylorgr-24505ab4/",
   },
-  // {
-  //   id: 4,
-  //   icon: <FiGlobe />,
-  //   url: "https://www.taylorgr93.com/",
-  // },
-  // {
-  //   id: 5,
-  //   icon: <FiYoutube />,
-  //   url: "https://www.youtube.com/c/realstoman",
-  // },
+  {
+    id: 4,
+    label: "GitHub",
+    name: "@taylorgr93",
+    icon: <FiGithub />,
+    link: "https://github.com/taylorgr93",
+  },
+  {
+    id: 5,
+    label: "GitLab",
+    name: "@ctgonzalez",
+    icon: <FiGitlab />,
+    link: "https://gitlab.com/ctgonzalez",
+  },
+  {
+    id: 6,
+    label: "SMS",
+    name: "+1 657 281 0607",
+    icon: <FiMessageSquare />,
+    link: "sms:+16572810607",
+  },
 ];
 
+const AUTHOR_NAME = "Christopher Taylor Gonzalez";
+
 const AppFooter = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="container mx-auto">
-      <div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
-        {/* Footer social links */}
-        <div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
-          <p className="text-3xl sm:text-4xl text-primary-dark dark:text-primary-light mb-5">
-            Follow me
-          </p>
-          <ul className="flex gap-4 sm:gap-8">
-            {socialLinks.map((link) => (
+      <div className="pt-20 sm:pt-30 pb-20 mt-20 border-t-2 border-primary-light dark:border-secondary-dark">
+        <div className="w-full max-w-6xl mx-auto px-4">
+          <h2 className="font-general-semibold text-2xl sm:text-3xl text-center text-ternary-dark dark:text-primary-light mb-10">
+            Let&apos;s work together
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-12">
+            {primaryContacts.map((contact) => (
               <a
-                href={link.url}
-                target="__blank"
-                key={link.id}
-                className="text-gray-400 hover:text-indigo-500 dark:hover:text-indigo-400 cursor-pointer rounded-lg bg-gray-50 dark:bg-ternary-dark hover:bg-gray-100 shadow-sm p-4 duration-300"
+                key={contact.id}
+                href={contact.link}
+                target={
+                  contact.link.startsWith("mailto:") ||
+                  contact.link.startsWith("sms:")
+                    ? undefined
+                    : "_blank"
+                }
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-6 rounded-xl border border-gray-200 dark:border-ternary-dark bg-secondary-light dark:bg-ternary-dark hover:shadow-lg hover:border-indigo-300 dark:hover:border-indigo-600 transition-all duration-300"
+                aria-label={`Contact via ${contact.label}`}
               >
-                <i className="text-xl sm:text-2xl md:text-3xl">{link.icon}</i>
+                <span className="text-3xl text-indigo-500 dark:text-indigo-400 mb-3">
+                  {contact.icon}
+                </span>
+                <span className="font-general-semibold text-sm text-gray-400 dark:text-gray-500 uppercase tracking-wide mb-1">
+                  {contact.label}
+                </span>
+                <span className="font-general-medium text-sm text-ternary-dark dark:text-ternary-light text-center">
+                  {contact.name}
+                </span>
               </a>
             ))}
-          </ul>
-        </div>
+          </div>
 
-        {/* <AppFooterCopyright /> */}
+          <div className="text-center text-sm text-gray-500 dark:text-gray-400">
+            <p>
+              © {currentYear} {AUTHOR_NAME}. All rights reserved.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
