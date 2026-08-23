@@ -18,13 +18,14 @@ const ProjectInfo = () => {
           </p>
           <ul className="leading-loose">
             {singleProjectData.ProjectInfo.CompanyInfo.map((info) => {
+              const isUrl = typeof info.details === "string" && info.details.startsWith("http");
               return (
                 <li
                   className="font-general-regular text-ternary-dark dark:text-ternary-light"
                   key={info.id}
                 >
                   <span>{info.title}: </span>
-                  {info.title === "Website" ? (
+                  {isUrl ? (
                     <a
                       href={info.details}
                       target="_blank"
@@ -54,14 +55,16 @@ const ProjectInfo = () => {
         </div>
 
         {/* Single project technologies */}
-        <div className="mb-7">
-          <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
-            {singleProjectData.ProjectInfo.Technologies[0].title}
-          </p>
-          <p className="font-general-regular text-primary-dark dark:text-ternary-light">
-            {singleProjectData.ProjectInfo.Technologies[0].techs.join(", ")}
-          </p>
-        </div>
+        {singleProjectData.ProjectInfo.Technologies?.length > 0 && (
+          <div className="mb-7">
+            <p className="font-general-regular text-2xl font-semibold text-ternary-dark dark:text-ternary-light mb-2">
+              {singleProjectData.ProjectInfo.Technologies[0].title}
+            </p>
+            <p className="font-general-regular text-primary-dark dark:text-ternary-light">
+              {singleProjectData.ProjectInfo.Technologies[0].techs.join(", ")}
+            </p>
+          </div>
+        )}
 
         {/* Single project social sharing */}
         <div>
@@ -74,7 +77,8 @@ const ProjectInfo = () => {
                 <a
                   key={social.id}
                   href={social.url}
-                  target="__blank"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Share Project"
                   className="bg-ternary-light dark:bg-ternary-dark text-gray-400 hover:text-primary-dark dark:hover:text-primary-light p-2 rounded-lg shadow-sm duration-500"
                 >

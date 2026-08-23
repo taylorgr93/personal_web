@@ -24,6 +24,9 @@ import Conboleto3 from "../images/conboleto/conboleto3.png";
 import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
 import KnesysMonitoring2 from "../images/knesys-monitoring/knesys-monitoring2.png";
 import KnesysMonitoring3 from "../images/knesys-monitoring/knesys-monitoring3.png";
+import MongoClientImg from "../images/npm.webp";
+import Findable1 from "../images/findable/findable1.png";
+import Findable2 from "../images/findable/findable2.png";
 
 // Import icons
 import {
@@ -866,7 +869,13 @@ export const singleProjectDataArray = [
       publishDate: "2020 - Present",
       tags: "NPM Package / Library",
     },
-    ProjectImages: [],
+    ProjectImages: [
+      {
+        id: 1,
+        title: "NPM Package",
+        img: MongoClientImg,
+      },
+    ],
     ProjectInfo: {
       ClientHeading: "About Package",
       CompanyInfo: [
@@ -930,6 +939,105 @@ export const singleProjectDataArray = [
           id: 6,
           details:
             "Configured automated npm publishing via GitHub Actions (`.github/workflows/publish-to-npm.yml`): on merge to `main`, package builds and publishes to npm registry. Maintains semantic versioning and integration tests requiring live MongoDB instance.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Findable",
+      publishDate: "2019 - 2021",
+      tags: "IoT / BLE",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "BLE Scanner",
+        img: Findable1,
+      },
+      {
+        id: 2,
+        title: "Gateway Dashboard",
+        img: Findable2,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Project",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Findable",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "IoT / Indoor Positioning",
+        },
+        {
+          id: 3,
+          title: "Website",
+          details: "https://app.knesysplus.com/findable/Account/Login",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a containerized BLE beacon detection and localization system running on Raspberry Pi. Enable real-time beacon scanning, GPIO-based LED status indicators, REST API gateway for beacon data retrieval, and MongoDB persistence for indoor positioning analytics—supporting multiple simultaneous beacon signals across large indoor spaces.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Node.js",
+            "Express.js",
+            "BLE (noble)",
+            "GPIO",
+            "Docker",
+            "Docker Compose",
+            "MongoDB",
+            "Raspberry Pi",
+            "Manjaro ARM",
+            "REST API",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Built apible, an Express.js REST API server exposing endpoints for managing beacons, querying device state, and retrieving historical positioning data. Designed to handle concurrent beacon discovery requests and provide low-latency responses for real-time location tracking applications.",
+        },
+        {
+          id: 2,
+          details:
+            "Implemented noble-based BLE scanning service running in a containerized Node.js environment with privileged access to Bluetooth hardware. Configured to continuously discover BLE beacons, filter by RSSI (signal strength) thresholds, and stream beacon events to downstream processors without blocking the scanner.",
+        },
+        {
+          id: 3,
+          details:
+            "Built gpioctl service for GPIO-based hardware control: debounced button handling for factory reset (10-second hold), Bluetooth stack mode cycling on triple-press (peripheral/central toggle via bleno/noble), and relay of button state changes to rgbcontrol for LED feedback. Designed with reusable patterns enabling consistent hardware abstraction across DataCenter, FaceDN, and Findable.",
+        },
+        {
+          id: 4,
+          details:
+            "Implemented rgbcontrol service driving the gateway's physical RGB LED indicators, translating internal service state (BLE scanning active, beacons found, error states) into real-time visual feedback. Exposed REST endpoints for state management and integrated with gpioctl for hardware coordination.",
+        },
+        {
+          id: 5,
+          details:
+            "Built mongoctl service for MongoDB schema initialization and data management—setting up beacon event collections, indexes for RSSI queries and temporal searches, and seed data for test environments. Designed automated schema migrations to support new beacon attributes without manual database administration.",
+        },
+        {
+          id: 4,
+          details:
+            "Built pushble event processor to handle incoming BLE beacon signals, validate RSSI data, associate beacons with physical spaces, and trigger real-time notifications. Integrated with MongoDB for persistent event storage and analytics queries (beacon frequency, signal strength distribution, temporal patterns).",
+        },
+        {
+          id: 6,
+          details:
+            "Orchestrated multi-service architecture via Docker Compose across development, test, and production environments (compose_dev, compose_test, compose_prod). Included Watchtower for automated container image updates, SSH tunnel for remote debugging, and optional Grafana integration for monitoring beacon detection rates and gateway health.",
         },
       ],
       SocialSharingHeading: "",

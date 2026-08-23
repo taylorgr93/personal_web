@@ -8,6 +8,7 @@ import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
 import MongoClientImg from "../images/npm.webp";
+import Findable1 from "../images/findable/findable1.png";
 
 export const projectsData = [
   {
@@ -139,5 +140,17 @@ export const projectsData = [
       "Lightweight npm package wrapping MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used across Conboleto and internal microservices.",
     technologies: ["Node.js", "MongoDB", "npm", "JavaScript", "Docker"],
     liveUrl: "https://www.npmjs.com/package/mongoclienteasywrapper",
+  },
+  {
+    id: 11,
+    title: "Findable",
+    url: "findable",
+    category: "IoT Platform",
+    company: "Knesys Plus",
+    img: Findable1,
+    description:
+      "BLE beacon localization and detection system running on Raspberry Pi. Real-time beacon scanning via noble, GPIO and RGB LED controls, REST API gateway, and MongoDB data collection for indoor positioning applications.",
+    technologies: ["Node.js", "Express.js", "BLE", "GPIO", "Docker Compose", "MongoDB", "Raspberry Pi"],
+    liveUrl: "https://app.knesysplus.com/findable/Account/Login",
   },
 ];
