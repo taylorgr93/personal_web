@@ -10,7 +10,11 @@ export const aboutMeData = [
   },
   {
     id: 3,
-    bio: `As the founder of HiveCoding, I help startups and small businesses launch their digital presence with modern, scalable web solutions. From e-commerce platforms to custom dashboards, I focus on delivering value within realistic budgets.`,
+    bio: `I founded HiveCoding to pursue my passion for entrepreneurship and build digital solutions independently. I believe great software should be accessible to businesses of all sizes. Through HiveCoding, I help startups and companies across industries transform their ideas into reality — whether it's building scalable websites and mobile applications, launching e-commerce stores with secure payments, creating custom enterprise systems (ERPs, POS, cloud platforms), or providing IT consulting. My goal is to deliver production-ready solutions that grow with your business. Learn more at hivecoding.com.`,
+    link: {
+      text: "hivecoding.com",
+      url: "https://hivecoding.com/",
+    },
   },
 ];
 

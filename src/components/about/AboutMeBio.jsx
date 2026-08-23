@@ -16,6 +16,21 @@ const AboutMeBio = () => {
             className="font-general-regular text-lg text-ternary-dark dark:text-ternary-light leading-relaxed text-justify"
           >
             {item.bio}
+            {item.link && (
+              <>
+                {" "}
+                <a
+                  href={item.link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visit ${item.link.text}`}
+                  className="underline text-indigo-500 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 duration-300"
+                >
+                  {item.link.text}
+                </a>
+                .
+              </>
+            )}
           </p>
         ))}
       </div>
