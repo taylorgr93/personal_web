@@ -123,13 +123,13 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Checkton",
-      publishDate: "Aug 12, 2021",
-      tags: "Frontend",
+      publishDate: "2020 - 2022",
+      tags: "Frontend / SaaS",
     },
     ProjectImages: [
       {
         id: 1,
-        title: "Checkton UI",
+        title: "Login & Auth",
         img: ChecktonImg,
       },
       {
@@ -139,7 +139,7 @@ export const singleProjectDataArray = [
       },
       {
         id: 3,
-        title: "Employees",
+        title: "Workers Management",
         img: checkton3,
       },
     ],
@@ -149,32 +149,30 @@ export const singleProjectDataArray = [
         {
           id: 1,
           title: "Name",
-          details: "Checkton",
+          details: "Checkton / Knesys Plus",
         },
-        // {
-        //   id: 2,
-        //   title: "Services",
-        //   details: "UI Design & Frontend Development",
-        // },
         {
-          id: 3,
+          id: 2,
           title: "Website",
           details: "https://checkton.com.mx/",
         },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "The objective of the web platform is to provide a flexible and user-friendly management system for construction companies, where users can manage work crews, in addition to modules such as attendance tracking, warehouse management, and work hours reporting.",
+        "Build a comprehensive workforce management SaaS platform for construction companies, integrating facial recognition attendance tracking, real-time worker and contractor management, site project administration, working-time reporting, and permission-based role access control—serving multi-tenant construction enterprises via a responsive, intuitive React-based UI.",
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
             "React",
-            "Material UI",
+            "Material-UI",
             "Redux",
-            "NodeJS",
+            "Kendo UI",
+            "zustand",
+            "react-query",
+            "i18next",
+            "axios",
             "JavaScript",
-            "Docker",
           ],
         },
       ],
@@ -183,17 +181,37 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "The most challenging aspect of the project was developing web services with the REST standard for two front-end applications (event management platform and ticket purchasing platform). Some services for the online purchasing platform did not require tokens and were publicly accessible.",
+            "Built the Auth/Security module from scratch—JWT-based login flow with dual login UI (admin/user roles), role-based access control (RoleBasedGuard, AuthGuard, PreAuthGuard), and session management via zustand auth store. Initially used localStorage for token persistence, but improved the implementation to zustand in-memory state management to mitigate XSS vulnerabilities and avoid storing sensitive tokens in browser storage.",
         },
         {
           id: 2,
           details:
-            "Additionally, we created different types of roles and permissions for each user, allowing a user to have an account on both platforms using the same email.",
+            "Developed the Employees/Trabajadores module—a full CRUD interface for worker management, including bulk actions, advanced filtering via Kendo UI Grid, profile management, and integration with facial recognition backend APIs.",
         },
         {
           id: 3,
           details:
-            "We also established a flexible and scalable development environment, utilizing microservices for code reuse and creating generic middlewares for different endpoints.",
+            "Implemented the Subcontratistas (Contractors) module with similar complexity to workers, including contractor-specific workflows, permissions hierarchy, and site assignment management.",
+        },
+        {
+          id: 4,
+          details:
+            "Built the Asistencias (Attendance) module—real-time attendance tracking with date filtering, facial recognition verification, manual entry correction, and detailed attendance reports integrated with the backend attendance APIs.",
+        },
+        {
+          id: 5,
+          details:
+            "Created the Obras/Proyectos (Sites/Projects) module for construction site administration—site creation, worker assignment, project timeline management, and site-level permission scoping tied to the multi-tenant architecture.",
+        },
+        {
+          id: 6,
+          details:
+            "Developed the Workingtime (Shifts/Hours) module—tracking working hours per site, shift management, overtime calculation, and integration with the reporting backend for payroll and compliance reports.",
+        },
+        {
+          id: 7,
+          details:
+            "Built the Reporting module—dynamic report generation using react-query for server-state management, including attendance reports, working-time summaries, contractor invoicing, and exportable analytics dashboards.",
         },
       ],
       // SocialSharingHeading: "Social media",

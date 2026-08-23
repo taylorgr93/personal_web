@@ -28,8 +28,8 @@ export const projectsData = [
     company: "Knesys Plus",
     img: Checkton1,
     description:
-      "Management platform for construction companies with crew tracking, attendance, warehouse, and work hours modules.",
-    technologies: ["React", "Redux", "Material UI", "Node.js", "Docker"],
+      "Comprehensive workforce management SaaS for construction sites with facial recognition, real-time attendance tracking, worker and contractor management, working-time reporting, and project site administration.",
+    technologies: ["React", "Material-UI", "Redux", "Kendo UI", "zustand", "react-query", "i18next"],
     liveUrl: "https://checkton.com.mx",
   },
   {
