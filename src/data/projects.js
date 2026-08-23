@@ -7,6 +7,7 @@ import TransportesColimenses1 from "../images/transportescolimenses/transportesc
 import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
+import MongoClientImg from "../images/npm.webp";
 
 export const projectsData = [
   {
@@ -126,5 +127,17 @@ export const projectsData = [
       "Centralized monitoring infrastructure observing ~8 servers and ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs.",
     technologies: ["Prometheus", "Grafana", "Loki", "Docker Compose", "node_exporter", "cAdvisor", "Alloy"],
     liveUrl: "https://monitoring.knesysplus.com",
+  },
+  {
+    id: 10,
+    title: "MongoDB Client Wrapper",
+    url: "mongodb_client_wrapper",
+    category: "NPM Package / Library",
+    company: "Knesys Plus",
+    img: MongoClientImg,
+    description:
+      "Lightweight npm package wrapping MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used across Conboleto and internal microservices.",
+    technologies: ["Node.js", "MongoDB", "npm", "JavaScript", "Docker"],
+    liveUrl: "https://www.npmjs.com/package/mongoclienteasywrapper",
   },
 ];

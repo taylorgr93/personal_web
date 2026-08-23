@@ -860,4 +860,80 @@ export const singleProjectDataArray = [
       SocialSharing: [],
     },
   },
+  {
+    ProjectHeader: {
+      title: "MongoDB Client Wrapper",
+      publishDate: "2020 - Present",
+      tags: "NPM Package / Library",
+    },
+    ProjectImages: [],
+    ProjectInfo: {
+      ClientHeading: "About Package",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "mongoclienteasywrapper",
+        },
+        {
+          id: 2,
+          title: "Registry",
+          details: "https://www.npmjs.com/package/mongoclienteasywrapper",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a lightweight, reusable npm package that simplifies common MongoDB operations (CRUD, aggregation, pagination, $lookup-based population) with automatic ID/datetime conversion. Enable internal microservices (Conboleto, DataCenter, RTSP) to share a consistent data access layer without boilerplate.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Node.js",
+            "MongoDB 4.17.2 Driver",
+            "npm",
+            "JavaScript",
+            "GitHub Actions",
+            "Integration Testing",
+            "BSON",
+            "Aggregation Pipeline",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Design & Features",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Implemented factory pattern initialization: `require('mongoclienteasywrapper')(connectionString, defaultDbName)` returns an object with all CRUD, aggregation, and helper functions. Every function accepts an optional `databaseName` parameter falling back to the default database.",
+        },
+        {
+          id: 2,
+          details:
+            "Built automatic type conversion utilities: `ConvertIdtoObjectId` auto-converts any property containing `_id` suffix to BSON ObjectId (handles nested objects/arrays), and `ConvertDatetoDatetime` recursively converts `_datetime` properties to JS Date while preserving BSON operators ($inc, $unset, etc.).",
+        },
+        {
+          id: 3,
+          details:
+            "Implemented singleton `MongoDBConnectionManager` class maintaining a single `MongoClient` with cached `Db` handles per database name, checking connection state via MongoDB Driver 4.x topology state inspection—avoiding connection thrashing across microservices.",
+        },
+        {
+          id: 4,
+          details:
+            "Designed 'ND_' prefix convention for functions that auto-filter `{ status: 'deleted' }` documents, enabling soft-delete patterns across the platform. Wrap `UpdateMongo` operations in `$set` automatically; expose `UpdateOneRaw` and `FindOneAndUpdate` for raw operator access.",
+        },
+        {
+          id: 5,
+          details:
+            "Built `Populate` / `PopulateAuto` functions using `$lookup` aggregation, inferring foreign collection names by stripping `_id` suffix from field names (e.g., `user_id` → `user` collection). Handles bidirectional many-to-many relationships via `assing.js` cross-reference helper.",
+        },
+        {
+          id: 6,
+          details:
+            "Configured automated npm publishing via GitHub Actions (`.github/workflows/publish-to-npm.yml`): on merge to `main`, package builds and publishes to npm registry. Maintains semantic versioning and integration tests requiring live MongoDB instance.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
 ];
