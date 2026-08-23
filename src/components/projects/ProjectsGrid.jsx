@@ -15,6 +15,84 @@ const ProjectsGrid = () => {
     selectProjectsByCategory,
   } = useContext(ProjectsContext);
 
+  const getProjectsToDisplay = () => {
+    if (selectProject) return selectProjectsByCategory;
+    if (searchProject) return searchProjectsByTitle;
+    return projects;
+  };
+
+  const projectsToDisplay = getProjectsToDisplay();
+  const isFiltered = selectProject || searchProject;
+
+  const groupByCompany = (projectList) => {
+    const grouped = {};
+    projectList.forEach((project) => {
+      const company = project.company || "Other";
+      if (!grouped[company]) {
+        grouped[company] = [];
+      }
+      grouped[company].push(project);
+    });
+    return grouped;
+  };
+
+  const renderProjects = () => {
+    if (isFiltered) {
+      return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
+          {projectsToDisplay.map((project) => (
+            <ProjectSingle
+              id={project.id}
+              title={project.title}
+              category={project.category}
+              image={project.img}
+              description={project.description}
+              technologies={project.technologies}
+              liveUrl={project.liveUrl}
+              key={project.id}
+            />
+          ))}
+        </div>
+      );
+    }
+
+    const groupedProjects = groupByCompany(projectsToDisplay);
+    const companyOrder = ["Knesys Plus", "HiveCoding"];
+    const sortedCompanies = Object.keys(groupedProjects).sort((a, b) => {
+      const indexA = companyOrder.indexOf(a);
+      const indexB = companyOrder.indexOf(b);
+      if (indexA === -1) return 1;
+      if (indexB === -1) return -1;
+      return indexA - indexB;
+    });
+
+    return (
+      <div className="mt-6">
+        {sortedCompanies.map((company) => (
+          <div key={company} className="mb-12">
+            <h2 className="text-2xl sm:text-3xl font-general-semibold text-ternary-dark dark:text-ternary-light mb-8">
+              {company}
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              {groupedProjects[company].map((project) => (
+                <ProjectSingle
+                  id={project.id}
+                  title={project.title}
+                  category={project.category}
+                  image={project.img}
+                  description={project.description}
+                  technologies={project.technologies}
+                  liveUrl={project.liveUrl}
+                  key={project.id}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <section className="py-5 sm:py-10 mt-5 sm:mt-10">
       <div className="text-center">
@@ -25,7 +103,7 @@ const ProjectsGrid = () => {
 
       <div className="mt-10 sm:mt-16">
         <h3
-          className="font-general-regular 
+          className="font-general-regular
                         text-center text-secondary-dark
                         dark:text-ternary-light
                         text-md
@@ -64,12 +142,12 @@ const ProjectsGrid = () => {
               onChange={(e) => {
                 setSearchProject(e.target.value);
               }}
-              className="font-general-medium 
+              className="font-general-medium
                                 pl-3
                                 pr-1
                                 sm:px-4
                                 py-2
-                                border 
+                                border
                             border-gray-200
                                 dark:border-secondary-dark
                                 rounded-lg
@@ -93,46 +171,7 @@ const ProjectsGrid = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-        {selectProject
-          ? selectProjectsByCategory.map((project) => (
-              <ProjectSingle
-                id={project.id}
-                title={project.title}
-                category={project.category}
-                image={project.img}
-                description={project.description}
-                technologies={project.technologies}
-                liveUrl={project.liveUrl}
-                key={project.id}
-              />
-            ))
-          : searchProject
-          ? searchProjectsByTitle.map((project) => (
-              <ProjectSingle
-                id={project.id}
-                title={project.title}
-                category={project.category}
-                image={project.img}
-                description={project.description}
-                technologies={project.technologies}
-                liveUrl={project.liveUrl}
-                key={project.id}
-              />
-            ))
-          : projects.map((project) => (
-              <ProjectSingle
-                id={project.id}
-                title={project.title}
-                category={project.category}
-                image={project.img}
-                description={project.description}
-                technologies={project.technologies}
-                liveUrl={project.liveUrl}
-                key={project.id}
-              />
-            ))}
-      </div>
+      {renderProjects()}
     </section>
   );
 };

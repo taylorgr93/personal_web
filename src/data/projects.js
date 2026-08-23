@@ -12,6 +12,7 @@ export const projectsData = [
     title: "Conboleto",
     url: "conboleto",
     category: "Ticketing Platform",
+    company: "Knesys Plus",
     img: WebImage6,
     description:
       "Ticketing platform for event organizers and buyers with role-based access and microservices architecture.",
@@ -23,6 +24,7 @@ export const projectsData = [
     title: "Checkton",
     url: "checkton",
     category: "Construction SaaS",
+    company: "Knesys Plus",
     img: WebImage3,
     description:
       "Management platform for construction companies with crew tracking, attendance, warehouse, and work hours modules.",
@@ -34,6 +36,7 @@ export const projectsData = [
     title: "RTSP ABSA Industrial",
     url: "rtsp_absa_industrial",
     category: "Video Management Platform",
+    company: "Knesys Plus",
     img: Rtsp1,
     description:
       "Frontend for a multi-enterprise RTSP video management platform, built on a microservices backend for device, employee, and access control, plus a searchable video evidence archive.",
@@ -45,6 +48,7 @@ export const projectsData = [
     title: "DataCenter",
     url: "datacenter",
     category: "IoT Platform",
+    company: "Knesys Plus",
     img: DataCenter1,
     description:
       "OS provisioning and hardware I/O microservices for a containerized Bluetooth IoT gateway on Raspberry Pi, a GPS vehicle-tracking backend, and a UDP middleware bridging REST to Motorola two-way radios.",
@@ -66,6 +70,7 @@ export const projectsData = [
     title: "FaceDN",
     url: "facedn",
     category: "IoT Platform",
+    company: "Knesys Plus",
     img: Facedn1,
     description:
       "Backend microservices and configuration UI for a thermal-camera IoT platform monitoring employee attendance, temperature, and mask compliance.",
@@ -77,6 +82,7 @@ export const projectsData = [
     title: "Transportes Colimenses",
     url: "transportes_colimenses",
     category: "Corporate Website",
+    company: "HiveCoding",
     img: TransportesColimenses1,
     description:
       "Corporate website for a freight transportation company with client portal integration and interactive routes map.",
@@ -88,6 +94,7 @@ export const projectsData = [
     title: "Invertúneles",
     url: "invertuneles",
     category: "Corporate Website",
+    company: "HiveCoding",
     img: Invertuneles1,
     description:
       "Multilingual corporate website for an agricultural company with product catalog, video integration, and email quotation system.",
