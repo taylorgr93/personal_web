@@ -7,7 +7,7 @@ import Loading from "./components/Loading";
 import AppFooter from "./components/shared/AppFooter";
 import AppHeader from "./components/shared/AppHeader";
 import "./css/App.css";
-import UseScrollToTop from "./hooks/useScrollToTop";
+import ScrollToTopButton from "./hooks/useScrollToTop";
 import NotFound from "./components/NotFound.jsx";
 
 const About = lazy(() => import("./pages/AboutMe"));
@@ -45,7 +45,7 @@ function App() {
           </Suspense>
           <AppFooter />
         </Router>
-        <UseScrollToTop />
+        <ScrollToTopButton />
       </div>
     </AnimatePresence>
   );
