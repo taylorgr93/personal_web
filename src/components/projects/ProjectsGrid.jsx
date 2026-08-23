@@ -21,9 +21,6 @@ const ProjectsGrid = () => {
     return projects;
   };
 
-  const projectsToDisplay = getProjectsToDisplay();
-  const isFiltered = selectProject || searchProject;
-
   const groupByCompany = (projectList) => {
     const grouped = {};
     projectList.forEach((project) => {
@@ -35,6 +32,9 @@ const ProjectsGrid = () => {
     });
     return grouped;
   };
+
+  const projectsToDisplay = getProjectsToDisplay();
+  const isFiltered = selectProject || searchProject;
 
   const renderProjects = () => {
     if (isFiltered) {

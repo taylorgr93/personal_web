@@ -37,8 +37,8 @@ const AboutMeBio = () => {
 
       {/* Quick highlights - scannable stats */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-10 pt-10 border-t border-gray-200 dark:border-gray-700">
-        {highlights.map((item, index) => (
-          <div key={index} className="text-center">
+        {highlights.map((item) => (
+          <div key={item.label} className="text-center">
             <p className="text-3xl font-bold text-ternary-dark dark:text-ternary-light">
               {item.value}
             </p>
