@@ -11,13 +11,16 @@ import DataCenterImg from "../images/datacenter/datacenter1.png";
 import DataCenter2 from "../images/datacenter/datacenter2.png";
 import DataCenter4 from "../images/datacenter/datacenter4.png";
 import Facedn1 from "../images/facedn/facedn1.png";
-import ConboletoImg from "../images/web-project-6.png";
+import Facedn2 from "../images/facedn/facedn2.png";
 import TransportesColimensesImg from "../images/transportescolimenses/transportescolimenses1.png";
 import transportescolimenses2 from "../images/transportescolimenses/transportescolimenses2.png";
 import transportescolimenses3 from "../images/transportescolimenses/transportescolimenses3.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 import VigoCoffee2 from "../images/vigo-coffee/vigo-coffee2.png";
 import VigoCoffee3 from "../images/vigo-coffee/vigo-coffee3.png";
+import ConboletoImg from "../images/conboleto/conboleto1.png";
+import Conboleto2 from "../images/conboleto/conboleto2.png";
+import Conboleto3 from "../images/conboleto/conboleto3.png";
 
 // Import icons
 import {
@@ -33,14 +36,24 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Conboleto",
-      publishDate: "Jan 26, 2024",
-      tags: "Backend",
+      publishDate: "2023 - 2026",
+      tags: "Backend / Full-Stack",
     },
     ProjectImages: [
       {
         id: 1,
-        title: "Conboleto UI",
+        title: "Dashboard",
         img: ConboletoImg,
+      },
+      {
+        id: 2,
+        title: "Events & Ticketing",
+        img: Conboleto2,
+      },
+      {
+        id: 3,
+        title: "Payment Processing",
+        img: Conboleto3,
       },
     ],
     ProjectInfo: {
@@ -49,33 +62,37 @@ export const singleProjectDataArray = [
         {
           id: 1,
           title: "Name",
-          details: "Conboleto",
+          details: "Conboleto / Knesys Plus",
         },
-        // {
-        //   id: 2,
-        //   title: "Services",
-        //   details: "UI Design & Frontend Development",
-        // },
         {
-          id: 3,
+          id: 2,
           title: "Website",
           details: "https://www.conboleto.com/",
         },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "To provide a seamless ticketing platform that empowers users to effortlessly purchase tickets for events while enabling organizers to create events and access comprehensive statistics to enhance their planning and marketing efforts.",
+        "Architect and build a complete event ticketing and cashless payment platform serving event organizers and attendees across Latin America. Integrate multiple payment gateways (Stripe, LKL Pay, MercadoPago), implement RFID/NFC token-based transactions, manage reserved seating via third-party APIs, and provide real-time reporting and analytics—all through a microservices architecture supporting multi-tenancy and high throughput.",
       Technologies: [
         {
           title: "Tools & Technologies",
           techs: [
-            "JavaScript",
-            "NodeJS",
-            "ExpressJS",
+            "TypeScript",
+            "Node.js",
+            "Express.js",
+            "NestJS",
             "MongoDB",
+            "Socket.IO",
+            "Stripe",
+            "MercadoPago",
+            "LKL Pay",
+            "SeatsIO",
+            "RFID/NFC",
             "Docker",
+            "Docker Compose",
             "JWT",
-            "MicroServices",
+            "Multer",
+            "node-schedule",
           ],
         },
       ],
@@ -84,17 +101,32 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "The most challenging aspect of the project was developing web services with the REST standard for two front-end applications (event management platform and ticket purchasing platform). Some services for the online purchasing platform did not require tokens and were publicly accessible.",
+            "Architected and built all 6 microservices from scratch: API Gateway (request routing, JWT validation, multi-tenancy scoping), Auth Service (registration, login, activation, JWT issuance), Events Service (CRUD events, ticket management, SeatsIO integration, scheduled jobs), Payment Service (multi-gateway factory pattern supporting Stripe MXN/USD, MercadoPago, LKL Pay with unified refund/chargeback handling), Cashless Service (NestJS-based RFID/NFC token recharge/charge/transfer with WebSocket real-time events), and POS Service (inventory, products, sales points, transactions with company-scoped multi-tenancy).",
         },
         {
           id: 2,
           details:
-            "Additionally, we created different types of roles and permissions for each user, allowing a user to have an account on both platforms using the same email.",
+            "Implemented complex payment orchestration: simultaneous multi-gateway support with automatic gateway selection, unified refund flows driven by per-gateway flags, chargeback/dispute evidence generation as PDFs, Stripe balance sync cron jobs, and MercadoPago webhook handling for transaction confirmation and dispute notifications.",
         },
         {
           id: 3,
           details:
-            "We also established a flexible and scalable development environment, utilizing microservices for code reuse and creating generic middlewares for different endpoints.",
+            "Built the cashless RFID/NFC token system in NestJS with real-time WebSocket events (recharge_success, charge_success, balance_updated, transfer_complete), secure token lifecycle management, and per-company/per-event isolation for segregated carnival/festival deployments.",
+        },
+        {
+          id: 4,
+          details:
+            "Designed and implemented multi-tenancy at the database level: each enterprise scopes all queries by `companies_id`, JWT headers inject tenant context, and MongoDB operations use aggregation pipelines with $facet for efficient paginated reporting across events, tickets, transactions, and disputes.",
+        },
+        {
+          id: 5,
+          details:
+            "Developed comprehensive ticket lifecycle management: ticket creation/assignment, inter-user transfers with expiry cleanup via node-schedule cron jobs, coupon/discount application, courtesy tickets for organizers, experience upsells, and billboard event listings with access control per company.",
+        },
+        {
+          id: 6,
+          details:
+            "Implemented GitLab CI/CD pipeline with Docker-in-Docker for automated builds, tests, and deployments across dev/staging/production environments. Configured Docker Compose orchestration for local development and cloud deployments, with branch-triggered releases (testing branch → staging, release branch → production).",
         },
       ],
       SocialSharingHeading: "Social media",
@@ -420,6 +452,11 @@ export const singleProjectDataArray = [
         id: 1,
         title: "FaceDN Login",
         img: Facedn1,
+      },
+      {
+        id: 2,
+        title: "Dashboard",
+        img: Facedn2,
       },
     ],
     ProjectInfo: {

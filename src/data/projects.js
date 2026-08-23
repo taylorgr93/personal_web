@@ -1,8 +1,8 @@
+import Conboleto1 from "../images/conboleto/conboleto1.png";
 import Checkton1 from "../images/checkton/checkton1.png";
 import Rtsp1 from "../images/rtsp/rtsp1.png";
 import DataCenter1 from "../images/datacenter/datacenter1.png";
 import Facedn1 from "../images/facedn/facedn1.png";
-import WebImage6 from "../images/web-project-6.png";
 import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
 import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
@@ -14,10 +14,10 @@ export const projectsData = [
     url: "conboleto",
     category: "Ticketing Platform",
     company: "Knesys Plus",
-    img: WebImage6,
+    img: Conboleto1,
     description:
-      "Ticketing platform for event organizers and buyers with role-based access and microservices architecture.",
-    technologies: ["Node.js", "Express", "MongoDB", "Docker", "JWT"],
+      "Full-stack event ticketing and cashless payment platform with 6 microservices, multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration.",
+    technologies: ["TypeScript", "Node.js", "Express", "NestJS", "MongoDB", "Socket.IO", "Stripe", "MercadoPago", "SeatsIO", "Docker"],
     liveUrl: "https://www.conboleto.com",
   },
   {
