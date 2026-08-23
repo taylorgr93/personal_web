@@ -1,4 +1,4 @@
-import WebImage3 from "../images/web-project-3.png";
+import Checkton1 from "../images/checkton/checkton1.png";
 import Rtsp1 from "../images/rtsp/rtsp1.png";
 import DataCenter1 from "../images/datacenter/datacenter1.png";
 import Facedn1 from "../images/facedn/facedn1.png";
@@ -25,7 +25,7 @@ export const projectsData = [
     url: "checkton",
     category: "Construction SaaS",
     company: "Knesys Plus",
-    img: WebImage3,
+    img: Checkton1,
     description:
       "Management platform for construction companies with crew tracking, attendance, warehouse, and work hours modules.",
     technologies: ["React", "Redux", "Material UI", "Node.js", "Docker"],
