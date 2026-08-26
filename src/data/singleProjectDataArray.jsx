@@ -1117,4 +1117,151 @@ export const singleProjectDataArray = [
       SocialSharing: [],
     },
   },
+  {
+    ProjectHeader: {
+      title: "AbsaCCM",
+      publishDate: "2024 - 2026",
+      tags: "Frontend / Full-Stack",
+    },
+    ProjectImages: [],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "AbsaCCM / Knesys Plus",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Build a manufacturing configuration and monitoring system as a microservices monorepo with a React-based GUI for real-time operational oversight. Implement dynamic calendar filtering, multi-currency support (USD/MXN), real-time analytics dashboards with Syncfusion charts, and synchronized data architecture across frontend and multiple backend services (API gateway, authentication, MongoDB control, Active Directory integration).",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "React 16.13.1",
+            "Material-UI 4.x",
+            "styled-components",
+            "react-router-dom",
+            "react-hook-form",
+            "Node.js",
+            "Express.js",
+            "Passport.js",
+            "JWT",
+            "MongoDB 4.0.14",
+            "Docker Compose",
+            "Syncfusion Charts",
+          ],
+        },
+      ],
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Designed and implemented complete React frontend for manufacturing operations: calendar with dynamic filtering by date/month, real-time component state management, and responsive UI across desktop and tablet viewports using Material-UI theme system.",
+        },
+        {
+          id: 2,
+          details:
+            "Built multi-currency selector (USD/MXN) with dynamic limit updates: switching currencies recalculates thresholds, chart maximum values, and dashboard KPIs in real-time without page reload. Integrated with backend API for currency-specific metrics aggregation.",
+        },
+        {
+          id: 3,
+          details:
+            "Implemented real-time analytics dashboards with Syncfusion charts: line charts with dynamic X-axis limits, interactive tooltips, series predictions with navigation arrows, and theme-aware styling (light/dark mode support). Fixed chart rendering edge cases when data is sparse or empty.",
+        },
+        {
+          id: 4,
+          details:
+            "Contributed 55 commits (55% of repository code) to frontend development: calendar logic refinement, padding/styling corrections, month picker fixes, component lifecycle optimization, and UX improvements across dashboard, filters, and event handling.",
+        },
+        {
+          id: 5,
+          details:
+            "Built microservices monorepo architecture: frontconfig (React GUI on port 4001), apigateway (Express on 3001), security service (Passport authentication on 3214), activedirectory integration (3002), mongoctl (database initialization), plus optional Odoo ERP service. All services containerized with Docker Compose for local development.",
+        },
+        {
+          id: 6,
+          details:
+            "Debugged and optimized React component rendering: fixed padding inconsistencies, resolved month picker date display issues, streamlined form submissions with react-hook-form, and minimized unnecessary re-renders through proper prop drilling and state management.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "FAN-ID",
+      publishDate: "2023 - 2026",
+      tags: "Frontend / Full-Stack",
+    },
+    ProjectImages: [],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "FAN-ID / Knesys Plus",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Develop a comprehensive sports tournament and stadium event management platform enabling ticket sales, employee/fan profiles, door access control, attendance tracking, and identity verification via AWS Rekognition face recognition. Support multi-tenant tournament organization with role-based permissions, real-time event synchronization, and reporting dashboards for attendance and revenue analytics.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "AWS Rekognition",
+            "Docker",
+            "Redux",
+            "Material-UI",
+            "JWT",
+            "Socket.IO",
+            "AWS S3",
+          ],
+        },
+      ],
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Implemented comprehensive event/tournament management UI: calendar interface, tournament CRUD operations with permission validation, employee roster management, sports-specific role definitions (teams, events, gates), and real-time status synchronization across multiple concurrent users.",
+        },
+        {
+          id: 2,
+          details:
+            "Built employee and fan profile management system: document uploads and verification, profile completion workflows, role-based field visibility (employees vs fans), and dashboard widgets displaying personalized event invitations and attendance history.",
+        },
+        {
+          id: 3,
+          details:
+            "Integrated AWS Rekognition face recognition for door access control: real-time identity verification against employee/fan databases, attendance logging with timestamp capture, photo upload with auto-resize/crop, and fallback manual verification when confidence scores are below thresholds.",
+        },
+        {
+          id: 4,
+          details:
+            "Developed reporting and analytics dashboards: attendance heatmaps by gate/time window, revenue summaries by event/ticket type, employee activity logs, and multi-currency support (USD/MXN). Charts update in real-time as events progress.",
+        },
+        {
+          id: 5,
+          details:
+            "Contributed 95 commits (primary contributor with 13,768 lines added, 10,230 lines deleted): frontend colorimetry/theme implementation, calendar and event dialog design, form validations, scroll/pagination optimization (infinite scroll, lazy loading), loading animations, and accessibility improvements.",
+        },
+        {
+          id: 6,
+          details:
+            "Managed backend API development: tournament CRUD endpoints, user and role management, document APIs, event synchronization services, and Rekognition service integration. Implemented permission checks on sensitive operations and audit logging for compliance.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
 ];

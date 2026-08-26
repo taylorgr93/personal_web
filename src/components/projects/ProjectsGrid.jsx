@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import ProjectSingle from "./ProjectSingle";
 import { ProjectsContext } from "../../context/ProjectsContext";
@@ -14,6 +14,8 @@ const ProjectsGrid = () => {
     setSelectProject,
     selectProjectsByCategory,
   } = useContext(ProjectsContext);
+
+  const [showMoreKnesys, setShowMoreKnesys] = useState(false);
 
   const getProjectsToDisplay = () => {
     if (selectProject) return selectProjectsByCategory;
@@ -66,15 +68,22 @@ const ProjectsGrid = () => {
       return indexA - indexB;
     });
 
+    const knesysProjects = groupedProjects["Knesys Plus"] || [];
+    const remainingKnesys = knesysProjects.length - 6;
+    const totalOtherProjects = sortedCompanies
+      .filter((company) => company !== "Knesys Plus")
+      .reduce((sum, company) => sum + groupedProjects[company].length, 0);
+
     return (
       <div className="mt-6">
-        {sortedCompanies.map((company) => (
-          <div key={company} className="mb-12">
+        {/* Knesys Plus section - always visible */}
+        {knesysProjects.length > 0 && (
+          <div className="mb-12">
             <h2 className="text-2xl sm:text-3xl font-general-semibold text-ternary-dark dark:text-ternary-light mb-8">
-              {company}
+              Knesys Plus
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {groupedProjects[company].map((project) => (
+              {knesysProjects.slice(0, 6).map((project) => (
                 <ProjectSingle
                   id={project.id}
                   title={project.title}
@@ -87,8 +96,68 @@ const ProjectsGrid = () => {
                 />
               ))}
             </div>
+
+            {/* Remaining Knesys projects - only visible if showMoreKnesys is true */}
+            {showMoreKnesys && knesysProjects.length > 6 && (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                {knesysProjects.slice(6).map((project) => (
+                  <ProjectSingle
+                    id={project.id}
+                    title={project.title}
+                    category={project.category}
+                    image={project.img}
+                    description={project.description}
+                    technologies={project.technologies}
+                    liveUrl={project.liveUrl}
+                    key={project.id}
+                  />
+                ))}
+              </div>
+            )}
           </div>
-        ))}
+        )}
+
+        {/* Other companies - only visible if showMoreKnesys is true */}
+        {showMoreKnesys && (
+          <div>
+            {sortedCompanies.map((company) => {
+              if (company === "Knesys Plus") return null;
+
+              const companyProjects = groupedProjects[company];
+              return (
+                <div key={company} className="mb-12">
+                  <h2 className="text-2xl sm:text-3xl font-general-semibold text-ternary-dark dark:text-ternary-light mb-8">
+                    {company}
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    {companyProjects.map((project) => (
+                      <ProjectSingle
+                        id={project.id}
+                        title={project.title}
+                        category={project.category}
+                        image={project.img}
+                        description={project.description}
+                        technologies={project.technologies}
+                        liveUrl={project.liveUrl}
+                        key={project.id}
+                      />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
+        {/* Ver más button */}
+        {!showMoreKnesys && remainingKnesys > 0 && (
+          <button
+            onClick={() => setShowMoreKnesys(true)}
+            className="mt-8 mx-auto block px-6 py-3 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-general-medium rounded-lg transition-colors duration-300"
+          >
+            Ver más proyectos ({remainingKnesys + totalOtherProjects} más)
+          </button>
+        )}
       </div>
     );
   };

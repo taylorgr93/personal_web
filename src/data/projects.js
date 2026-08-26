@@ -10,6 +10,8 @@ import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.pn
 import MongoClientImg from "../images/npm.webp";
 import Findable1 from "../images/findable/findable1.png";
 import TracSaImg from "../images/nodejs.png";
+import AbsaCCMImg from "../images/nodejs.png";
+import FanIDImg from "../images/nodejs.png";
 
 export const projectsData = [
   {
@@ -164,6 +166,30 @@ export const projectsData = [
     description:
       "Fleet management system tracking vehicle fuel consumption, metrics, salaries, and expenses via monorepo architecture (3 microservices). Real-time data synchronization from external sources, scheduled daily jobs for metrics aggregation, and REST API with Swagger documentation.",
     technologies: ["Node.js", "Express.js", "MongoDB", "Docker Compose", "node-schedule", "Passport.js", "JWT"],
+    liveUrl: "https://app.knesysplus.com",
+  },
+  {
+    id: 13,
+    title: "AbsaCCM",
+    url: "absaccm",
+    category: "Manufacturing & Monitoring",
+    company: "Knesys Plus",
+    img: AbsaCCMImg,
+    description:
+      "Manufacturing configuration and monitoring system built as a microservices monorepo. React-based GUI for manufacturing operations with calendar filtering, multi-currency support, real-time analytics dashboards, and dynamic chart visualization.",
+    technologies: ["React", "Material-UI", "Node.js", "Express.js", "MongoDB", "Docker Compose", "Syncfusion Charts", "Passport.js"],
+    liveUrl: "https://app.knesysplus.com",
+  },
+  {
+    id: 14,
+    title: "FAN-ID",
+    url: "fan_id",
+    category: "Sports & Events",
+    company: "Knesys Plus",
+    img: FanIDImg,
+    description:
+      "Sports tournament and stadium event management platform with employee profiles, door access control, attendance reporting, and AWS Rekognition integration for face recognition and identity verification.",
+    technologies: ["React", "Node.js", "MongoDB", "Docker", "AWS Rekognition", "Express.js"],
     liveUrl: "https://app.knesysplus.com",
   },
 ];
