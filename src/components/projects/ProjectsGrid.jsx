@@ -4,6 +4,8 @@ import ProjectSingle from "./ProjectSingle";
 import { ProjectsContext } from "../../context/ProjectsContext";
 import ProjectsFilter from "./ProjectsFilter";
 
+const INITIAL_PROJECTS_SHOWN = 6;
+
 const ProjectsGrid = () => {
   const {
     projects,
@@ -35,44 +37,46 @@ const ProjectsGrid = () => {
     return grouped;
   };
 
+  const renderProjectCard = (project) => (
+    <ProjectSingle
+      id={project.id}
+      title={project.title}
+      category={project.category}
+      image={project.img}
+      description={project.description}
+      technologies={project.technologies}
+      liveUrl={project.liveUrl}
+      key={project.id}
+    />
+  );
+
   const projectsToDisplay = getProjectsToDisplay();
   const isFiltered = selectProject || searchProject;
+  const groupedProjects = groupByCompany(projectsToDisplay);
+  const knesysProjects = groupedProjects["Knesys Plus"] || [];
+  const remainingKnesys = knesysProjects.length - INITIAL_PROJECTS_SHOWN;
+
+  const companyOrder = ["Knesys Plus", "HiveCoding"];
+  const sortedCompanies = Object.keys(groupedProjects).sort((a, b) => {
+    const indexA = companyOrder.indexOf(a);
+    const indexB = companyOrder.indexOf(b);
+    if (indexA === -1) return 1;
+    if (indexB === -1) return -1;
+    return indexA - indexB;
+  });
+
+  const totalOtherProjects = sortedCompanies
+    .filter((company) => company !== "Knesys Plus")
+    .reduce((sum, company) => sum + groupedProjects[company].length, 0);
 
   const renderProjects = () => {
     if (isFiltered) {
       return (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-6 sm:gap-10">
-          {projectsToDisplay.map((project) => (
-            <ProjectSingle
-              id={project.id}
-              title={project.title}
-              category={project.category}
-              image={project.img}
-              description={project.description}
-              technologies={project.technologies}
-              liveUrl={project.liveUrl}
-              key={project.id}
-            />
-          ))}
+          {projectsToDisplay.map(renderProjectCard)}
         </div>
       );
     }
-
-    const groupedProjects = groupByCompany(projectsToDisplay);
-    const companyOrder = ["Knesys Plus", "HiveCoding"];
-    const sortedCompanies = Object.keys(groupedProjects).sort((a, b) => {
-      const indexA = companyOrder.indexOf(a);
-      const indexB = companyOrder.indexOf(b);
-      if (indexA === -1) return 1;
-      if (indexB === -1) return -1;
-      return indexA - indexB;
-    });
-
-    const knesysProjects = groupedProjects["Knesys Plus"] || [];
-    const remainingKnesys = knesysProjects.length - 6;
-    const totalOtherProjects = sortedCompanies
-      .filter((company) => company !== "Knesys Plus")
-      .reduce((sum, company) => sum + groupedProjects[company].length, 0);
 
     return (
       <div className="mt-6">
@@ -83,35 +87,13 @@ const ProjectsGrid = () => {
               Knesys Plus
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-              {knesysProjects.slice(0, 6).map((project) => (
-                <ProjectSingle
-                  id={project.id}
-                  title={project.title}
-                  category={project.category}
-                  image={project.img}
-                  description={project.description}
-                  technologies={project.technologies}
-                  liveUrl={project.liveUrl}
-                  key={project.id}
-                />
-              ))}
+              {knesysProjects.slice(0, INITIAL_PROJECTS_SHOWN).map(renderProjectCard)}
             </div>
 
             {/* Remaining Knesys projects - only visible if showMoreKnesys is true */}
-            {showMoreKnesys && knesysProjects.length > 6 && (
+            {showMoreKnesys && knesysProjects.length > INITIAL_PROJECTS_SHOWN && (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
-                {knesysProjects.slice(6).map((project) => (
-                  <ProjectSingle
-                    id={project.id}
-                    title={project.title}
-                    category={project.category}
-                    image={project.img}
-                    description={project.description}
-                    technologies={project.technologies}
-                    liveUrl={project.liveUrl}
-                    key={project.id}
-                  />
-                ))}
+                {knesysProjects.slice(INITIAL_PROJECTS_SHOWN).map(renderProjectCard)}
               </div>
             )}
           </div>
@@ -130,18 +112,7 @@ const ProjectsGrid = () => {
                     {company}
                   </h2>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {companyProjects.map((project) => (
-                      <ProjectSingle
-                        id={project.id}
-                        title={project.title}
-                        category={project.category}
-                        image={project.img}
-                        description={project.description}
-                        technologies={project.technologies}
-                        liveUrl={project.liveUrl}
-                        key={project.id}
-                      />
-                    ))}
+                    {companyProjects.map(renderProjectCard)}
                   </div>
                 </div>
               );
