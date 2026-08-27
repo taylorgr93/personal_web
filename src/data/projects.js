@@ -13,6 +13,7 @@ import TracSaImg from "../images/nodejs.png";
 import AbsaCCMImg from "../images/nodejs.png";
 import FanIDImg from "../images/nodejs.png";
 import CisItemValiImg from "../images/ASP.NET-Core.png";
+import BitFlow1 from "../images/bitflow/bitflow1.png";
 
 export const projectsData = [
   {
@@ -203,6 +204,18 @@ export const projectsData = [
     description:
       "ASP.NET Core MVC application for managing FAI (Form and Item validation) documents. Enables creation, editing, and validation of structured records with document folio tracking, title/template management, evidence items, and approval workflows.",
     technologies: ["ASP.NET Core 2.2", ".NET Core 2.0", "MVC", "MySQL 8.0", "Entity Framework Core", "ADO.NET"],
+    liveUrl: "",
+  },
+  {
+    id: 16,
+    title: "BitFlow",
+    url: "bitflow",
+    category: "Manufacturing Quality Control",
+    company: "Pounce Consulting",
+    img: BitFlow1,
+    description:
+      "Comprehensive quality control platform for smart energy meter manufacturing at CFE. 12 independent graphical interfaces orchestrated through centralized database, ensuring real-time traceability, version control, and productivity metrics across production lines.",
+    technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "Linq", "SQL Server 2012", "ClickOnce"],
     liveUrl: "",
   },
 ];

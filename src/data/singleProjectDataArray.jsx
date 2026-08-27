@@ -28,6 +28,10 @@ import MongoClientImg from "../images/npm.webp";
 import Findable1 from "../images/findable/findable1.png";
 import Findable2 from "../images/findable/findable2.png";
 
+import BitFlow1 from "../images/bitflow/bitflow1.png";
+import BitFlow2 from "../images/bitflow/bitflow2.png";
+import BitFlow3 from "../images/bitflow/bitflow3.png";
+
 // Import icons
 import {
   FiFacebook,
@@ -1267,7 +1271,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "cisItemVali",
-      publishDate: "2023 - 2024",
+      publishDate: "2018 - 2019",
       tags: "Backend / Full-Stack",
     },
     ProjectImages: [],
@@ -1329,6 +1333,113 @@ export const singleProjectDataArray = [
           id: 6,
           details:
             "Managed MySQL database schema with 5 interconnected tables using referential integrity. Optimized queries for common operations (list documents, load document with related data, update approval status). Implemented proper data validation at controller level before database write operations.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "BitFlow",
+      publishDate: "2016 - 2018",
+      tags: "Backend / Full-Stack",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Quality Control Dashboard",
+        img: BitFlow1,
+      },
+      {
+        id: 2,
+        title: "Testing Station Interface",
+        img: BitFlow2,
+      },
+      {
+        id: 3,
+        title: "Meter Validation Process",
+        img: BitFlow3,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "BitFlow / Pounce Consulting",
+        },
+        {
+          id: 2,
+          title: "Industry",
+          details: "Manufacturing - Energy Meters for CFE",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Develop an integrated quality control platform for smart energy meter manufacturing at CFE (Mexico's state electricity company). Orchestrate 12 independent testing stations across production lines, automate validation procedures, ensure complete product traceability from manufacturing through final testing, and provide real-time visibility into defect rates and productivity metrics. System must support role-based access, hardware synchronization via multiple protocols, and automated software deployment across all stations.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "C#",
+            ".NET Framework",
+            "Windows Forms",
+            "Entity Framework",
+            "Linq",
+            "SQL Server 2012",
+            "ClickOnce",
+            "Serial/Ethernet",
+            "Excel Export",
+          ],
+        },
+      ],
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Architected layered software design (Presentation → Business Logic → Data Access → Database) enabling modularity, testability, and scalability. Separated UI concerns from business logic, allowing independent testing of core algorithms and database operations. This architecture simplified maintenance as requirements evolved and new testing procedures were added.",
+        },
+        {
+          id: 2,
+          details:
+            "Implemented Entity Framework + Linq as ORM abstraction over SQL Server 2012: eliminated raw SQL string concatenation, reduced complexity in data queries, and improved type safety. Built repository patterns for data access layer, centralizing all database interactions and enabling easy modifications to persistence logic without changing business layer.",
+        },
+        {
+          id: 3,
+          details:
+            "Developed comprehensive data persistence system capturing test results, execution logs, meter configurations, and serial numbers for complete product traceability. Designed normalized schema supporting audit trails, version history, and time-series metrics. Implemented transaction management ensuring data integrity during concurrent test executions across 12 stations.",
+        },
+        {
+          id: 4,
+          details:
+            "Built Windows Forms interfaces for each testing station: real-time validation feedback, visual progress indicators, immediate operator notifications on pass/fail results. Implemented input validation at UI layer with contextual error messages. Created responsive layouts adapting to different screen resolutions and supporting touch/keyboard input from industrial environments.",
+        },
+        {
+          id: 5,
+          details:
+            "Implemented role-based access control (RBAC): pre-authentication enforcement, authorization levels (operator, technician, admin), and personalized dashboards showing only assigned stations per user. Integrated security logging for compliance and audit purposes. Prevented unauthorized access to sensitive configuration and historical data.",
+        },
+        {
+          id: 6,
+          details:
+            "Engineered real-time synchronization between 12 GUI interfaces and hardware devices using serial and Ethernet protocols: coordinated concurrent test execution, managed hardware resource contention, implemented protocol-level error recovery. Built retry logic with exponential backoff for failed communications, ensuring robustness in noisy manufacturing environments.",
+        },
+        {
+          id: 7,
+          details:
+            "Enabled data export capabilities: Excel spreadsheets with formatted reports, CSV dumps for data science analysis, and direct database query access for ad-hoc reporting. Implemented scheduled exports and email delivery, reducing manual report generation. Allowed operations teams to perform analytics without database expertise.",
+        },
+        {
+          id: 8,
+          details:
+            "Integrated ClickOnce deployment strategy for automatic updates: pushed new versions to all 12 stations without manual intervention, reducing downtime and ensuring software consistency. Implemented rollback mechanisms for problematic releases, enabling quick recovery. Centralized version management simplified tracking of which stations ran which code versions.",
+        },
+        {
+          id: 9,
+          details:
+            "Implemented automatic retry logic for failed tests with exponential backoff, preventing cascading test failures from transient hardware issues. Built error classification system (transient vs permanent faults) enabling intelligent retry decisions. Reduced error noise in logs and improved test pass rates through smarter failure handling.",
         },
       ],
       SocialSharingHeading: "",
