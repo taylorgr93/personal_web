@@ -179,7 +179,7 @@ export const projectsData = [
     description:
       "Manufacturing configuration and monitoring system built as a microservices monorepo. React-based GUI for manufacturing operations with calendar filtering, multi-currency support, real-time analytics dashboards, and dynamic chart visualization.",
     technologies: ["React", "Material-UI", "Node.js", "Express.js", "MongoDB", "Docker Compose", "Syncfusion Charts", "Passport.js"],
-    liveUrl: "https://app.knesysplus.com",
+    liveUrl: "",
   },
   {
     id: 14,
@@ -191,7 +191,7 @@ export const projectsData = [
     description:
       "Sports tournament and stadium event management platform with employee profiles, door access control, attendance reporting, and AWS Rekognition integration for face recognition and identity verification.",
     technologies: ["React", "Node.js", "MongoDB", "Docker", "AWS Rekognition", "Express.js"],
-    liveUrl: "https://app.knesysplus.com",
+    liveUrl: "",
   },
   {
     id: 15,
