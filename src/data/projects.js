@@ -167,7 +167,7 @@ export const projectsData = [
     description:
       "Fleet management system tracking vehicle fuel consumption, metrics, salaries, and expenses via monorepo architecture (3 microservices). Real-time data synchronization from external sources, scheduled daily jobs for metrics aggregation, and REST API with Swagger documentation.",
     technologies: ["Node.js", "Express.js", "MongoDB", "Docker Compose", "node-schedule", "Passport.js", "JWT"],
-    liveUrl: "https://app.knesysplus.com",
+    liveUrl: "",
   },
   {
     id: 13,
