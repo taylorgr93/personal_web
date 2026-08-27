@@ -12,7 +12,7 @@ import Findable1 from "../images/findable/findable1.png";
 import TracSaImg from "../images/nodejs.png";
 import AbsaCCMImg from "../images/nodejs.png";
 import FanIDImg from "../images/nodejs.png";
-import CisItemValiImg from "../images/nodejs.png";
+import CisItemValiImg from "../images/ASP.NET-Core.png";
 
 export const projectsData = [
   {
