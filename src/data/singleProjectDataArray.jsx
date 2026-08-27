@@ -1264,4 +1264,75 @@ export const singleProjectDataArray = [
       SocialSharing: [],
     },
   },
+  {
+    ProjectHeader: {
+      title: "cisItemVali",
+      publishDate: "2023 - 2024",
+      tags: "Backend / Full-Stack",
+    },
+    ProjectImages: [],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "cisItemVali / Jabil",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Develop an internal document management system for FAI (Form and Item validation) records at Jabil manufacturing. Enable users to create, edit, and manage validation documents with structured data including folio tracking, title/template information, evidence items (images, headings, subheadings), and multi-level approval workflows. Provide search, edit, and bulk management capabilities with MySQL backend for data persistence.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "ASP.NET Core 2.2",
+            ".NET Core 2.0",
+            "MVC Architecture",
+            "MySQL 8.0",
+            "Entity Framework Core",
+            "ADO.NET",
+            "Razor Templates",
+            "Bootstrap",
+            "C#",
+          ],
+        },
+      ],
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Built complete ASP.NET Core MVC application from scratch: single HomeController managing 6 main workflows (Choice, Index approval, About title/data, Contact evidence items, Search, Edit). Implemented views using Razor templates with Bootstrap styling for responsive UI across desktop and mobile viewports.",
+        },
+        {
+          id: 2,
+          details:
+            "Designed data access layer (FaiContext) with static methods handling all CRUD operations against MySQL: tbl_folio (document tracking), tbl_title (headers), tbl_template (70+ boolean/character properties for A1-K1 cells), tbl_data (evidence items), tbl_approval (review records). Used ADO.NET raw SQL queries for complex data retrieval.",
+        },
+        {
+          id: 3,
+          details:
+            "Implemented session-based state management using static ViewModel: maintains current document across multiple page views during a session. Enables seamless workflow progression (create → title → items → approval) without explicit database saves until final submission. Trade-off: single-user per session; not thread-safe for concurrent users.",
+        },
+        {
+          id: 4,
+          details:
+            "Created dynamic HTML generation in FaiContext.BuildItems(): converts database evidence items into HTML table structure for Edit view display. Supports 3 item types (heading, subheading, image) with type-specific rendering logic. Generates inline CSS for responsive image display with max-width constraints.",
+        },
+        {
+          id: 5,
+          details:
+            "Implemented comprehensive search workflow: find existing FAI documents by folio/criteria, load into Edit view with full history (title, template, items, approvals). Edit page allows modification of all fields with validation, save changes back to MySQL, and track approval status. Includes bulk operations for efficient document management.",
+        },
+        {
+          id: 6,
+          details:
+            "Managed MySQL database schema with 5 interconnected tables using referential integrity. Optimized queries for common operations (list documents, load document with related data, update approval status). Implemented proper data validation at controller level before database write operations.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
 ];

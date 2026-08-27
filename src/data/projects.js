@@ -12,6 +12,7 @@ import Findable1 from "../images/findable/findable1.png";
 import TracSaImg from "../images/nodejs.png";
 import AbsaCCMImg from "../images/nodejs.png";
 import FanIDImg from "../images/nodejs.png";
+import CisItemValiImg from "../images/nodejs.png";
 
 export const projectsData = [
   {
@@ -191,5 +192,17 @@ export const projectsData = [
       "Sports tournament and stadium event management platform with employee profiles, door access control, attendance reporting, and AWS Rekognition integration for face recognition and identity verification.",
     technologies: ["React", "Node.js", "MongoDB", "Docker", "AWS Rekognition", "Express.js"],
     liveUrl: "https://app.knesysplus.com",
+  },
+  {
+    id: 15,
+    title: "cisItemVali",
+    url: "cisitemvali",
+    category: "Document Management",
+    company: "Jabil",
+    img: CisItemValiImg,
+    description:
+      "ASP.NET Core MVC application for managing FAI (Form and Item validation) documents. Enables creation, editing, and validation of structured records with document folio tracking, title/template management, evidence items, and approval workflows.",
+    technologies: ["ASP.NET Core 2.2", ".NET Core 2.0", "MVC", "MySQL 8.0", "Entity Framework Core", "ADO.NET"],
+    liveUrl: "",
   },
 ];
