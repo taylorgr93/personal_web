@@ -58,11 +58,10 @@ export const skillCategories = [
       { name: "Git", years: 5 },
       { name: "GitLab CI/CD", years: 2 },
       { name: "Linux CLI", years: 4 },
-      { name: "EC2 AWS", years: 2 },
-      { name: "S3 AWS", years: 2 },
-      { name: "Lambda AWS", years: 2 },
+      { name: "EC2 AWS", years: 1 },
+      { name: "S3 AWS", years: 1 },
+      { name: "Lambda AWS", years: 1 },
       { name: "CloudWatch AWS", years: 1 },
-      { name: "AWS Rekognition", years: 1 },
       { name: "ClickOnce", years: 1 },
     ],
   },
@@ -71,7 +70,6 @@ export const skillCategories = [
     skills: [
       { name: "Raspberry Pi", years: 1 },
       { name: "GPIO", years: 1 },
-      { name: "BLE (Bluetooth Low Energy)", years: 1 },
     ],
   },
   {
@@ -79,6 +77,7 @@ export const skillCategories = [
     skills: [
       { name: "Jest", years: 2 },
       { name: "Mocha", years: 2 },
+      { name: "React Testing Library", years: 1 },
     ],
   },
 ];
