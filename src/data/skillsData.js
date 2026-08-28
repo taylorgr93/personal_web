@@ -21,6 +21,7 @@ export const skillCategories = [
       { name: "CSS", years: 4 },
       { name: "Tailwind CSS", years: 2 },
       { name: "Material UI", years: 2 },
+      { name: "Syncfusion Charts", years: 1 },
       { name: "Flutter", years: 1 },
     ],
   },
@@ -31,8 +32,12 @@ export const skillCategories = [
       { name: "Express.js", years: 4 },
       { name: "NestJS", years: 2 },
       { name: "RESTful API", years: 5 },
-      { name: "ASP.NET", years: 2 },
+      { name: "ASP.NET Core", years: 1 },
       { name: ".NET", years: 2 },
+      { name: "Passport.js", years: 1 },
+      { name: "JWT", years: 3 },
+      { name: "Entity Framework Core", years: 1 },
+      { name: "ADO.NET", years: 1 },
     ],
   },
   {
@@ -56,6 +61,16 @@ export const skillCategories = [
       { name: "S3 AWS", years: 2 },
       { name: "Lambda AWS", years: 2 },
       { name: "CloudWatch AWS", years: 1 },
+      { name: "AWS Rekognition", years: 1 },
+      { name: "ClickOnce", years: 1 },
+    ],
+  },
+  {
+    category: "Hardware/IoT",
+    skills: [
+      { name: "Raspberry Pi", years: 1 },
+      { name: "GPIO", years: 1 },
+      { name: "BLE (Bluetooth Low Energy)", years: 1 },
     ],
   },
   {
