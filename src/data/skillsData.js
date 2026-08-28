@@ -36,6 +36,7 @@ export const skillCategories = [
       { name: ".NET", years: 2 },
       { name: "Passport.js", years: 1 },
       { name: "JWT", years: 3 },
+      { name: "Entity Framework", years: 2 },
       { name: "Entity Framework Core", years: 1 },
       { name: "ADO.NET", years: 1 },
     ],
