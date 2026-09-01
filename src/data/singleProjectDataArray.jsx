@@ -32,6 +32,8 @@ import BitFlow1 from "../images/bitflow/bitflow1.png";
 import BitFlow2 from "../images/bitflow/bitflow2.png";
 import BitFlow3 from "../images/bitflow/bitflow3.png";
 
+import PregnancyApp1 from "../images/pregnancyapp/silhouette-of-pregnant-woman.jpg";
+
 // Import icons
 import {
   FiFacebook,
@@ -1440,6 +1442,86 @@ export const singleProjectDataArray = [
           id: 9,
           details:
             "Implemented automatic retry logic for failed tests with exponential backoff, preventing cascading test failures from transient hardware issues. Built error classification system (transient vs permanent faults) enabling intelligent retry decisions. Reduced error noise in logs and improved test pass rates through smarter failure handling.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "mypregnancyapp",
+      publishDate: "2021 - 2022",
+      tags: "Mobile / Flutter",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Pregnancy Monitoring Interface",
+        img: PregnancyApp1,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Project",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "mypregnancyapp / Thesis Project",
+        },
+        {
+          id: 2,
+          title: "Institution",
+          details: "Universidad Autónoma de Guadalajara - Maestría",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Develop a mobile application to monitor pregnancy variables including fetal movement, heart rate, and contractions using wearable sensors. Provide real-time data visualization and insights for pregnant women, enabling enhanced prenatal care, risk reduction, and peace of mind through an intuitive, user-friendly interface. Backend integration planned for secure data storage and medical provider communication.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "MongoDB",
+            "REST APIs",
+            "Flutter Calendar Carousel",
+            "Cupertino Icons",
+          ],
+        },
+      ],
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Architected bottom navigation bar (BotNavBar) as stateful widget managing 5 main sections: Home, Smart Devices, Health, Calendar (Due Date), and More. Implemented index-based navigation with seamless screen transitions, enabling intuitive app flow for pregnant women tracking their progress.",
+        },
+        {
+          id: 2,
+          details:
+            "Built responsive UI screens using Flutter widgets: HomeScreen for dashboard overview, DeviceScreen for wearable sensor integration, HealthyScreen for health metrics tracking, CalendarScreen with flutter_calendar_carousel for due date management, and AccountScreen for user profile and personal information.",
+        },
+        {
+          id: 3,
+          details:
+            "Implemented authentication system with Login and SignUp screens supporting secure user registration and credential verification. Designed form validation with user-friendly error messages, password strength indicators, and session management for persistent user state across app restarts.",
+        },
+        {
+          id: 4,
+          details:
+            "Integrated wearable sensor connectivity: real-time data acquisition from pregnancy-tracking devices (fetal movement, heart rate, contractions). Built protocols for data synchronization with backend services, ensuring consistent and accurate health metrics available across all app screens.",
+        },
+        {
+          id: 5,
+          details:
+            "Developed real-time data visualization dashboard displaying pregnancy metrics with interactive charts, trend analysis, and alerts. Implemented visual indicators for normal vs. abnormal readings, enabling quick status assessment and triggering notifications for medical attention when needed.",
+        },
+        {
+          id: 6,
+          details:
+            "Designed user-centric interface with accessibility features: clear typography, high-contrast colors, logical information hierarchy. Ensured responsive layouts across device sizes (phones, tablets) and orientations (portrait, landscape) for seamless usability in various pregnancy tracking scenarios.",
         },
       ],
       SocialSharingHeading: "",

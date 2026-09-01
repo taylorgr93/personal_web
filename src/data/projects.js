@@ -14,6 +14,7 @@ import AbsaCCMImg from "../images/nodejs.png";
 import FanIDImg from "../images/nodejs.png";
 import CisItemValiImg from "../images/ASP.NET-Core.png";
 import BitFlow1 from "../images/bitflow/bitflow1.png";
+import PregnancyApp1 from "../images/pregnancyapp/silhouette-of-pregnant-woman.jpg";
 
 export const projectsData = [
   {
@@ -217,5 +218,17 @@ export const projectsData = [
       "Comprehensive quality control platform for smart energy meter manufacturing at CFE. 12 independent graphical interfaces orchestrated through centralized database, ensuring real-time traceability, version control, and productivity metrics across production lines.",
     technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "Linq", "SQL Server 2012", "ClickOnce"],
     liveUrl: "",
+  },
+  {
+    id: 17,
+    title: "mypregnancyapp",
+    url: "mypregnancyapp",
+    category: "Healthcare & Wellness",
+    company: "Personal / University",
+    img: PregnancyApp1,
+    description:
+      "Flutter mobile application for pregnancy monitoring with real-time fetal movement, heart rate, and contraction tracking via sensors. Real-time data visualization, intuitive interface, and planned backend integration for enhanced prenatal care.",
+    technologies: ["Flutter", "Dart", "Firebase", "MongoDB", "REST APIs", "Flutter Calendar Carousel"],
+    liveUrl: "https://github.com/taylorgr93/pregnancyapp",
   },
 ];

@@ -5,6 +5,7 @@ import { ProjectsContext } from "../../context/ProjectsContext";
 import ProjectsFilter from "./ProjectsFilter";
 
 const INITIAL_PROJECTS_SHOWN = 6;
+const BUTTON_STYLES = "mt-8 mx-auto block px-6 py-3 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-general-medium rounded-lg transition-colors duration-300";
 
 const ProjectsGrid = () => {
   const {
@@ -124,9 +125,19 @@ const ProjectsGrid = () => {
         {!showMoreKnesys && remainingKnesys > 0 && (
           <button
             onClick={() => setShowMoreKnesys(true)}
-            className="mt-8 mx-auto block px-6 py-3 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-600 dark:hover:bg-indigo-700 text-white font-general-medium rounded-lg transition-colors duration-300"
+            className={BUTTON_STYLES}
           >
             Ver más proyectos ({remainingKnesys + totalOtherProjects} más)
+          </button>
+        )}
+
+        {/* Ver menos button */}
+        {showMoreKnesys && remainingKnesys > 0 && (
+          <button
+            onClick={() => setShowMoreKnesys(false)}
+            className={BUTTON_STYLES}
+          >
+            Ver menos proyectos
           </button>
         )}
       </div>
