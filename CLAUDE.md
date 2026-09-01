@@ -29,27 +29,28 @@ npm test           # Run tests (Vitest)
 
 ```
 src/
-  pages/           # Route-level views (Home, AboutMe, Skills, Experience, Projects, Contact, ProjectSingle)
+  pages/           # Route-level views (Home, AboutMe, Skills, Experience, Education, Projects, Contact, ProjectSingle)
   components/
     SEO.jsx        # Shared SEO/meta component (react-helmet-async)
     Loading.jsx    # Suspense fallback spinner
-    NotFound.jsx   # 404 page
+    NotFound.jsx   # 404 page (includes SEO noindex)
     HireMeModal.jsx # Hire-me contact modal
     ScrollToTop.jsx # Scrolls to top on route change
     BackToTop.jsx  # Back-to-top utility
-    shared/        # AppHeader, AppFooter, AppBanner, AppFooterCopyright
+    shared/        # AppHeader, AppFooter (contact cards + copyright), AppBanner, AppFooterCopyright
     about/         # AboutMeBio, AboutClients, AboutClientSingle, AboutCounter, CounterItem
-    projects/      # ProjectsGrid, ProjectsFilter, ProjectSingle, ProjectHeader, ProjectInfo, ProjectGallery, ProjectRelatedProjects
-    skills/        # SkillsYears, SoftSkills
-    experience/    # ExperienceComponent
+    projects/      # ProjectsGrid (grouped by company, progressive loading), ProjectsFilter, ProjectSingle, ProjectHeader, ProjectInfo, ProjectGallery, ProjectRelatedProjects
+    skills/        # SkillsYears (grouped by category with 3-tier badges), SoftSkills
+    experience/    # ExperienceComponent (vertical timeline with pulsing current-role indicator)
+    education/     # EducationComponent (vertical timeline)
     contact/       # ContactForm, ContactDetails
     reusable/      # Button, FormInput
   data/            # Static content source of truth (see Data section)
   context/         # ProjectsContext, SingleProjectContext, AboutMeContext
-  hooks/           # useThemeSwitcher, useScrollToTop
+  hooks/           # useThemeSwitcher, useScrollToTop (ScrollToTopButton)
   css/             # App.css (GeneralSans fonts), tailwind.css, Loading.css, NotFound.css
   fonts/           # GeneralSans font files (variable + static weights, all formats)
-  images/          # Project screenshots and brand logos
+  images/          # Project screenshots organized in per-project subdirectories
   __tests__/       # Test files (Modal.test.jsx, Banner.test.jsx)
 ```
 
@@ -61,6 +62,7 @@ src/
 | `/about` | `AboutMe` |
 | `/skills` | `Skills` |
 | `/experience` | `Experience` |
+| `/education` | `Education` |
 | `/projects` | `Projects` |
 | `/projects/single-project/:id` | `ProjectSingle` |
 | `/contact` | `Contact` |
@@ -73,13 +75,27 @@ All site content lives here. To update personal information, **edit only these f
 | File | Content |
 |------|---------|
 | `aboutMeData.js` | Bio, highlights (years of experience, projects, stack) |
-| `skillsData.js` | Technical skills with years of experience |
+| `skillsData.js` | Technical skills grouped by category (Languages, Frontend, Backend, etc.) with years of experience |
 | `softSkillsData.js` | Soft skills |
 | `otherSkillsData.js` | Other skills |
-| `experienceData.js` | Work history (company, position, dates, responsibilities) |
-| `projects.js` | Projects list (id, title, URL, category, image) |
-| `singleProjectData.jsx` / `singleProjectDataArray.jsx` | Individual project details (`.jsx` because they contain react-icons) |
-| `clientsData.js` | Clients / logos |
+| `experienceData.js` | Work history (company, position, dates, summary, responsibilities) |
+| `educationData.js` | Education (degree, institution, dates) |
+| `projects.js` | Projects list (id, title, URL, category, company, image, description, technologies, liveUrl) |
+| `singleProjectDataArray.jsx` | Individual project details (`.jsx` because they contain react-icons) |
+| `clientsData.js` | Clients (Knesys Plus, HiveCoding, JABIL, Pounce Consulting) |
+
+## Projects Structure
+
+Projects are grouped by company in the grid view:
+- **Knesys Plus** — 11 projects (Conboleto, Checkton, RTSP, DataCenter, FaceDN, Knesys Monitoring, MongoDB Client Wrapper, Findable, Tracsa, AbsaCCM, FAN-ID)
+- **HiveCoding** — 3 projects (Transportes Colimenses, Invertúneles, Vigo Coffee)
+- **Jabil** — 1 project (cisItemVali)
+- **Pounce Consulting** — 1 project (BitFlow)
+- **Personal / University** — 1 project (mypregnancyapp)
+
+The grid shows the first 6 Knesys projects initially with a "Ver más proyectos" button for progressive loading.
+
+Project images are organized in per-project subdirectories under `src/images/` (e.g., `src/images/conboleto/conboleto1.png`).
 
 ## Design System (TailwindCSS)
 
@@ -121,10 +137,22 @@ The `SEO` component (`src/components/SEO.jsx`) accepts the following props:
 | `description` | Meta description | General description |
 | `path` | Relative path (e.g. `"/about"`) | `""` |
 | `image` | Open Graph image | `"/og-image.png"` |
+| `imageWidth` | OG image width | `"1363"` |
+| `imageHeight` | OG image height | `"1101"` |
 | `type` | Open Graph type | `"website"` |
 | `noindex` | Prevent search engine indexing | `false` |
 
 Use it at the top of every page.
+
+### Structured Data
+
+`index.html` contains two JSON-LD schemas:
+- `@type: "Person"` — name, job title, skills, social links
+- `@type: "WebSite"` — site name and URL
+
+### Subpage SEO Strategy
+
+Subpages (`/about`, `/skills`, `/experience`, `/education`) have `noindex={true}` — this is intentional since the home page is single-page with all content. Do not remove noindex from subpages.
 
 ## Git Commits
 
@@ -189,5 +217,10 @@ Use it at the top of every page.
 - `Home.jsx` loads all sections as components within a single page (single-page approach). Individual routes (`/about`, etc.) also exist for direct access.
 - `App.jsx` uses `React.lazy` + `Suspense` for code splitting across all pages, with `Loading` as the fallback.
 - Vite build outputs to `build/` (not the default `dist/`), configured in `vite.config.js`.
-- Project images are imported in `src/data/projects.js` from `src/images/`.
+- Project images are organized in per-project subdirectories under `src/images/` and imported in `src/data/projects.js`.
+- The footer (`AppFooter.jsx`) contains the contact cards and copyright — there is no separate `ContactDetails` component used in the footer.
+- Skills are grouped by category (`skillCategories` in `skillsData.js`) with a 3-tier badge system: indigo (4+ years), gray (2-3 years), outline (1 year).
+- Experience and Education components share the same vertical timeline visual pattern.
+- The projects grid groups projects by company with progressive loading (6 shown initially, "Ver más" button).
+- The `ProjectsFilter` categories must match the `category` values in `projects.js` exactly (strict equality match).
 - There is no custom backend; the contact form requires integration with an external service (see `src/components/contact/ContactForm.jsx`).
