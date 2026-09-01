@@ -8,6 +8,7 @@ export const skillCategories = [
       { name: "C#", years: 2 },
       { name: "Shell", years: 1 },
       { name: "C++", years: 1 },
+      { name: "Dart", years: 1 },
     ],
   },
   {
