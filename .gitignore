@@ -118,3 +118,6 @@ src/css/main.css
 
 # Project TODO (local only)
 TODO.md
+
+# Private files (interview prep, salary info)
+files/
