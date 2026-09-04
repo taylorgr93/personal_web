@@ -5,6 +5,8 @@ export const experience = [
     position: "Software Engineer",
     startDate: "April 2019",
     endDate: "Present",
+    summary:
+      "Full Stack Developer building Industry 4.0 and IoT platforms, delivering real-time monitoring solutions and REST APIs for enterprise clients.",
     responsibilities: [
       `Development of applications for industry 4.0 and IoT, allowing users to monitor variables in real time and extract valuable information for making intelligent decisions. In addition, we develop customized web solutions adapted to the needs of our clients.`,
       `The main technologies that I use as a Full Stack Developer are Mongo DB, Express JS, React JS, Node JS (MERN).`,
@@ -28,6 +30,8 @@ export const experience = [
     position: "Full Stack Developer",
     startDate: "August 2024",
     endDate: "Present",
+    summary:
+      "Delivering custom web solutions for startups under HiveCoding, specializing in Next.js, React, and TypeScript for scalable corporate websites.",
     responsibilities: [
       `Delivering custom web solutions for startups and small businesses as a freelance Full Stack Developer under HiveCoding. Specialized in Next.js, React, and TypeScript to build modern, scalable corporate websites and web applications.`,
       `Invertúneles (Apr–Jul 2025): Built a multilingual corporate website (Spanish/English) for an agricultural protected structures company using Next.js 16+. Implemented i18n, a responsive product catalog with video integration, email quotation system, and WhatsApp contact.`,
@@ -42,6 +46,8 @@ export const experience = [
     position: "Software Test Engineer",
     startDate: "November 2018",
     endDate: "April 2019",
+    summary:
+      "Automated manufacturing processes through web applications and maintained existing systems to improve operational efficiency.",
     responsibilities: [
       `Automate processes of the project to which I was assigned, through the development of innovative and efficient applications. Provide technical support to the manufacturing area on other existing process improvement applications.`,
       `I developed dynamic web applications using C#, ASP.NET, ASP.NET Core, HTML, JavaScript and CSS, focusing on creating intuitive user interfaces and optimizing the end-user experience.`,
@@ -56,6 +62,8 @@ export const experience = [
     position: "Support Engineer",
     startDate: "August 2016",
     endDate: "November 2018",
+    summary:
+      "Developed validation applications and GUIs for electronic meter testing, providing nationwide support to manufacturing plants.",
     responsibilities: [
       `Development of applications for the validation and verification of the operation of the products manufactured by the company, as well as the improvement of processes.`,
       `Development of Applications and graphical user interfaces with Windows Form with .NET and C# for validation of electronic meters.`,
@@ -72,6 +80,8 @@ export const experience = [
     position: "Diagnostic technician",
     startDate: "January 2016",
     endDate: "November 2016",
+    summary:
+      "Diagnosed electrical failures in PCBs and maintained 100% certification compliance in a high-volume manufacturing environment.",
     responsibilities: [
       `Analyze and diagnose electrical failures occurred in the electronic cards (PCB's).`,
       `Report failures in the process, operating errors and test equipment failures to my immediate boss.`,

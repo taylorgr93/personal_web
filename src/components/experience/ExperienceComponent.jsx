@@ -32,12 +32,12 @@ export const ExperienceComponent = ({ experience }) => {
               </p>
 
               {item.summary && (
-                <p className="text-gray-500 dark:text-gray-400 italic mb-3">
+                <p className="text-gray-600 dark:text-gray-300 italic mb-3">
                   {item.summary}
                 </p>
               )}
 
-              <ul className="list-disc list-outside ml-4 space-y-1.5 text-ternary-dark dark:text-ternary-light text-sm sm:text-base">
+              <ul className="list-disc list-outside ml-4 space-y-1.5 text-justify text-ternary-dark dark:text-ternary-light text-sm sm:text-base">
                 {item.responsibilities.map((responsibility, index) => (
                   <li key={`${item.id}-${index}`}>{responsibility}</li>
                 ))}
