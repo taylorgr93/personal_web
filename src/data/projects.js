@@ -61,7 +61,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: DataCenter1,
     description:
-      "OS provisioning and hardware I/O microservices for a containerized Bluetooth IoT gateway on Raspberry Pi, a GPS vehicle-tracking backend, and a UDP middleware bridging REST to Motorola two-way radios.",
+      "OS provisioning and hardware I/O microservices for a containerized IoT gateway on Raspberry Pi, a GPS vehicle-tracking backend, and a UDP middleware bridging REST to Motorola two-way radios.",
     technologies: [
       "Node.js",
       "Express.js",
