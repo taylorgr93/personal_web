@@ -8,20 +8,16 @@ export const experience = [
     summary:
       "Full Stack Developer building Industry 4.0 and IoT platforms, delivering real-time monitoring solutions and REST APIs for enterprise clients.",
     responsibilities: [
-      `Development of applications for industry 4.0 and IoT, allowing users to monitor variables in real time and extract valuable information for making intelligent decisions. In addition, we develop customized web solutions adapted to the needs of our clients.`,
-      `The main technologies that I use as a Full Stack Developer are Mongo DB, Express JS, React JS, Node JS (MERN).`,
-      `The AWS services I have used are EC2, S3, Lambda, CloudWatch.`,
-      `In most of the projects that I have developed using Docker for its ease of implementation and portability.`,
-      `To manage all these containers as microservices I use Docker Compose.`,
-      `For the implementation of unit tests in JavaScript I have used libraries such as Mocha and Chai, and for React I have used JEST and React Testing Library.`,
-      `I have developed a wide set of REST APIs for multiple projects, ranging from personnel management systems to e-commerce platforms.`,
-      `I have implemented CI/CD using GitLab CI to automate application deployment, significantly improving the efficiency and reliability of the software release process.`,
-      `As a developer in an Agile environment, I used tools such as Jira and Monday to manage my workflow, ensuring effective and transparent collaboration with the team.`,
-      `In addition to developing applications, I also provide customer service with problems with the applications we develop as well as my colleagues dedicated to support and testing.`,
-      `Advanced skill in managing the Git version control system.`,
-      `I am familiar with the Linux command line, executing tasks and scripts, and system administration and configuration (Network, Encryption File System).`,
-      `For the IoT implementation, I used a gateway implemented with Raspberry Pi and with Raspbi an, Ubuntu, Manjaro operating systems.`,
-      `I have developed REST Full API's services for the integration of GPS location services and Motorola RF communication services.`,
+      `Built and shipped several Industry 4.0/IoT platforms (Conboleto, Checkton, DataCenter, FaceDN, Findable, Tracsa, AbsaCCM, FAN-ID) using the MERN stack, delivering real-time monitoring and decision-support tools adopted by enterprise clients across ticketing, construction, fleet management, and manufacturing.`,
+      `Architected microservices-based backends with Node.js, Express, and MongoDB (MERN), powering platforms ranging from a 6-microservice ticketing system (Conboleto) to a 3-microservice fleet management monorepo (Tracsa).`,
+      `Deployed AWS services (EC2, S3, Lambda, CloudWatch, Rekognition) to host applications, store assets, and add facial recognition to a stadium/event management platform (FAN-ID).`,
+      `Containerized every major project with Docker, standardizing deployment across environments and eliminating "works on my machine" setup issues.`,
+      `Orchestrated multi-service applications with Docker Compose, coordinating interdependent microservices (API, database, monitoring agents) as a single deployable stack per project.`,
+      `Designed and shipped REST APIs for multiple production systems, from personnel/attendance management (Checkton) to hardware integrations bridging GPS vehicle-tracking and Motorola two-way radio communication into unified backends.`,
+      `Implemented CI/CD pipelines with GitLab CI, automating build, test (Mocha/Chai for Node.js, Jest/React Testing Library for React), and deployment stages — catching regressions before release and cutting manual release effort across projects.`,
+      `Provided ongoing customer and internal support for production applications, triaging and resolving issues reported by clients and the QA team.`,
+      `Administered Linux servers (network configuration, encrypted filesystems, shell scripting) supporting production deployments and the team's monitoring stack.`,
+      `Provisioned Raspberry Pi IoT gateways running Raspbian, Ubuntu, and Manjaro, standardizing the hardware/OS base across multiple IoT platforms (DataCenter, FaceDN, Findable).`,
     ],
   },
   {
@@ -33,11 +29,12 @@ export const experience = [
     summary:
       "Delivering custom web solutions for startups under HiveCoding, specializing in Next.js, React, and TypeScript for scalable corporate websites.",
     responsibilities: [
-      `Delivering custom web solutions for startups and small businesses as a freelance Full Stack Developer under HiveCoding. Specialized in Next.js, React, and TypeScript to build modern, scalable corporate websites and web applications.`,
-      `Invertúneles (Apr–Jul 2025): Built a multilingual corporate website (Spanish/English) for an agricultural protected structures company using Next.js 16+. Implemented i18n, a responsive product catalog with video integration, email quotation system, and WhatsApp contact.`,
-      `Transportes Colimenses (Aug–Sep 2024): Developed a comprehensive corporate website for a freight transportation company using Next.js 14+. Implemented multi-section layout, external client portal integration, interactive routes map, and social media integration.`,
-      `Managed full project lifecycle: requirements gathering, technical scoping, development, deployment on Vercel, and post-launch support.`,
-      `Optimized SEO for each project to improve search visibility in their respective industries.`,
+      `Delivered 3 production websites for HiveCoding clients (Invertúneles, Transportes Colimenses, Vigo Coffee) as a freelance Full Stack Developer, specializing in Next.js, React, and TypeScript for scalable corporate sites.`,
+      `Built a bilingual (Spanish/English) corporate site for Invertúneles (Apr–Jul 2025) using Next.js with i18n routing, a responsive product catalog with video integration, and an email-based quotation system.`,
+      `Developed a corporate site for Transportes Colimenses (Aug–Sep 2024) using Next.js, integrating an external client portal, an interactive routes map, and social media feeds.`,
+      `Audited and remediated Vigo Coffee's website for WCAG 2.1 compliance, fixing broken links and improving social integration to bring the site up to accessibility standards.`,
+      `Owned the full project lifecycle end-to-end — requirements gathering, technical scoping, development, Vercel deployment, and post-launch support — for every freelance engagement.`,
+      `Optimized on-page SEO for each site, improving organic search visibility within each client's industry.`,
     ],
   },
   {
@@ -49,11 +46,12 @@ export const experience = [
     summary:
       "Automated manufacturing processes through web applications and maintained existing systems to improve operational efficiency.",
     responsibilities: [
-      `Automate processes of the project to which I was assigned, through the development of innovative and efficient applications. Provide technical support to the manufacturing area on other existing process improvement applications.`,
-      `I developed dynamic web applications using C#, ASP.NET, ASP.NET Core, HTML, JavaScript and CSS, focusing on creating intuitive user interfaces and optimizing the end-user experience.`,
-      `Responsible for updating and continuously maintaining existing PHP applications, ensuring their optimal functioning and the incorporation of new functionalities.`,
-      `Manipulation and processing of data in XML format, implementing code script in PHP for integration and management of data between systems.`,
-      `Implement and manage the open source OsTicket application, to improve ticket generation and technical support management.`,
+      `Built cisItemVali, an ASP.NET Core MVC application for FAI (Form and Item Validation) document management, replacing manual tracking with a 5-table MySQL schema supporting folio tracking, templates, and approval workflows.`,
+      `Automated manufacturing process workflows through new internal applications, reducing manual steps and providing technical support to the manufacturing area on existing process-improvement tools.`,
+      `Developed web applications with C#, ASP.NET, ASP.NET Core, HTML, JavaScript, and CSS, focused on intuitive UIs for manufacturing operators with limited technical background.`,
+      `Maintained and extended existing PHP applications, fixing bugs and shipping new functionality without disrupting ongoing manufacturing operations.`,
+      `Built PHP integrations to parse and transform XML data between manufacturing systems, enabling automated data exchange instead of manual re-entry.`,
+      `Deployed and configured OsTicket, an open-source helpdesk system, streamlining ticket creation and technical support tracking for the manufacturing floor.`,
     ],
   },
   {
@@ -65,13 +63,13 @@ export const experience = [
     summary:
       "Developed validation applications and GUIs for electronic meter testing, providing nationwide support to manufacturing plants.",
     responsibilities: [
-      `Development of applications for the validation and verification of the operation of the products manufactured by the company, as well as the improvement of processes.`,
-      `Development of Applications and graphical user interfaces with Windows Form with .NET and C# for validation of electronic meters.`,
-      `Database design and management (SQL server, MySQL).`,
-      `Generation of csv reports from the sql management studio tool using specific queries.`,
-      `Version control systems (hg mercurial, svn, git).`,
-      `Customer service (had to travel throughout the Mexican Republic to support the company's manufacturing plants).`,
-      `I have knowledge of production lines for electronic manufacturing.`,
+      `Built BitFlow, a quality-control platform orchestrating 12 independent testing stations for smart energy meter manufacturing (CFE), ensuring real-time traceability and productivity metrics across production lines.`,
+      `Developed Windows Forms GUIs in C#/.NET for electronic meter validation, giving floor operators real-time pass/fail feedback and reducing manual test-result logging.`,
+      `Designed and managed SQL Server/MySQL databases with Entity Framework and LINQ, centralizing test results, meter configurations, and audit trails for complete product traceability.`,
+      `Automated CSV/Excel report generation from SQL Server Management Studio queries, replacing manual report compilation for the operations team.`,
+      `Managed source control across multiple version control systems (Git, SVN, Mercurial) during a multi-year migration of legacy codebases.`,
+      `Delivered on-site technical support at manufacturing plants nationwide, resolving hardware/software issues that required in-person diagnostics.`,
+      `Applied electronic-manufacturing production-line knowledge to design testing workflows that matched real floor conditions and constraints.`,
     ],
   },
   {
@@ -83,12 +81,11 @@ export const experience = [
     summary:
       "Diagnosed electrical failures in PCBs and maintained 100% certification compliance in a high-volume manufacturing environment.",
     responsibilities: [
-      `Analyze and diagnose electrical failures occurred in the electronic cards (PCB's).`,
-      `Report failures in the process, operating errors and test equipment failures to my immediate boss.`,
-      `Maintain the diagnostic efficiency established in the project.`,
-      `Maintain 100% of the certifications required by the company and the project.`,
-      `Use of electronic measurement equipment (multimeter, oscilloscope, spectrum analyzer).`,
+      `Diagnosed electrical failures on PCBs using multimeters, oscilloscopes, and spectrum analyzers, identifying root causes before boards moved further down the production line.`,
+      `Reported process failures, operator errors, and test-equipment malfunctions to management, contributing to faster escalation and resolution of recurring issues.`,
+      `Maintained the project's diagnostic efficiency targets in a high-volume manufacturing environment, meeting throughput requirements without sacrificing accuracy.`,
+      `Maintained 100% compliance with company and project certification requirements throughout the role.`,
+      `Operated precision electronic measurement equipment daily, building the hardware-diagnostics foundation that supported the later transition into software development.`,
     ],
   },
-  // ... other experiences
 ];
