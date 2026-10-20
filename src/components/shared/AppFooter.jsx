@@ -27,7 +27,7 @@ const primaryContacts = [
     label: "LinkedIn",
     name: "Christopher Taylor Gonzalez",
     icon: <FiLinkedin />,
-    link: "https://www.linkedin.com/in/taylorgr-24505ab4/",
+    link: "https://www.linkedin.com/in/christopher-taylor-gonzalez/",
   },
   {
     id: 4,
