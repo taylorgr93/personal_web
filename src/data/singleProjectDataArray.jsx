@@ -18,6 +18,8 @@ import transportescolimenses3 from "../images/transportescolimenses/transportesc
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
 import VigoCoffee2 from "../images/vigo-coffee/vigo-coffee2.png";
 import VigoCoffee3 from "../images/vigo-coffee/vigo-coffee3.png";
+import NussenImg from "../images/nussen/nussen1.png";
+import Nussen2 from "../images/nussen/nussen2.png";
 import ConboletoImg from "../images/conboleto/conboleto1.png";
 import Conboleto2 from "../images/conboleto/conboleto2.png";
 import Conboleto3 from "../images/conboleto/conboleto3.png";
@@ -774,6 +776,80 @@ export const singleProjectDataArray = [
           id: 4,
           details:
             "Produced a detailed accessibility compliance report documenting all changes, standards met (WCAG 2.1 Level AA), and remediation steps—serving as legal defense documentation for the client.",
+        },
+      ],
+      SocialSharingHeading: "",
+      SocialSharing: [],
+    },
+  },
+  {
+    ProjectHeader: {
+      title: "Nussen",
+      publishDate: "Oct, 2025",
+      tags: "Web Design / Wix",
+    },
+    ProjectImages: [
+      {
+        id: 1,
+        title: "Nussen Homepage",
+        img: NussenImg,
+      },
+      {
+        id: 2,
+        title: "Nussen Footer & Contact",
+        img: Nussen2,
+      },
+    ],
+    ProjectInfo: {
+      ClientHeading: "About Client",
+      CompanyInfo: [
+        {
+          id: 1,
+          title: "Name",
+          details: "Nussen",
+        },
+        {
+          id: 2,
+          title: "Website",
+          details: "https://www.nussen.mx/",
+        },
+      ],
+      ObjectivesHeading: "Objective",
+      ObjectivesDetails:
+        "Visual redesign of the Nussen website on Wix: implement a new brand color palette, configure custom typography site-wide, refresh the footer with corrected links, and add a contact form for studios and salons interested in carrying the brand.",
+      Technologies: [
+        {
+          title: "Tools & Technologies",
+          techs: [
+            "Wix",
+            "Brand Identity",
+            "Typography",
+            "Contact Form",
+            "QA Testing",
+          ],
+        },
+      ],
+      ProjectDetailsHeading: "Challenge",
+      ProjectDetails: [
+        {
+          id: 1,
+          details:
+            "Applied a brand palette with 4 accent colors (green #5a8876, terracotta #7d3825, mauve #9d797e, and orange #bb7746) to the announcement bar, buttons, and footer — establishing a cohesive visual identity across the site.",
+        },
+        {
+          id: 2,
+          details:
+            "Configured Parkinsans (headings) and DM Sans (body) fonts in the Wix global theme, ensuring consistent typography across all pages and components.",
+        },
+        {
+          id: 3,
+          details:
+            "Refreshed the footer: fixed broken links, removed outdated copy, and restructured navigation for clarity.",
+        },
+        {
+          id: 4,
+          details:
+            "Built and tested end-to-end a 'Quiero Nussen en mi negocio' contact form with promotions opt-in, enabling studios and salons to request the brand for their business.",
         },
       ],
       SocialSharingHeading: "",

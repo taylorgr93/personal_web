@@ -88,7 +88,7 @@ All site content lives here. To update personal information, **edit only these f
 
 Projects are grouped by company in the grid view:
 - **Knesys Plus** — 11 projects (Conboleto, Checkton, RTSP, DataCenter, FaceDN, Knesys Monitoring, MongoDB Client Wrapper, Findable, Tracsa, AbsaCCM, FAN-ID)
-- **HiveCoding** — 3 projects (Transportes Colimenses, Invertúneles, Vigo Coffee)
+- **HiveCoding** — 4 projects (Transportes Colimenses, Invertúneles, Vigo Coffee, Nussen)
 - **Jabil** — 1 project (cisItemVali)
 - **Pounce Consulting** — 1 project (BitFlow)
 - **Personal / University** — 1 project (mypregnancyapp)

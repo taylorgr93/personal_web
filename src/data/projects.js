@@ -6,6 +6,7 @@ import Facedn1 from "../images/facedn/facedn1.png";
 import TransportesColimenses1 from "../images/transportescolimenses/transportescolimenses1.png";
 import Invertuneles1 from "../images/invertuneles/invertuneles1.png";
 import VigoCoffee1 from "../images/vigo-coffee/vigo-coffee1.png";
+import Nussen1 from "../images/nussen/nussen1.png";
 import KnesysMonitoring1 from "../images/knesys-monitoring/knesys-monitoring1.png";
 import MongoClientImg from "../images/npm.webp";
 import Findable1 from "../images/findable/findable1.png";
@@ -125,6 +126,18 @@ export const projectsData = [
   },
   {
     id: 9,
+    title: "Nussen",
+    url: "nussen",
+    category: "Wix Site Customization",
+    company: "HiveCoding",
+    img: Nussen1,
+    description:
+      "Visual redesign of the Nussen website on Wix: new brand color palette, custom typography applied site-wide, and a refreshed footer with fixed links and a contact form for studios and salons.",
+    technologies: ["Wix", "Brand Identity", "Typography", "Contact Form", "QA Testing"],
+    liveUrl: "https://www.nussen.mx/",
+  },
+  {
+    id: 10,
     title: "Knesys Monitoring",
     url: "knesys_monitoring",
     category: "Infrastructure & Monitoring",
@@ -136,7 +149,7 @@ export const projectsData = [
     liveUrl: "https://monitoring.knesysplus.com",
   },
   {
-    id: 10,
+    id: 11,
     title: "MongoDB Client Wrapper",
     url: "mongodb_client_wrapper",
     category: "NPM Package / Library",
@@ -148,7 +161,7 @@ export const projectsData = [
     liveUrl: "https://www.npmjs.com/package/mongoclienteasywrapper",
   },
   {
-    id: 11,
+    id: 12,
     title: "Findable",
     url: "findable",
     category: "IoT Platform",
@@ -160,7 +173,7 @@ export const projectsData = [
     liveUrl: "https://app.knesysplus.com/findable/Account/Login",
   },
   {
-    id: 12,
+    id: 13,
     title: "Tracsa",
     url: "tracsa",
     category: "Fleet Management",
@@ -172,7 +185,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    id: 13,
+    id: 14,
     title: "AbsaCCM",
     url: "absaccm",
     category: "Manufacturing & Monitoring",
@@ -184,7 +197,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    id: 14,
+    id: 15,
     title: "FAN-ID",
     url: "fan_id",
     category: "Sports & Events",
@@ -196,7 +209,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    id: 15,
+    id: 16,
     title: "cisItemVali",
     url: "cisitemvali",
     category: "Document Management",
@@ -208,7 +221,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    id: 16,
+    id: 17,
     title: "BitFlow",
     url: "bitflow",
     category: "Manufacturing Quality Control",
@@ -220,7 +233,7 @@ export const projectsData = [
     liveUrl: "",
   },
   {
-    id: 17,
+    id: 18,
     title: "mypregnancyapp",
     url: "mypregnancyapp",
     category: "Healthcare & Wellness",

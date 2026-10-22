@@ -4,6 +4,7 @@ const selectOptions = [
   "Construction SaaS",
   "Ticketing Platform",
   "Industrial Video",
+  "Wix Site Customization",
 ];
 
 const ProjectsFilter = ({ setSelectProject }) => {
