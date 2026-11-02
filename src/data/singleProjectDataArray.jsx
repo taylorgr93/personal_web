@@ -785,7 +785,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Nussen",
-      publishDate: "Oct, 2025",
+      publishDate: "Oct, 2026",
       tags: "Web Design / Wix",
     },
     ProjectImages: [

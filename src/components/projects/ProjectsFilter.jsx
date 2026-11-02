@@ -3,7 +3,7 @@ const selectOptions = [
   "IoT Platform",
   "Construction SaaS",
   "Ticketing Platform",
-  "Industrial Video",
+  "Video Management Platform",
   "Wix Site Customization",
 ];
 
