@@ -9,7 +9,7 @@ const ProjectInfo = () => {
   }
 
   return (
-    <div className="block sm:flex gap-0 sm:gap-10 mt-14">
+    <div className="block sm:flex gap-0 sm:gap-10 mt-14 break-words">
       <div className="w-full sm:w-1/3 text-left">
         {/* Single project client details */}
         <div className="mb-7">

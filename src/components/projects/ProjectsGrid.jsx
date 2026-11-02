@@ -167,6 +167,8 @@ const ProjectsGrid = () => {
         <div
           className="
                         flex
+                        flex-col
+                        sm:flex-row
                         justify-between
                         border-b border-primary-light
                         dark:border-secondary-dark
@@ -194,6 +196,8 @@ const ProjectsGrid = () => {
                 setSearchProject(e.target.value);
               }}
               className="font-general-medium
+                                w-full
+                                sm:w-auto
                                 pl-3
                                 pr-1
                                 sm:px-4
