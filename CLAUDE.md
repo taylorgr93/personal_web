@@ -137,8 +137,8 @@ The `SEO` component (`src/components/SEO.jsx`) accepts the following props:
 | `description` | Meta description | General description |
 | `path` | Relative path (e.g. `"/about"`) | `""` |
 | `image` | Open Graph image | `"/og-image.png"` |
-| `imageWidth` | OG image width | `"1363"` |
-| `imageHeight` | OG image height | `"1101"` |
+| `imageWidth` | OG image width | `"1192"` |
+| `imageHeight` | OG image height | `"622"` |
 | `type` | Open Graph type | `"website"` |
 | `noindex` | Prevent search engine indexing | `false` |
 
