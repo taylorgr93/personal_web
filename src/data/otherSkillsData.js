@@ -16,6 +16,7 @@ export const otherSkills = [
   { name: "Apigateway", years: 1 },
   { name: "Claude Code", years: 2 },
   { name: "ChatGPT", years: 1 },
+  { name: "OpenCode", years: 1 },
   // { name: "Nginx", years: 1 },
   // Agrega más habilidades aquí
 ];
