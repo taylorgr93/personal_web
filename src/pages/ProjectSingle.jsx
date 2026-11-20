@@ -22,7 +22,7 @@ const ProjectSingleSEO = () => {
   return (
     <SEO
       title={`${title} | Taylor - Software Engineer`}
-      description={`${title} — ${tags} project developed by Taylor. Full Stack Developer with 6+ years of experience building modern web solutions.`}
+      description={`${title} — ${tags} project developed by Taylor. Full Stack Developer with 7+ years of experience building modern web solutions.`}
       path={`/projects/single-project/${id}`}
       noindex={true}
     />

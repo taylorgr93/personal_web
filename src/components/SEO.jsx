@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 const SEO = ({
   title = "Taylor | Software Engineer",
-  description = "Software Engineer with 6+ years of experience in Full Stack Development, IoT, and Industry 4.0 solutions.",
+  description = "Software Engineer with 7+ years of experience in Full Stack Development, IoT, and Industry 4.0 solutions.",
   path = "",
   image = "/og-image.png",
   imageWidth = "1192",

@@ -16,7 +16,7 @@ const Experience = () => {
       {url === "experience" && (
         <SEO
           title="Experience | Taylor - Software Engineer"
-          description="Work history of Taylor: Software Engineer at Knesys Plus, Full Stack Developer at HiveCoding, and more. 6+ years building web and IoT solutions."
+          description="Work history of Taylor: Software Engineer at Knesys Plus, Full Stack Developer at HiveCoding, and more. 7+ years building web and IoT solutions."
           path="/experience"
           noindex={true}
         />

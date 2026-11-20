@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <SEO
         title="Taylor | Full Stack Developer - React, Node.js, TypeScript"
-        description="Full Stack Developer specializing in React, Node.js, and TypeScript. 6+ years building IoT platforms, SaaS products, and corporate websites. Founder of HiveCoding."
+        description="Full Stack Developer specializing in React, Node.js, and TypeScript. 7+ years building IoT platforms, SaaS products, and corporate websites. Founder of HiveCoding."
         path="/"
       />
       <div className="container mx-auto">

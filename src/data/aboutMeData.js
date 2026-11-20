@@ -2,7 +2,7 @@
 export const aboutMeData = [
   {
     id: 1,
-    bio: `I'm a Software Engineer with 6+ years of experience building web applications that solve real business problems. I specialize in the JavaScript ecosystem — React, Node.js, TypeScript, and Next.js — with a focus on clean, maintainable code.`,
+    bio: `I'm a Software Engineer with 7+ years of experience building web applications that solve real business problems. I specialize in the JavaScript ecosystem — React, Node.js, TypeScript, and Next.js — with a focus on clean, maintainable code.`,
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ export const aboutMeData = [
 
 // Optional: Add highlights for visual scanning
 export const highlights = [
-  { label: "Years Experience", value: "6 +" },
+  { label: "Years Experience", value: "7 +" },
   { label: "Projects Delivered", value: "30 +" },
   {
     label: "Tech Stack",
