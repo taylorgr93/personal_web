@@ -26,7 +26,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: Conboleto1,
     description:
-      "Full-stack event ticketing and cashless payment platform with 6 microservices, multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration.",
+      "Full-stack event ticketing and cashless payment platform with 6 microservices, multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration. 110,000+ tickets issued across 370+ events since 2024.",
     technologies: ["TypeScript", "Node.js", "Express", "NestJS", "MongoDB", "Socket.IO", "Stripe", "MercadoPago", "SeatsIO", "Docker", "Jest"],
     liveUrl: "https://www.conboleto.com",
   },
@@ -144,7 +144,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: KnesysMonitoring1,
     description:
-      "Extended a centralized monitoring stack (~8 servers) to ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs. Built with AI-assisted development.",
+      "Extended a centralized monitoring stack (~8 servers) to ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, application logs, and email alerting. Built with AI-assisted development.",
     technologies: ["Prometheus", "Grafana", "Loki", "Docker Compose", "node_exporter", "cAdvisor", "Alloy"],
     liveUrl: "https://monitoring.knesysplus.com",
   },
@@ -156,7 +156,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: MongoClientImg,
     description:
-      "Co-developed lightweight npm package, now maintained and evolved solo, wrapping the MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used across Conboleto and internal microservices.",
+      "Co-developed lightweight npm package, now maintained and evolved solo, wrapping the MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used by 7 of ConBoleto's 8 microservices and other internal services.",
     technologies: ["Node.js", "MongoDB", "npm", "JavaScript", "Docker"],
     liveUrl: "https://www.npmjs.com/package/mongoclienteasywrapper",
   },

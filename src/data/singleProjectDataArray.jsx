@@ -86,7 +86,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Architect and build a complete event ticketing and cashless payment platform serving event organizers and attendees across Latin America. Integrate multiple payment gateways (Stripe, LKL Pay, MercadoPago), implement RFID/NFC token-based transactions, manage reserved seating via third-party APIs, and provide real-time reporting and analytics—all through a microservices architecture supporting multi-tenancy and high throughput.",
+        "Architect and build a complete event ticketing and cashless payment platform serving event organizers and attendees across Latin America. Integrate multiple payment gateways (Stripe, LKL Pay, MercadoPago), implement RFID/NFC token-based transactions, manage reserved seating via third-party APIs, and provide real-time reporting and analytics—all through a microservices architecture supporting multi-tenancy and high throughput. Since 2024 the platform has issued 110,000+ tickets across 370+ events for 20+ organizer companies.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -131,7 +131,7 @@ export const singleProjectDataArray = [
         {
           id: 4,
           details:
-            "Designed and implemented multi-tenancy at the database level: each enterprise scopes all queries by `companies_id`, JWT headers inject tenant context, and MongoDB operations use aggregation pipelines with $facet for efficient paginated reporting across events, tickets, transactions, and disputes.",
+            "Designed and implemented multi-tenancy at the database level for 20+ organizer companies sharing one platform: each enterprise scopes all queries by `companies_id`, JWT headers inject tenant context, and MongoDB operations use aggregation pipelines with $facet for efficient paginated reporting across events, tickets, transactions, and disputes.",
         },
         {
           id: 5,
@@ -141,12 +141,17 @@ export const singleProjectDataArray = [
         {
           id: 6,
           details:
-            "Implemented GitLab CI/CD pipeline with Docker-in-Docker for automated builds, tests, and deployments across dev/staging/production environments. Configured Docker Compose orchestration for local development and cloud deployments, with branch-triggered releases (testing branch → staging, release branch → production).",
+            "Implemented GitLab CI/CD pipeline with Docker-in-Docker for automated builds, tests, and deployments across dev/staging/production environments. Configured Docker Compose orchestration for local development and cloud deployments, with branch-triggered releases (testing branch → staging, release branch → production). Cut typical deploy time from ~7–8 to ~4–6 minutes and added an on-demand E2E test job with Jest.",
         },
         {
           id: 7,
           details:
-            "Fixed a seat-reservation race condition in which customers could be charged without a ticket being issued and seats could be resold: payments are now validated at checkout time (confirming the ticket exists before processing) and seat updates use atomic MongoDB operations. Also introduced multi-document MongoDB transactions for cascading CRUD flows, so writes roll back when any middleware fails instead of leaving event stats inflated.",
+            "Fixed a seat-reservation race condition in which customers could be charged without a ticket being issued and seats could be resold: payments are now validated at checkout time (confirming the ticket exists before processing) and seat updates use atomic MongoDB operations, with zero charges without tickets across 2,800+ subsequent approved payments. Also introduced multi-document MongoDB transactions for cascading CRUD flows, so writes roll back when any middleware fails instead of leaving event stats inflated.",
+        },
+        {
+          id: 8,
+          details:
+            "Maintain and evolve mongoclienteasywrapper, an internal MongoDB data-access library published to npm and used by 7 of the platform's 8 microservices (every TypeScript service).",
         },
       ],
       SocialSharingHeading: "Social media",
@@ -961,7 +966,12 @@ export const singleProjectDataArray = [
         {
           id: 6,
           details:
-            "Configured Grafana Alerting with SMTP email notifications for 5 ConBoleto service alerts (contact point, notification policy and SMTP wiring), and deployed the versioned stack through GitLab CI/CD.",
+            "Configured Grafana Alerting with SMTP email notifications covering service downtime, restarts, MongoDB connectivity, 5xx error rates, latency and traffic (contact point, notification policy and SMTP wiring), and deployed the versioned stack through GitLab CI/CD.",
+        },
+        {
+          id: 7,
+          details:
+            "Detected a Google/Apple sign-in failure through Prometheus metrics before any client reported it, leading to a fix.",
         },
       ],
       SocialSharingHeading: "",
@@ -997,7 +1007,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Maintain and evolve a lightweight, reusable npm package, originally developed with a teammate and lately evolved with AI-assisted development, that simplifies common MongoDB operations (CRUD, aggregation, pagination, $lookup-based population) with automatic ID/datetime conversion. Enable internal microservices (Conboleto, DataCenter, RTSP) to share a consistent data access layer without boilerplate.",
+        "Maintain and evolve a lightweight, reusable npm package, originally developed with a teammate and lately evolved with AI-assisted development, that simplifies common MongoDB operations (CRUD, aggregation, pagination, $lookup-based population) with automatic ID/datetime conversion. Enable internal microservices (Conboleto, DataCenter, RTSP) to share a consistent data access layer without boilerplate; today it powers 7 of ConBoleto's 8 microservices.",
       Technologies: [
         {
           title: "Tools & Technologies",
