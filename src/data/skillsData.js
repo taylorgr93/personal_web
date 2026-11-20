@@ -63,7 +63,6 @@ export const skillCategories = [
       { name: "S3 AWS", years: 1 },
       { name: "Lambda AWS", years: 1 },
       { name: "CloudWatch AWS", years: 1 },
-      { name: "ClickOnce", years: 1 },
       { name: "Prometheus", years: 1 },
       { name: "Grafana", years: 1 },
       { name: "Loki", years: 1 },
