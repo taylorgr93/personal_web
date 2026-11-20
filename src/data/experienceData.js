@@ -52,7 +52,7 @@ export const experience = [
       `Developed web applications with C#, ASP.NET, ASP.NET Core, HTML, JavaScript, and CSS, focused on intuitive UIs for manufacturing operators with limited technical background.`,
       `Maintained and extended existing PHP applications, fixing bugs and shipping new functionality without disrupting ongoing manufacturing operations.`,
       `Built PHP integrations to parse and transform XML data between manufacturing systems, enabling automated data exchange instead of manual re-entry.`,
-      `Deployed and configured OsTicket, an open-source helpdesk system, streamlining ticket creation and technical support tracking for the manufacturing floor.`,
+      `Deployed and configured osTicket, an open-source helpdesk system, streamlining ticket creation and technical support tracking for internal customers on the manufacturing floor.`,
     ],
   },
   {
