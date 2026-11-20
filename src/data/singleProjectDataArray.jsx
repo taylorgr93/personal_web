@@ -142,6 +142,11 @@ export const singleProjectDataArray = [
           details:
             "Implemented GitLab CI/CD pipeline with Docker-in-Docker for automated builds, tests, and deployments across dev/staging/production environments. Configured Docker Compose orchestration for local development and cloud deployments, with branch-triggered releases (testing branch → staging, release branch → production).",
         },
+        {
+          id: 7,
+          details:
+            "Fixed a seat-reservation race condition in which customers could be charged without a ticket being issued and seats could be resold: payments are now validated at checkout time (confirming the ticket exists before processing) and seat updates use atomic MongoDB operations. Also introduced multi-document MongoDB transactions for cascading CRUD flows, so writes roll back when any middleware fails instead of leaving event stats inflated.",
+        },
       ],
       SocialSharingHeading: "Social media",
       SocialSharing: [
@@ -227,7 +232,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Built the Auth/Security module from scratch—JWT-based login flow with dual login UI (admin/user roles), role-based access control (RoleBasedGuard, AuthGuard, PreAuthGuard), and session management via zustand auth store. Initially used localStorage for token persistence, but improved the implementation to zustand in-memory state management to mitigate XSS vulnerabilities and avoid storing sensitive tokens in browser storage.",
+            "Built the Auth/Security module from scratch—JWT-based login flow with dual login UI (admin/user roles), role-based access control (RoleBasedGuard, AuthGuard, PreAuthGuard), and session management via zustand auth store. Hardened session security by moving auth tokens out of localStorage into in-memory zustand state, removing them from browser storage and closing that XSS session-theft vector.",
         },
         {
           id: 2,
@@ -712,7 +717,7 @@ export const singleProjectDataArray = [
         {
           id: 4,
           details:
-            "Implemented technical SEO in stages: robots.txt, a sitemap, and base metadata at launch, then per-category metadata, an expanded sitemap, and hreflang alternates for both languages, plus targeted keywords for greenhouses, macro-tunnels, agricultural tunnels, plastic films, and mulch films.",
+            "Implemented technical SEO in stages: robots.txt, a sitemap, and base metadata at launch, then per-category metadata, an expanded sitemap, and hreflang alternates for both languages, plus targeted keywords for greenhouses, macro-tunnels, agricultural tunnels, plastic films, and mulch films. Comparing the first three months of Google Search Console data with the latest three, impressions more than doubled (733 → 1,630, +122%) and clicks grew 69% (100 → 169).",
         },
       ],
       SocialSharingHeading: "",
@@ -905,7 +910,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Design and deploy a centralized monitoring infrastructure observing ~8 production servers and ConBoleto microservices (testing + production). Implement Prometheus for metrics collection with push-based remote_write architecture, Grafana for visualization and alerting dashboards, and Loki for log aggregation and retention. Enable real-time observability across system metrics, container health, application performance, and multi-environment logs.",
+        "Design and deploy a centralized monitoring infrastructure observing ~8 production servers and ConBoleto microservices (testing + production). Implement Prometheus for metrics collection with push-based remote_write architecture, Grafana for visualization and alerting dashboards, and Loki for log aggregation and retention. Enable real-time observability across system metrics, container health, application performance, and multi-environment logs, delivered through AI-assisted development so the team can spot issues before clients report them.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -984,7 +989,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build a lightweight, reusable npm package that simplifies common MongoDB operations (CRUD, aggregation, pagination, $lookup-based population) with automatic ID/datetime conversion. Enable internal microservices (Conboleto, DataCenter, RTSP) to share a consistent data access layer without boilerplate.",
+        "Maintain and evolve a lightweight, reusable npm package, originally developed with a teammate and lately evolved with AI-assisted development, that simplifies common MongoDB operations (CRUD, aggregation, pagination, $lookup-based population) with automatic ID/datetime conversion. Enable internal microservices (Conboleto, DataCenter, RTSP) to share a consistent data access layer without boilerplate.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -1005,32 +1010,32 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Implemented factory pattern initialization: `require('mongoclienteasywrapper')(connectionString, defaultDbName)` returns an object with all CRUD, aggregation, and helper functions. Every function accepts an optional `databaseName` parameter falling back to the default database.",
+            "Factory pattern initialization: `require('mongoclienteasywrapper')(connectionString, defaultDbName)` returns an object with all CRUD, aggregation, and helper functions. Every function accepts an optional `databaseName` parameter falling back to the default database.",
         },
         {
           id: 2,
           details:
-            "Built automatic type conversion utilities: `ConvertIdtoObjectId` auto-converts any property containing `_id` suffix to BSON ObjectId (handles nested objects/arrays), and `ConvertDatetoDatetime` recursively converts `_datetime` properties to JS Date while preserving BSON operators ($inc, $unset, etc.).",
+            "Automatic type conversion utilities: `ConvertIdtoObjectId` auto-converts any property containing `_id` suffix to BSON ObjectId (handles nested objects/arrays), and `ConvertDatetoDatetime` recursively converts `_datetime` properties to JS Date while preserving BSON operators ($inc, $unset, etc.).",
         },
         {
           id: 3,
           details:
-            "Implemented singleton `MongoDBConnectionManager` class maintaining a single `MongoClient` with cached `Db` handles per database name, checking connection state via MongoDB Driver 4.x topology state inspection—avoiding connection thrashing across microservices.",
+            "A singleton `MongoDBConnectionManager` class maintains a single `MongoClient` with cached `Db` handles per database name, checking connection state via MongoDB Driver 4.x topology state inspection—avoiding connection thrashing across microservices.",
         },
         {
           id: 4,
           details:
-            "Designed 'ND_' prefix convention for functions that auto-filter `{ status: 'deleted' }` documents, enabling soft-delete patterns across the platform. Wrap `UpdateMongo` operations in `$set` automatically; expose `UpdateOneRaw` and `FindOneAndUpdate` for raw operator access.",
+            "An 'ND_' prefix convention for functions that auto-filter `{ status: 'deleted' }` documents, enabling soft-delete patterns across the platform. `UpdateMongo` operations are wrapped in `$set` automatically, while `UpdateOneRaw` and `FindOneAndUpdate` provide raw operator access.",
         },
         {
           id: 5,
           details:
-            "Built `Populate` / `PopulateAuto` functions using `$lookup` aggregation, inferring foreign collection names by stripping `_id` suffix from field names (e.g., `user_id` → `user` collection). Handles bidirectional many-to-many relationships via `assing.js` cross-reference helper.",
+            "`Populate` / `PopulateAuto` functions use `$lookup` aggregation, inferring foreign collection names by stripping `_id` suffix from field names (e.g., `user_id` → `user` collection). Handles bidirectional many-to-many relationships via `assing.js` cross-reference helper.",
         },
         {
           id: 6,
           details:
-            "Configured automated npm publishing via GitHub Actions (`.github/workflows/publish-to-npm.yml`): on merge to `main`, package builds and publishes to npm registry. Maintains semantic versioning and integration tests requiring live MongoDB instance.",
+            "Automated npm publishing via GitHub Actions (`.github/workflows/publish-to-npm.yml`): on merge to `main`, package builds and publishes to npm registry. The package keeps semantic versioning and integration tests requiring live MongoDB instance.",
         },
       ],
       SocialSharingHeading: "",

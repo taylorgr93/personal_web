@@ -10,6 +10,7 @@ export const experience = [
     responsibilities: [
       `Built and shipped several Industry 4.0/IoT platforms (Conboleto, Checkton, DataCenter, FaceDN, Findable, Tracsa, AbsaCCM, FAN-ID) using the MERN stack, delivering real-time monitoring and decision-support tools adopted by enterprise clients across ticketing, construction, fleet management, and manufacturing.`,
       `Architected microservices-based backends with Node.js, Express, and MongoDB (MERN), powering platforms ranging from a 6-microservice ticketing system (Conboleto) to a 3-microservice fleet management monorepo (Tracsa).`,
+      `Fixed a seat-reservation race condition in Conboleto (customers charged without tickets issued) with payment-time validation and atomic MongoDB operations, and introduced multi-document transactions so cascading writes roll back when any middleware fails, preventing inflated event stats.`,
       `Deployed AWS services (EC2, S3, Lambda, CloudWatch, Rekognition) to host applications, store assets, and add facial recognition to a stadium/event management platform (FAN-ID).`,
       `Containerized every major project with Docker, standardizing deployment across environments and eliminating "works on my machine" setup issues.`,
       `Orchestrated multi-service applications with Docker Compose, coordinating interdependent microservices (API, database, monitoring agents) as a single deployable stack per project.`,
@@ -34,7 +35,7 @@ export const experience = [
       `Developed a corporate site for Transportes Colimenses (Aug–Sep 2024) using Next.js, integrating an external client portal, an interactive routes map, and social media feeds.`,
       `Audited and remediated Vigo Coffee's website for WCAG 2.1 compliance, fixing broken links and improving social integration to bring the site up to accessibility standards.`,
       `Owned the full project lifecycle end-to-end — requirements gathering, technical scoping, development, Vercel deployment, and post-launch support — for every freelance engagement.`,
-      `Optimized on-page SEO for each site, improving organic search visibility within each client's industry.`,
+      `Led technical SEO (sitemap, robots.txt, per-category metadata, hreflang, keyword strategy), more than doubling Invertúneles' organic search impressions (+122%) and growing clicks by 69%.`,
     ],
   },
   {

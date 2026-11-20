@@ -144,7 +144,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: KnesysMonitoring1,
     description:
-      "Centralized monitoring infrastructure observing ~8 servers and ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs.",
+      "Centralized monitoring infrastructure observing ~8 servers and ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs. Built with AI-assisted development.",
     technologies: ["Prometheus", "Grafana", "Loki", "Docker Compose", "node_exporter", "cAdvisor", "Alloy"],
     liveUrl: "https://monitoring.knesysplus.com",
   },
@@ -156,7 +156,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: MongoClientImg,
     description:
-      "Lightweight npm package wrapping MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used across Conboleto and internal microservices.",
+      "Co-developed lightweight npm package, now maintained and evolved solo, wrapping the MongoDB 4.17.2 driver with simplified API for CRUD, aggregation, pagination, and $lookup-based population. Published to npm, used across Conboleto and internal microservices.",
     technologies: ["Node.js", "MongoDB", "npm", "JavaScript", "Docker"],
     liveUrl: "https://www.npmjs.com/package/mongoclienteasywrapper",
   },
