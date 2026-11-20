@@ -1490,6 +1490,7 @@ export const singleProjectDataArray = [
             "Entity Framework",
             "Linq",
             "SQL Server 2012",
+            "ClickOnce",
             "Serial/Ethernet",
             "Excel Export",
           ],

@@ -229,7 +229,7 @@ export const projectsData = [
     img: BitFlow1,
     description:
       "Validation platform for smart electricity meters during assembly and manufacturing: pre-operational and configuration tests across 12 testing stations, with results stored in SQL Server for full product traceability.",
-    technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "LINQ", "SQL Server 2012"],
+    technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "LINQ", "SQL Server 2012", "ClickOnce"],
     liveUrl: "",
   },
   {
