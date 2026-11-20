@@ -577,8 +577,8 @@ export const singleProjectDataArray = [
         {
           title: "Tools & Technologies",
           techs: [
-            "React",
-            "Next.js",
+            "React 19",
+            "Next.js 15",
             "TypeScript",
             "TailwindCSS",
             "Swiper",
@@ -602,6 +602,11 @@ export const singleProjectDataArray = [
           id: 3,
           details:
             "Finally, something that proved difficult was configuring DNS records on the hosting provider where the client had their domain. I hosted the code on Vercel to ensure faster updates; I simply update the main branch, and the website changes are published automatically.",
+        },
+        {
+          id: 4,
+          details:
+            "In October 2026 I upgraded the site from Next.js 14.2 to Next.js 15, React 19, and Swiper 14 to patch a critical unauthenticated remote code execution vulnerability, leaving production with no outstanding npm audit warnings.",
         },
       ],
       // SocialSharingHeading: "Social media",
@@ -702,7 +707,12 @@ export const singleProjectDataArray = [
         {
           id: 3,
           details:
-            "Built two Nodemailer-backed contact endpoints over SMTP — a general contact form and a custom-project inquiry form (crop, location, and contact details) — plus a WhatsApp contact link, to streamline customer quote requests, and optimized the site's SEO for agricultural industry keywords.",
+            "Built two Nodemailer-backed contact endpoints over SMTP — a general contact form and a custom-project inquiry form (crop, location, and contact details) — plus a WhatsApp contact link, to streamline customer quote requests.",
+        },
+        {
+          id: 4,
+          details:
+            "Implemented technical SEO in stages: robots.txt, a sitemap, and base metadata at launch, then per-category metadata, an expanded sitemap, and hreflang alternates for both languages, plus targeted keywords for greenhouses, macro-tunnels, agricultural tunnels, plastic films, and mulch films.",
         },
       ],
       SocialSharingHeading: "",
