@@ -22,8 +22,8 @@ export const experience = [
   },
   {
     id: 2,
-    company: "Freelance",
-    position: "Full Stack Developer",
+    company: "HiveCoding",
+    position: "Founder & Full Stack Developer",
     startDate: "August 2024",
     endDate: "Present",
     summary:

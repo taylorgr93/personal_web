@@ -10,7 +10,7 @@ export const education = [
     id: 2,
     degree: "Bachelor's in Electronics Engineering",
     institution: "Centro de Enseñanza Técnica Industrial (CETI)",
-    startDate: "2011",
+    startDate: "2012",
     endDate: "2016",
   },
 ];
