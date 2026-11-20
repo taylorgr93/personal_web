@@ -16,7 +16,9 @@ export const experience = [
       `Orchestrated multi-service applications with Docker Compose, coordinating interdependent microservices (API, database, monitoring agents) as a single deployable stack per project.`,
       `Designed and shipped REST APIs for multiple production systems, from personnel/attendance management (Checkton) to hardware integrations bridging GPS vehicle-tracking and Motorola two-way radio communication into unified backends.`,
       `Implemented CI/CD pipelines with GitLab CI, automating build, test (Mocha/Chai for Node.js, Jest/React Testing Library for React), and deployment stages — catching regressions before release and cutting manual release effort across projects.`,
-      `Provided ongoing customer and internal support for production applications, triaging and resolving issues reported by clients and the QA team.`,
+      `Provided ongoing customer and internal support for production applications, triaging and resolving issues reported by clients and the QA team, including urgent hotfixes and after-hours deploys.`,
+      `Worked in cross-functional teams with designers, QA, UX/UI leads, and clients, turning Figma designs into production features.`,
+      `Mentored 2 junior engineers through architecture and design-pattern onboarding, task assignment, and code reviews.`,
       `Administered Linux servers (network configuration, encrypted filesystems, shell scripting) supporting production deployments and the team's monitoring stack.`,
       `Provisioned Raspberry Pi IoT gateways running Raspbian, Ubuntu, and Manjaro, standardizing the hardware/OS base across multiple IoT platforms (DataCenter, FaceDN, Findable).`,
     ],
@@ -30,12 +32,12 @@ export const experience = [
     summary:
       "Delivering custom web solutions for startups under HiveCoding, specializing in Next.js, React, and TypeScript for scalable corporate websites.",
     responsibilities: [
-      `Delivered 3 production websites for HiveCoding clients (Invertuneles, Transportes Colimenses, Vigo Coffee) as a freelance Full Stack Developer, specializing in Next.js, React, and TypeScript for scalable corporate sites.`,
+      `Founded a software studio delivering web solutions for small and mid-sized businesses, managing the full client lifecycle: requirements, quoting, development, deployment, and post-launch support.`,
       `Built a bilingual (Spanish/English) corporate site for Invertuneles (Apr–Jul 2025) using Next.js with i18n routing, a responsive product catalog with video integration, and an email-based quotation system.`,
       `Developed a corporate site for Transportes Colimenses (Aug–Sep 2024) using Next.js, integrating an external client portal, an interactive routes map, and social media feeds.`,
       `Audited and remediated Vigo Coffee's website for WCAG 2.1 compliance, fixing broken links and improving social integration to bring the site up to accessibility standards.`,
       `Owned the full project lifecycle end-to-end — requirements gathering, technical scoping, development, Vercel deployment, and post-launch support — for every freelance engagement.`,
-      `Led technical SEO (sitemap, robots.txt, per-category metadata, hreflang, keyword strategy), more than doubling Invertuneles' organic search impressions (+122%) and growing clicks by 69%.`,
+      `Led technical SEO (sitemap, robots.txt, per-category metadata, hreflang, keyword strategy), more than doubling Invertuneles' organic search impressions (+122%) and growing clicks by 69% (Google Search Console data).`,
     ],
   },
   {
