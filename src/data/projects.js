@@ -27,7 +27,7 @@ export const projectsData = [
     img: Conboleto1,
     description:
       "Full-stack event ticketing and cashless payment platform with 6 microservices, multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration.",
-    technologies: ["TypeScript", "Node.js", "Express", "NestJS", "MongoDB", "Socket.IO", "Stripe", "MercadoPago", "SeatsIO", "Docker"],
+    technologies: ["TypeScript", "Node.js", "Express", "NestJS", "MongoDB", "Socket.IO", "Stripe", "MercadoPago", "SeatsIO", "Docker", "Jest"],
     liveUrl: "https://www.conboleto.com",
   },
   {
@@ -144,7 +144,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: KnesysMonitoring1,
     description:
-      "Centralized monitoring infrastructure observing ~8 servers and ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs. Built with AI-assisted development.",
+      "Extended a centralized monitoring stack (~8 servers) to ConBoleto services. Prometheus + Grafana + Loki stack with Docker Compose, handling system metrics, container observability, and application logs. Built with AI-assisted development.",
     technologies: ["Prometheus", "Grafana", "Loki", "Docker Compose", "node_exporter", "cAdvisor", "Alloy"],
     liveUrl: "https://monitoring.knesysplus.com",
   },

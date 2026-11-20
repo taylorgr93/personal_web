@@ -107,6 +107,7 @@ export const singleProjectDataArray = [
             "JWT",
             "Multer",
             "node-schedule",
+            "Jest",
           ],
         },
       ],
@@ -224,6 +225,7 @@ export const singleProjectDataArray = [
             "i18next",
             "axios",
             "JavaScript",
+            "React Testing Library",
           ],
         },
       ],
@@ -232,7 +234,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Built the Auth/Security module from scratch—JWT-based login flow with dual login UI (admin/user roles), role-based access control (RoleBasedGuard, AuthGuard, PreAuthGuard), and session management via zustand auth store. Hardened session security by moving auth tokens out of localStorage into in-memory zustand state, removing them from browser storage and closing that XSS session-theft vector.",
+            "Built the Auth/Security module from scratch—JWT-based login flow with dual login UI (admin/user roles), role-based route guards (RoleBasedGuard, AuthGuard, PreAuthGuard), and session management via zustand auth store. Hardened session security by moving auth tokens out of localStorage into in-memory zustand state, removing them from browser storage and closing that XSS session-theft vector.",
         },
         {
           id: 2,
@@ -910,7 +912,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Design and deploy a centralized monitoring infrastructure observing ~8 production servers and ConBoleto microservices (testing + production). Implement Prometheus for metrics collection with push-based remote_write architecture, Grafana for visualization and alerting dashboards, and Loki for log aggregation and retention. Enable real-time observability across system metrics, container health, application performance, and multi-environment logs, delivered through AI-assisted development so the team can spot issues before clients report them.",
+        "Extend an existing centralized monitoring stack (~8 servers) to ConBoleto's microservices (testing + production): a Prometheus agent pushing metrics via remote_write, Grafana dashboards and email alerting, and a new Loki instance for log aggregation and retention. Enable real-time observability across system metrics, container health, application performance, and multi-environment logs, delivered through AI-assisted development so the team can spot issues before clients report them.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -924,7 +926,8 @@ export const singleProjectDataArray = [
             "Grafana Alloy",
             "Remote Write Push",
             "Log Aggregation",
-            "Alerting",
+            "Grafana Alerting",
+            "GitLab CI/CD",
           ],
         },
       ],
@@ -938,7 +941,7 @@ export const singleProjectDataArray = [
         {
           id: 2,
           details:
-            "Implemented Prometheus remote_write receiver (`:9090`) and Loki (`:3100`) on the central monitoring host, enabling ConBoleto (testing + production) to push metrics and logs from external Docker daemon via cAdvisor and Grafana Alloy, eliminating single-point-of-failure risk by separating monitoring from the servers it observes.",
+            "Deployed Loki (`:3100`) on the central monitoring host and connected ConBoleto (testing + production) to the existing Prometheus remote_write receiver, pushing metrics and logs via a Prometheus agent, cAdvisor and Grafana Alloy, eliminating single-point-of-failure risk by separating monitoring from the servers it observes.",
         },
         {
           id: 3,
@@ -954,6 +957,11 @@ export const singleProjectDataArray = [
           id: 5,
           details:
             "Documented the 5-phase migration plan (Spanish) with critical gotchas: preserving Docker Compose project name (`COMPOSE_PROJECT_NAME=monitoreo`) to retain volumes holding the 20-month Grafana config, and proper external label setup before enabling remote_write to avoid metric collision.",
+        },
+        {
+          id: 6,
+          details:
+            "Configured Grafana Alerting with SMTP email notifications for 5 ConBoleto service alerts (contact point, notification policy and SMTP wiring), and deployed the versioned stack through GitLab CI/CD.",
         },
       ],
       SocialSharingHeading: "",
@@ -1512,7 +1520,7 @@ export const singleProjectDataArray = [
         {
           id: 5,
           details:
-            "Implemented role-based access control (RBAC): pre-authentication enforcement, authorization levels (operator, technician, admin), and personalized dashboards showing only assigned stations per user. Integrated security logging for compliance and audit purposes. Prevented unauthorized access to sensitive configuration and historical data.",
+            "Implemented role-based permissions: pre-authentication enforcement, authorization levels (operator, technician, admin), and personalized dashboards showing only assigned stations per user. Integrated security logging for compliance and audit purposes. Prevented unauthorized access to sensitive configuration and historical data.",
         },
         {
           id: 6,
