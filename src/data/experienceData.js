@@ -64,13 +64,13 @@ export const experience = [
     summary:
       "Developed validation applications and GUIs for electronic meter testing, providing nationwide support to manufacturing plants.",
     responsibilities: [
-      `Built BitFlow, a quality-control platform orchestrating 12 independent testing stations for smart energy meter manufacturing (CFE), ensuring real-time traceability and productivity metrics across production lines.`,
+      `Built BitFlow, a quality-control platform orchestrating 12 independent testing stations for smart electricity meter manufacturing, ensuring real-time traceability and productivity metrics across production lines.`,
       `Developed Windows Forms GUIs in C#/.NET for electronic meter validation, giving floor operators real-time pass/fail feedback and reducing manual test-result logging.`,
-      `Designed and managed SQL Server/MySQL databases with Entity Framework and LINQ, centralizing test results, meter configurations, and audit trails for complete product traceability.`,
+      `Designed and managed SQL Server databases with Entity Framework and LINQ, centralizing test results, meter configurations, and audit trails for complete product traceability.`,
       `Automated CSV/Excel report generation from SQL Server Management Studio queries, replacing manual report compilation for the operations team.`,
       `Managed source control across multiple version control systems (Git, SVN, Mercurial) during a multi-year migration of legacy codebases.`,
       `Delivered on-site technical support at manufacturing plants nationwide, resolving hardware/software issues that required in-person diagnostics.`,
-      `Applied electronic-manufacturing production-line knowledge to design testing workflows that matched real floor conditions and constraints.`,
+      `Applied electronic-manufacturing production-line knowledge to build testing applications that matched real floor conditions and constraints.`,
     ],
   },
   {

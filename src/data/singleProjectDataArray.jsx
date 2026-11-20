@@ -1474,12 +1474,12 @@ export const singleProjectDataArray = [
         {
           id: 2,
           title: "Industry",
-          details: "Manufacturing - Energy Meters for CFE",
+          details: "Manufacturing - Smart Electricity Meters",
         },
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Develop an integrated quality control platform for smart energy meter manufacturing at CFE (Mexico's state electricity company). Orchestrate 12 independent testing stations across production lines, automate validation procedures, ensure complete product traceability from manufacturing through final testing, and provide real-time visibility into defect rates and productivity metrics. System must support role-based access, hardware synchronization via multiple protocols, and automated software deployment across all stations.",
+        "Develop C#/.NET applications for pre-operational and configuration testing of smart electricity meters during assembly and manufacturing, giving operators real-time pass/fail feedback across 12 testing stations and storing every result for full product traceability.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -1490,7 +1490,6 @@ export const singleProjectDataArray = [
             "Entity Framework",
             "Linq",
             "SQL Server 2012",
-            "ClickOnce",
             "Serial/Ethernet",
             "Excel Export",
           ],
@@ -1500,47 +1499,27 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Architected layered software design (Presentation → Business Logic → Data Access → Database) enabling modularity, testability, and scalability. Separated UI concerns from business logic, allowing independent testing of core algorithms and database operations. This architecture simplified maintenance as requirements evolved and new testing procedures were added.",
+            "Developed Windows Forms applications in C#/.NET for pre-operational and configuration testing of smart electricity meters during assembly and manufacturing, giving operators real-time pass/fail feedback, progress indicators, and clear error messages across 12 testing stations.",
         },
         {
           id: 2,
           details:
-            "Implemented Entity Framework + Linq as ORM abstraction over SQL Server 2012: eliminated raw SQL string concatenation, reduced complexity in data queries, and improved type safety. Built repository patterns for data access layer, centralizing all database interactions and enabling easy modifications to persistence logic without changing business layer.",
+            "Integrated the testing applications with meter hardware over serial and Ethernet using the team's in-house communication library, coordinating test execution across the stations on the production line.",
         },
         {
           id: 3,
           details:
-            "Developed comprehensive data persistence system capturing test results, execution logs, meter configurations, and serial numbers for complete product traceability. Designed normalized schema supporting audit trails, version history, and time-series metrics. Implemented transaction management ensuring data integrity during concurrent test executions across 12 stations.",
+            "Designed and managed SQL Server databases with Entity Framework and LINQ, storing test results, meter configurations, and serial numbers for full product traceability.",
         },
         {
           id: 4,
           details:
-            "Built Windows Forms interfaces for each testing station: real-time validation feedback, visual progress indicators, immediate operator notifications on pass/fail results. Implemented input validation at UI layer with contextual error messages. Created responsive layouts adapting to different screen resolutions and supporting touch/keyboard input from industrial environments.",
+            "Wrote ad-hoc SQL queries for production reporting, then automated CSV/Excel report generation, replacing manual report compilation for the operations team.",
         },
         {
           id: 5,
           details:
-            "Implemented role-based permissions: pre-authentication enforcement, authorization levels (operator, technician, admin), and personalized dashboards showing only assigned stations per user. Integrated security logging for compliance and audit purposes. Prevented unauthorized access to sensitive configuration and historical data.",
-        },
-        {
-          id: 6,
-          details:
-            "Engineered real-time synchronization between 12 GUI interfaces and hardware devices using serial and Ethernet protocols: coordinated concurrent test execution, managed hardware resource contention, implemented protocol-level error recovery. Built retry logic with exponential backoff for failed communications, ensuring robustness in noisy manufacturing environments.",
-        },
-        {
-          id: 7,
-          details:
-            "Enabled data export capabilities: Excel spreadsheets with formatted reports, CSV dumps for data science analysis, and direct database query access for ad-hoc reporting. Implemented scheduled exports and email delivery, reducing manual report generation. Allowed operations teams to perform analytics without database expertise.",
-        },
-        {
-          id: 8,
-          details:
-            "Integrated ClickOnce deployment strategy for automatic updates: pushed new versions to all 12 stations without manual intervention, reducing downtime and ensuring software consistency. Implemented rollback mechanisms for problematic releases, enabling quick recovery. Centralized version management simplified tracking of which stations ran which code versions.",
-        },
-        {
-          id: 9,
-          details:
-            "Implemented automatic retry logic for failed tests with exponential backoff, preventing cascading test failures from transient hardware issues. Built error classification system (transient vs permanent faults) enabling intelligent retry decisions. Reduced error noise in logs and improved test pass rates through smarter failure handling.",
+            "Provided on-site technical support at manufacturing plants nationwide, resolving hardware and software issues that required in-person diagnostics.",
         },
       ],
       SocialSharingHeading: "",

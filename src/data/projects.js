@@ -228,8 +228,8 @@ export const projectsData = [
     company: "Pounce Consulting",
     img: BitFlow1,
     description:
-      "Comprehensive quality control platform for smart energy meter manufacturing at CFE. 12 independent graphical interfaces orchestrated through centralized database, ensuring real-time traceability, version control, and productivity metrics across production lines.",
-    technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "Linq", "SQL Server 2012", "ClickOnce"],
+      "Validation platform for smart electricity meters during assembly and manufacturing: pre-operational and configuration tests across 12 testing stations, with results stored in SQL Server for full product traceability.",
+    technologies: ["C#", ".NET", "Windows Forms", "Entity Framework", "LINQ", "SQL Server 2012"],
     liveUrl: "",
   },
   {
