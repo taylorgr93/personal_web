@@ -102,7 +102,7 @@ export const projectsData = [
   },
   {
     id: 7,
-    title: "Invertúneles",
+    title: "Invertuneles",
     url: "invertuneles",
     category: "Corporate Website",
     company: "HiveCoding",

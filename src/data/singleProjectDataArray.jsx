@@ -642,24 +642,24 @@ export const singleProjectDataArray = [
   },
   {
     ProjectHeader: {
-      title: "Invertúneles",
+      title: "Invertuneles",
       publishDate: "Jul 1, 2025",
       tags: "Web Application",
     },
     ProjectImages: [
       {
         id: 1,
-        title: "Invertúneles Corporate Website",
+        title: "Invertuneles Corporate Website",
         img: InvertuntelesImg,
       },
       {
         id: 2,
-        title: "Invertúneles Corporate Website",
+        title: "Invertuneles Corporate Website",
         img: Invertuneles2,
       },
       {
         id: 3,
-        title: "Invertúneles Corporate Website",
+        title: "Invertuneles Corporate Website",
         img: Invertuneles3,
       },
     ],
@@ -669,7 +669,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           title: "Name",
-          details: "Invertúneles",
+          details: "Invertuneles",
         },
         {
           id: 2,

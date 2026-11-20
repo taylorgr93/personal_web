@@ -30,12 +30,12 @@ export const experience = [
     summary:
       "Delivering custom web solutions for startups under HiveCoding, specializing in Next.js, React, and TypeScript for scalable corporate websites.",
     responsibilities: [
-      `Delivered 3 production websites for HiveCoding clients (Invertúneles, Transportes Colimenses, Vigo Coffee) as a freelance Full Stack Developer, specializing in Next.js, React, and TypeScript for scalable corporate sites.`,
-      `Built a bilingual (Spanish/English) corporate site for Invertúneles (Apr–Jul 2025) using Next.js with i18n routing, a responsive product catalog with video integration, and an email-based quotation system.`,
+      `Delivered 3 production websites for HiveCoding clients (Invertuneles, Transportes Colimenses, Vigo Coffee) as a freelance Full Stack Developer, specializing in Next.js, React, and TypeScript for scalable corporate sites.`,
+      `Built a bilingual (Spanish/English) corporate site for Invertuneles (Apr–Jul 2025) using Next.js with i18n routing, a responsive product catalog with video integration, and an email-based quotation system.`,
       `Developed a corporate site for Transportes Colimenses (Aug–Sep 2024) using Next.js, integrating an external client portal, an interactive routes map, and social media feeds.`,
       `Audited and remediated Vigo Coffee's website for WCAG 2.1 compliance, fixing broken links and improving social integration to bring the site up to accessibility standards.`,
       `Owned the full project lifecycle end-to-end — requirements gathering, technical scoping, development, Vercel deployment, and post-launch support — for every freelance engagement.`,
-      `Led technical SEO (sitemap, robots.txt, per-category metadata, hreflang, keyword strategy), more than doubling Invertúneles' organic search impressions (+122%) and growing clicks by 69%.`,
+      `Led technical SEO (sitemap, robots.txt, per-category metadata, hreflang, keyword strategy), more than doubling Invertuneles' organic search impressions (+122%) and growing clicks by 69%.`,
     ],
   },
   {
