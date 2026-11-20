@@ -24,6 +24,7 @@ export const skillCategories = [
       { name: "Material UI", years: 2 },
       { name: "Syncfusion Charts", years: 1 },
       { name: "Flutter", years: 1 },
+      { name: "Web Accessibility (WCAG 2.1)", years: 1 },
     ],
   },
   {
@@ -62,6 +63,7 @@ export const skillCategories = [
       { name: "EC2 AWS", years: 1 },
       { name: "S3 AWS", years: 1 },
       { name: "Lambda AWS", years: 1 },
+      { name: "API Gateway AWS", years: 1 },
       { name: "CloudWatch AWS", years: 1 },
       { name: "Prometheus", years: 1 },
       { name: "Grafana", years: 1 },
@@ -79,7 +81,7 @@ export const skillCategories = [
   {
     category: "Testing",
     skills: [
-      { name: "Jest", years: 2 },
+      { name: "Jest (unit and E2E)", years: 2 },
       { name: "Mocha", years: 2 },
       { name: "React Testing Library", years: 1 },
     ],

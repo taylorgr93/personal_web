@@ -17,7 +17,7 @@ const Skills = () => {
       {isStandalonePage ? (
         <SEO
           title="Skills | Taylor - Software Engineer"
-          description="Technical skills of Taylor: JavaScript, React, Node.js, TypeScript, Docker, AWS and more. 7+ years of experience in Full Stack and IoT development."
+          description="Technical skills of Taylor: JavaScript, React, Node.js, TypeScript, Docker, AWS (EC2, S3, Lambda) and more. 7+ years in Full Stack and IoT development."
           path="/skills"
           noindex={true}
         />
