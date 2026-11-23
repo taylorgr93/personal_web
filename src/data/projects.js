@@ -26,7 +26,7 @@ export const projectsData = [
     company: "Knesys Plus",
     img: Conboleto1,
     description:
-      "Full-stack event ticketing and cashless payment platform with 6 microservices, multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration. 110,000+ tickets issued across 370+ events since 2024.",
+      "Full-stack event ticketing and cashless payment platform of 8 microservices (6 built by me), multi-gateway payment processing (Stripe, LKL Pay, MercadoPago), RFID/NFC token system, and reserved seating integration. 110,000+ tickets issued across 370+ events since 2024.",
     technologies: ["TypeScript", "Node.js", "Express", "NestJS", "MongoDB", "Socket.IO", "Stripe", "MercadoPago", "SeatsIO", "Docker", "Jest"],
     liveUrl: "https://www.conboleto.com",
   },

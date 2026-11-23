@@ -116,7 +116,7 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Architected and built all 6 microservices from scratch: API Gateway (request routing, JWT validation, multi-tenancy scoping), Auth Service (registration, login, activation, JWT issuance), Events Service (CRUD events, ticket management, SeatsIO integration, scheduled jobs), Payment Service (multi-gateway factory pattern supporting Stripe MXN/USD, MercadoPago, LKL Pay with unified refund/chargeback handling), Cashless Service (NestJS-based RFID/NFC token recharge/charge/transfer with WebSocket real-time events), and POS Service (inventory, products, sales points, transactions with company-scoped multi-tenancy).",
+            "Architected and built 6 of the platform's 8 microservices:API Gateway (request routing, JWT validation, multi-tenancy scoping), Auth Service (registration, login, activation, JWT issuance), Events Service (CRUD events, ticket management, SeatsIO integration, scheduled jobs), Payment Service (multi-gateway factory pattern supporting Stripe MXN/USD, MercadoPago, LKL Pay with unified refund/chargeback handling), Cashless Service (NestJS-based RFID/NFC token recharge/charge/transfer with WebSocket real-time events), and POS Service (inventory, products, sales points, transactions with company-scoped multi-tenancy).",
         },
         {
           id: 2,
