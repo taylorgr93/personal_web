@@ -1,0 +1,44 @@
+# Workflow name shown in the GitHub "Actions" tab
+name: CI
+
+# Events that trigger this workflow
+on:
+  # Run on every push to main (Netlify deploys these, so CI flags breakage)
+  push:
+    branches: [main]
+  # Run on pull requests targeting main, before they are merged
+  pull_request:
+    branches: [main]
+
+jobs:
+  # Single job: install, test and build the site
+  test-and-build:
+    # GitHub-hosted Linux runner (fresh virtual machine on every run)
+    runs-on: ubuntu-latest
+
+    # Steps run in order; if one fails, the rest are skipped
+    steps:
+      # Clone the repository into the runner (it starts empty)
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      # Install Node.js using the same version as local and Netlify
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          # Read the Node version from .nvmrc (single source of truth)
+          node-version-file: .nvmrc
+          # Cache the npm download cache between runs to speed up installs
+          cache: npm
+
+      # Install the exact versions from package-lock.json; fails if out of sync
+      - name: Install dependencies
+        run: npm ci
+
+      # Run Vitest once and exit (--run disables watch mode)
+      - name: Run tests
+        run: npm test -- --run
+
+      # Build the production bundle with Vite to catch build errors
+      - name: Build
+        run: npm run build
