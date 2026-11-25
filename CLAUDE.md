@@ -6,7 +6,7 @@ Production URL: `https://taylorgr93.com`
 ## Tech Stack
 
 - **Framework**: React 18 (Vite)
-- **Routing**: React Router v6
+- **Routing**: React Router v7
 - **Styles**: TailwindCSS v3 + custom CSS (`src/css/App.css`)
 - **Animations**: Framer Motion
 - **SEO**: react-helmet-async (`src/components/SEO.jsx`)
