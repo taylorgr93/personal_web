@@ -59,6 +59,7 @@ export const skillCategories = [
       { name: "Docker Compose", years: 4 },
       { name: "Git", years: 5 },
       { name: "GitLab CI/CD", years: 2 },
+      { name: "GitHub Actions (CI, npm publish)", years: 2 },
       { name: "Linux CLI", years: 4 },
       { name: "EC2 AWS", years: 1 },
       { name: "S3 AWS", years: 1 },
