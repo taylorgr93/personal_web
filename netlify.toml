@@ -1,0 +1,7 @@
+# Netlify build settings (override the values set in the Netlify UI)
+[build]
+  # Run the test suite once; only build if every test passes,
+  # so a failing test blocks the deploy and keeps the previous version live
+  command = "npm test -- --run && npm run build"
+  # Vite outputs the production bundle to build/ (see vite.config.js)
+  publish = "build"
