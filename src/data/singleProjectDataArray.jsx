@@ -50,7 +50,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Conboleto",
-      publishDate: "2023 - 2026",
+      publishDate: "Jan 2024 – Present",
       tags: "Backend / Full-Stack",
     },
     ProjectImages: [
@@ -180,7 +180,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Checkton",
-      publishDate: "2020 - 2022",
+      publishDate: "Jul 2021 – Jan 2024",
       tags: "Frontend / SaaS",
     },
     ProjectImages: [
@@ -299,7 +299,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "RTSP ABSA Industrial",
-      publishDate: "Aug 12, 2021",
+      publishDate: "Nov 2022 – Apr 2024",
       tags: "Web Application",
     },
     ProjectImages: [
@@ -375,7 +375,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "DataCenter",
-      publishDate: "Aug 12, 2021",
+      publishDate: "Jan 2020 – Jul 2024",
       tags: "IoT / Backend",
     },
     ProjectImages: [
@@ -480,7 +480,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "FaceDN",
-      publishDate: "Aug 12, 2021",
+      publishDate: "Apr 2020 – Feb 2024",
       tags: "IoT / Computer Vision",
     },
     ProjectImages: [
@@ -543,7 +543,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Transportes Colimenses",
-      publishDate: "Aug 18, 2024",
+      publishDate: "Aug 2024 – Sep 2024",
       tags: "Web Application",
     },
     ProjectImages: [
@@ -648,7 +648,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Invertuneles",
-      publishDate: "Jul 1, 2025",
+      publishDate: "Apr 2025 – Jul 2025",
       tags: "Web Application",
     },
     ProjectImages: [
@@ -807,7 +807,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Nussen",
-      publishDate: "Oct, 2026",
+      publishDate: "Oct 2026",
       tags: "Web Design / Wix",
     },
     ProjectImages: [
@@ -881,7 +881,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Knesys Monitoring",
-      publishDate: "2026",
+      publishDate: "Jul 2026 – Present",
       tags: "Infrastructure / DevOps",
     },
     ProjectImages: [
@@ -981,7 +981,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "MongoDB Client Wrapper",
-      publishDate: "2020 - Present",
+      publishDate: "Aug 2024 – Present",
       tags: "NPM Package / Library",
     },
     ProjectImages: [
@@ -1063,7 +1063,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Findable",
-      publishDate: "2019 - 2021",
+      publishDate: "2019 – 2021",
       tags: "IoT / BLE",
     },
     ProjectImages: [
@@ -1162,7 +1162,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "Tracsa",
-      publishDate: "2021 - 2023",
+      publishDate: "Feb 2023 – Dec 2024",
       tags: "Fleet Management / Backend",
     },
     ProjectImages: [],
@@ -1235,7 +1235,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "AbsaCCM",
-      publishDate: "2024 - 2026",
+      publishDate: "Apr 2021 – Jul 2021",
       tags: "Frontend / Full-Stack",
     },
     ProjectImages: [],
@@ -1309,7 +1309,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "FAN-ID",
-      publishDate: "2023 - 2026",
+      publishDate: "May 2022 – Oct 2023",
       tags: "Frontend / Full-Stack",
     },
     ProjectImages: [],
@@ -1382,7 +1382,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "cisItemVali",
-      publishDate: "2018 - 2019",
+      publishDate: "Nov 2018 – Apr 2019",
       tags: "Backend / Full-Stack",
     },
     ProjectImages: [],
@@ -1453,7 +1453,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "BitFlow",
-      publishDate: "2016 - 2018",
+      publishDate: "Feb 2017 – Nov 2018",
       tags: "Backend / Full-Stack",
     },
     ProjectImages: [
@@ -1540,7 +1540,7 @@ export const singleProjectDataArray = [
   {
     ProjectHeader: {
       title: "mypregnancyapp",
-      publishDate: "2021 - 2022",
+      publishDate: "2021 – 2022",
       tags: "Mobile / Flutter",
     },
     ProjectImages: [
