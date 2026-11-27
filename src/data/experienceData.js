@@ -9,9 +9,9 @@ export const experience = [
       "Full Stack Developer building Industry 4.0 and IoT platforms, delivering real-time monitoring solutions and REST APIs for enterprise clients.",
     responsibilities: [
       `Built and shipped several Industry 4.0/IoT platforms (Conboleto, Checkton, DataCenter, FaceDN, Findable, Tracsa, AbsaCCM, FAN-ID) using the MERN stack, delivering real-time monitoring and decision-support tools adopted by enterprise clients across ticketing, construction, fleet management, and manufacturing.`,
-      `Architected microservices-based backends with Node.js, Express, and MongoDB (MERN), powering platforms ranging from a 6-microservice ticketing system (Conboleto) to a 3-microservice fleet management monorepo (Tracsa).`,
+      `Architected microservices-based backends with Node.js, Express, and MongoDB (MERN), powering platforms ranging from an 8-microservice ticketing system (Conboleto, 6 built by me) to a 3-microservice fleet management monorepo (Tracsa).`,
       `Fixed a seat-reservation race condition in Conboleto (customers charged without tickets issued) with payment-time validation and atomic MongoDB operations, and introduced multi-document transactions so cascading writes roll back when any middleware fails, preventing inflated event stats.`,
-      `Deployed AWS services (EC2, S3, Lambda, CloudWatch, Rekognition) to host applications, store assets, and add facial recognition to a stadium/event management platform (FAN-ID).`,
+      `Used AWS services (EC2, S3, Lambda with API Gateway, CloudWatch) to host applications and store assets.`,
       `Containerized every major project with Docker, standardizing deployment across environments and eliminating "works on my machine" setup issues.`,
       `Orchestrated multi-service applications with Docker Compose, coordinating interdependent microservices (API, database, monitoring agents) as a single deployable stack per project.`,
       `Designed and shipped REST APIs for multiple production systems, from personnel/attendance management (Checkton) to hardware integrations bridging GPS vehicle-tracking and Motorola two-way radio communication into unified backends.`,

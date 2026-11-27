@@ -22,7 +22,6 @@ export const skillCategories = [
       { name: "CSS", years: 4 },
       { name: "Tailwind CSS", years: 2 },
       { name: "Material UI", years: 2 },
-      { name: "Syncfusion Charts", years: 1 },
       { name: "Flutter", years: 1 },
       { name: "Web Accessibility (WCAG 2.1)", years: 1 },
     ],

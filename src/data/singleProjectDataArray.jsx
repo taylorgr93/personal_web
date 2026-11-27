@@ -360,7 +360,7 @@ export const singleProjectDataArray = [
         {
           id: 2,
           details:
-            "Operators needed to locate specific recordings among tens of thousands of video files, so I built a searchable, paginated archive with date-range filtering, indexed by purchase order and station.",
+            "Built a searchable video archive so operators can find recordings by purchase order and station, with date-range filters, file sizes, and token-based downloads with a progress bar.",
         },
         {
           id: 3,
@@ -1250,7 +1250,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Build a manufacturing configuration and monitoring system as a microservices monorepo with a React-based GUI for real-time operational oversight. Implement dynamic calendar filtering, multi-currency support (USD/MXN), real-time analytics dashboards with Syncfusion charts, and synchronized data architecture across frontend and multiple backend services (API gateway, authentication, MongoDB control, Active Directory integration).",
+        "Build a manufacturing configuration and monitoring system as a microservices monorepo (API gateway, authentication, MongoDB control, Active Directory integration) with a React GUI.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -1266,7 +1266,6 @@ export const singleProjectDataArray = [
             "JWT",
             "MongoDB 4.0.14",
             "Docker Compose",
-            "Syncfusion Charts",
           ],
         },
       ],
@@ -1274,32 +1273,22 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Designed and implemented complete React frontend for manufacturing operations: calendar with dynamic filtering by date/month, real-time component state management, and responsive UI across desktop and tablet viewports using Material-UI theme system.",
+            "Main contributor (47 of 85 commits, 55%) to a microservices monorepo for manufacturing configuration and monitoring, working mostly on the React frontend with Material-UI.",
         },
         {
           id: 2,
           details:
-            "Built multi-currency selector (USD/MXN) with dynamic limit updates: switching currencies recalculates thresholds, chart maximum values, and dashboard KPIs in real-time without page reload. Integrated with backend API for currency-specific metrics aggregation.",
+            "Built the Active Directory login service and its integration with ABSA's internal API to validate users, plus user roles in MongoDB.",
         },
         {
           id: 3,
           details:
-            "Implemented real-time analytics dashboards with Syncfusion charts: line charts with dynamic X-axis limits, interactive tooltips, series predictions with navigation arrows, and theme-aware styling (light/dark mode support). Fixed chart rendering edge cases when data is sparse or empty.",
+            "Set up the mongoctl container that initializes the database with default admin users.",
         },
         {
           id: 4,
           details:
-            "Contributed 55 commits (55% of repository code) to frontend development: calendar logic refinement, padding/styling corrections, month picker fixes, component lifecycle optimization, and UX improvements across dashboard, filters, and event handling.",
-        },
-        {
-          id: 5,
-          details:
-            "Built microservices monorepo architecture: frontconfig (React GUI on port 4001), apigateway (Express on 3001), security service (Passport authentication on 3214), activedirectory integration (3002), mongoctl (database initialization), plus optional Odoo ERP service. All services containerized with Docker Compose for local development.",
-        },
-        {
-          id: 6,
-          details:
-            "Debugged and optimized React component rendering: fixed padding inconsistencies, resolved month picker date display issues, streamlined form submissions with react-hook-form, and minimized unnecessary re-renders through proper prop drilling and state management.",
+            "Built the calendar with date and month filtering (month picker) and form handling with react-hook-form.",
         },
       ],
       SocialSharingHeading: "",
@@ -1324,7 +1313,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Develop a comprehensive sports tournament and stadium event management platform enabling ticket sales, employee/fan profiles, door access control, attendance tracking, and identity verification via AWS Rekognition face recognition. Support multi-tenant tournament organization with role-based permissions, real-time event synchronization, and reporting dashboards for attendance and revenue analytics.",
+        "Build the React frontend for a fan access control platform for sports tournaments and stadiums (tournaments, matches, stadium gates, fan and employee registration, attendance reports), running on a multi-tenant backend with one database per company.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -1333,12 +1322,10 @@ export const singleProjectDataArray = [
             "Node.js",
             "Express.js",
             "MongoDB",
-            "AWS Rekognition",
             "Docker",
             "Redux",
             "Material-UI",
             "JWT",
-            "Socket.IO",
             "AWS S3",
           ],
         },
@@ -1347,32 +1334,22 @@ export const singleProjectDataArray = [
         {
           id: 1,
           details:
-            "Implemented comprehensive event/tournament management UI: calendar interface, tournament CRUD operations with permission validation, employee roster management, sports-specific role definitions (teams, events, gates), and real-time status synchronization across multiple concurrent users.",
+            "Main frontend contributor (96 commits, more than the other two developers): built the screens for tournaments, matches, stadiums, gates, and fan and employee registration, consuming the platform's REST APIs.",
         },
         {
           id: 2,
           details:
-            "Built employee and fan profile management system: document uploads and verification, profile completion workflows, role-based field visibility (employees vs fans), and dashboard widgets displaying personalized event invitations and attendance history.",
+            "Built the tournament and event calendar with its dialogs, form validations, and front-end permission checks on create and edit actions.",
         },
         {
           id: 3,
           details:
-            "Integrated AWS Rekognition face recognition for door access control: real-time identity verification against employee/fan databases, attendance logging with timestamp capture, photo upload with auto-resize/crop, and fallback manual verification when confidence scores are below thresholds.",
+            "Implemented the app's theme and color palette, plus infinite scroll and paginated lists with loading indicators.",
         },
         {
           id: 4,
           details:
-            "Developed reporting and analytics dashboards: attendance heatmaps by gate/time window, revenue summaries by event/ticket type, employee activity logs, and multi-currency support (USD/MXN). Charts update in real-time as events progress.",
-        },
-        {
-          id: 5,
-          details:
-            "Contributed 95 commits (primary contributor with 13,768 lines added, 10,230 lines deleted): frontend colorimetry/theme implementation, calendar and event dialog design, form validations, scroll/pagination optimization (infinite scroll, lazy loading), loading animations, and accessibility improvements.",
-        },
-        {
-          id: 6,
-          details:
-            "Managed backend API development: tournament CRUD endpoints, user and role management, document APIs, event synchronization services, and Rekognition service integration. Implemented permission checks on sensitive operations and audit logging for compliance.",
+            "On the backend, added company sign-up to the users service and the initial data setup that runs when a new company is created.",
         },
       ],
       SocialSharingHeading: "",
@@ -1397,7 +1374,7 @@ export const singleProjectDataArray = [
       ],
       ObjectivesHeading: "Objective",
       ObjectivesDetails:
-        "Develop an internal document management system for FAI (Form and Item validation) records at Jabil manufacturing. Enable users to create, edit, and manage validation documents with structured data including folio tracking, title/template information, evidence items (images, headings, subheadings), and multi-level approval workflows. Provide search, edit, and bulk management capabilities with MySQL backend for data persistence.",
+        "Develop an internal document management system for FAI (Form and Item validation) records at Jabil manufacturing. Enable users to create, edit, and manage validation documents with structured data including folio tracking, title/template information, evidence items (images, headings, subheadings), and multi-level approval workflows. Provide search and edit capabilities with MySQL backend for data persistence.",
       Technologies: [
         {
           title: "Tools & Technologies",
@@ -1438,7 +1415,7 @@ export const singleProjectDataArray = [
         {
           id: 5,
           details:
-            "Implemented comprehensive search workflow: find existing FAI documents by folio/criteria, load into Edit view with full history (title, template, items, approvals). Edit page allows modification of all fields with validation, save changes back to MySQL, and track approval status. Includes bulk operations for efficient document management.",
+            "Implemented comprehensive search workflow: find existing FAI documents by folio/criteria, load into Edit view with full history (title, template, items, approvals). Edit page allows modification of all fields with validation, save changes back to MySQL, and track approval status.",
         },
         {
           id: 6,

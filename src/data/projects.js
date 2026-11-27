@@ -192,8 +192,8 @@ export const projectsData = [
     company: "Knesys Plus",
     img: AbsaCCMImg,
     description:
-      "Manufacturing configuration and monitoring system built as a microservices monorepo. React-based GUI for manufacturing operations with calendar filtering, multi-currency support, real-time analytics dashboards, and dynamic chart visualization.",
-    technologies: ["React", "Material-UI", "Node.js", "Express.js", "MongoDB", "Docker Compose", "Syncfusion Charts", "Passport.js"],
+      "Manufacturing configuration and monitoring system built as a microservices monorepo, with a React GUI, Active Directory login, and calendar filtering. Main contributor (55% of commits).",
+    technologies: ["React", "Material-UI", "Node.js", "Express.js", "MongoDB", "Docker Compose", "Passport.js"],
     liveUrl: "",
   },
   {
@@ -204,8 +204,8 @@ export const projectsData = [
     company: "Knesys Plus",
     img: FanIDImg,
     description:
-      "Sports tournament and stadium event management platform with employee profiles, door access control, attendance reporting, and AWS Rekognition integration for face recognition and identity verification.",
-    technologies: ["React", "Node.js", "MongoDB", "Docker", "AWS Rekognition", "Express.js"],
+      "Fan access control platform for sports tournaments and stadiums: tournaments, matches, gates, fan and employee registration, and attendance reports. Main frontend contributor.",
+    technologies: ["React", "Node.js", "MongoDB", "Docker", "Express.js"],
     liveUrl: "",
   },
   {
